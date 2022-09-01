@@ -1,44 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
 import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React from 'react';
+import {SafeAreaView, StatusBar, Text, View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {GameContainer} from './GameContainer';
+import {styleSheet} from '../styles/styleSheet';
+import {configureStore} from '@reduxjs/toolkit';
+import {reducer} from '../store/reducer';
+import {initialState} from '../store/initialState';
+import {Provider} from 'react-redux';
+import {addGuess, initializeGuesses} from '../store/actions';
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
+  const gameStore = configureStore({
+    reducer: reducer,
+    preloadedState: initialState,
+  });
+  gameStore.dispatch(initializeGuesses(''));
+  // console.log('app guesses:', gameStore.getState());
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <View
-        style={{
-          backgroundColor: 'red',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-        }}>
-        <Text style={{marginTop: '5%'}}>மொழி</Text>
-        <GameContainer />
-      </View>
-    </SafeAreaView>
+    <Provider store={gameStore}>
+      <SafeAreaView>
+        <StatusBar />
+        <View style={styleSheet.appBackground}>
+          <Text style={styleSheet.appTitle}>மொழி</Text>
+          <GameContainer />
+        </View>
+      </SafeAreaView>
+    </Provider>
   );
 };
 

@@ -1,27 +1,22 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {GuessList} from './GuessList';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, Button} from 'react-native';
+import {styleSheet} from '../styles/styleSheet';
+import {useDispatch, useSelector} from 'react-redux';
+import {addGuess} from '../store/actions';
 
 export const GameContainer = props => {
-  const [word, setWord] = useState('abcdef');
+  const dispatch = useDispatch();
+  const currentGuessLetters = useSelector(state => state.currentGuessLetters);
+  const submitWord = () => {
+    dispatch(addGuess(currentGuessLetters));
+  };
+
   return (
-    <View style={styles.gameContainer}>
+    <View style={styleSheet.gameContainer}>
       <Text>Top Area</Text>
       <GuessList />
-      <Text>Bottom Area</Text>
+      <Button title={'Submit Word'} onPress={submitWord} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  gameContainer: {
-    flexDirection: 'column',
-    backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    marginTop: '10%',
-    width: '80%',
-    // marginBottom: '10%',
-  },
-});

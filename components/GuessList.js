@@ -2,34 +2,29 @@ import React, {useState} from 'react';
 import {Guess} from './Guess';
 import {FlatList, Text, View} from 'react-native';
 import {keyExtractor} from 'react-native/Libraries/Lists/VirtualizeUtils';
+import {styleSheet} from '../styles/styleSheet';
+import {constants} from '../utils/constants';
+import {useSelector} from 'react-redux';
 
 export const GuessList = props => {
-  let numberOfGuesses = 8;
-  const [guesses, setGuesses] = useState(
-    Array(numberOfGuesses)
-      .fill('வாருக்காடை')
-      .map((s, i) => {
-        return {index: i, word: s};
-      }),
-  );
+  const secretWord = useSelector(state => state.secretWord);
+  const guesses = useSelector(state => state.guesses);
+  const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   console.log('guesses:', guesses);
+  console.log('secretWord:', secretWord);
   return (
-    <View
-      style={{
-        height: 324,
-        flexDirection: 'column',
-        borderWidth: 2,
-        // alignSelf: 'center',
-        backgroundColor: 'yellow',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View style={styleSheet.guessList}>
       <FlatList
-        data={guesses}
+        data={guesses.map((g, i) => {
+          return {
+            index: i,
+            guess: g,
+            isActive: i === currentGuessNumber,
+          };
+        })}
         renderItem={({item}) => {
           console.log('item:', item);
-          return <Guess guess={item.word} />;
+          return <Guess guess={item.guess} isActive={item.isActive} />;
         }}
       />
     </View>
