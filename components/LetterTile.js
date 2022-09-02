@@ -9,7 +9,6 @@ import {useDispatch, useSelector, useStore} from 'react-redux';
 export const LetterTile = props => {
   const [letter, setLetter] = useState('');
   const dispatch = useDispatch();
-  const store = useStore();
 
   const validateLetter = l => {
     return l === '' || Letters.flat().includes(l);
@@ -24,7 +23,6 @@ export const LetterTile = props => {
       setLetter('');
     } else if (input.unicodeLength() === 1) {
       let f = input.unicodeCharAt(0);
-      console.log('input:', input, ', f:', f);
       if (validateLetter(f)) {
         setLetter(f);
       } else {
@@ -33,10 +31,12 @@ export const LetterTile = props => {
     }
   };
 
+  const handleSubmitGuess = () => {
+    props.onSubmitGuess();
+  };
+
   useEffect(() => {
-    console.log('about to dispatch, letter:', letter);
     dispatch(currentGuessEdited({position: props.position, letter: letter}));
-    // console.log('LetterTile edited, store:', store.getState());
   }, [letter]);
 
   return (
@@ -44,8 +44,10 @@ export const LetterTile = props => {
       <TextInput
         style={styleSheet.letterTileInput}
         onChangeText={input => onLetterInput(input)}
+        onSubmitEditing={handleSubmitGuess}
         value={letter}
         editable={props.isActive}
+        caretHidden={true}
       />
     </View>
   );

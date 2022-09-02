@@ -16,6 +16,7 @@ export const Guess = props => {
             isActive={props.isActive}
             key={i.toString()}
             position={i}
+            onSubmitGuess={props.onSubmitGuess}
           />
         );
       })}

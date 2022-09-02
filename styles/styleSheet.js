@@ -46,7 +46,7 @@ export const styleSheet = {
     justifyContent: 'center',
   },
   letterTileInput: {
-    fontSize: 20,
+    fontSize: 16,
     color: 'black',
   },
 };

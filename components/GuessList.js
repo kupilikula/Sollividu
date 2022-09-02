@@ -24,7 +24,13 @@ export const GuessList = props => {
         })}
         renderItem={({item}) => {
           console.log('item:', item);
-          return <Guess guess={item.guess} isActive={item.isActive} />;
+          return (
+            <Guess
+              guess={item.guess}
+              isActive={item.isActive}
+              onSubmitGuess={props.onSubmitGuess}
+            />
+          );
         }}
       />
     </View>

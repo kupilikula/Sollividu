@@ -14,8 +14,12 @@ export const reducer = createReducer(initialState, builder => {
     })
     .addCase(addGuess, (state, action) => {
       state.guesses[state.currentGuessNumber] = action.payload;
-      state.currentGuessNumber += 1;
-      state.currentGuessLetters = Array(state.wordLength).fill('');
+      if (JSON.stringify(action.payload) === JSON.stringify(state.secretWord)) {
+        state.wordGuessed = true;
+      } else {
+        state.currentGuessNumber += 1;
+        state.currentGuessLetters = Array(state.wordLength).fill('');
+      }
     })
     .addCase(currentGuessEdited, (state, action) => {
       state.currentGuessLetters[action.payload.position] =
