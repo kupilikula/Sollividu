@@ -8,26 +8,26 @@ import {useDispatch} from 'react-redux';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
 
 export const LetterTile = props => {
-  const [letter, setLetter] = useState('');
+  const [inputLetter, setInputLetter] = useState('');
   const dispatch = useDispatch();
 
   const validateLetter = l => {
     return l === '' || Letters.flat().includes(l);
   };
 
-  const onLetterInput = input => {
-    if (input.length > 2) {
-      input = input.substring(0, 2);
+  const onLetterInput = textInputValue => {
+    if (textInputValue.length > 2) {
+      textInputValue = textInputValue.substring(0, 2);
     }
 
-    if (input === '') {
-      setLetter('');
-    } else if (TamilStringUtils.getTamilWordLength(input) === 1) {
-      let f = TamilStringUtils.getTamilLetterAt(input, 0);
+    if (textInputValue === '') {
+      setInputLetter('');
+    } else if (TamilStringUtils.getTamilWordLength(textInputValue) === 1) {
+      let f = TamilStringUtils.getTamilLetterAt(textInputValue, 0);
       if (validateLetter(f)) {
-        setLetter(f);
+        setInputLetter(f);
       } else {
-        setLetter('');
+        setInputLetter('');
       }
     }
   };
@@ -41,8 +41,16 @@ export const LetterTile = props => {
   };
 
   useEffect(() => {
-    dispatch(currentGuessEdited({position: props.position, letter: letter}));
-  }, [letter]);
+    dispatch(
+      currentGuessEdited({position: props.position, letter: inputLetter})
+    );
+    console.log(
+      'props.position:',
+      props.position,
+      'props.guessLetter:',
+      props.guessLetter
+    );
+  }, [inputLetter]);
 
   // const applyLetterTileStyles = () {
   //
@@ -65,21 +73,24 @@ export const LetterTile = props => {
         ]}>
         <TextInput
           style={styleSheet.letterTileInput}
-          onChangeText={input => onLetterInput(input)}
+          onChangeText={textInputValue => onLetterInput(textInputValue)}
           onSubmitEditing={handleSubmitGuess}
-          value={letter}
+          value={inputLetter}
           editable={props.isActive}
+          maxLength={2}
           caretHidden={true}
           autoCorrect={false}
           ref={letterInputRef}
         />
         {
-          <Text>
-            {annotationToNumber[props.annotation.letterState]},
-            {[
-              props.annotation.positionState.mei ? 1 : 0,
-              props.annotation.positionState.uyir ? 1 : 0,
-            ]}
+          <Text style={{fontSize: 16}}>
+            z:
+            {props.guessLetter}
+            {/*{annotationToNumber[props.annotation.letterState]},*/}
+            {/*{[*/}
+            {/*  props.annotation.positionState.uyir ? 1 : 0,*/}
+            {/*  props.annotation.positionState.mei ? 1 : 0,*/}
+            {/*]}*/}
           </Text>
         }
       </View>

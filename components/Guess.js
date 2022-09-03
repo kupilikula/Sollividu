@@ -16,6 +16,7 @@ export const Guess = props => {
             key={i.toString()}
             position={i}
             onSubmitGuess={props.onSubmitGuess}
+            guessLetter={props.guess[i]}
             annotation={props.guessAnnotation[i]}
           />
         );

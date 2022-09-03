@@ -9,33 +9,34 @@ export const GuessList = props => {
   const guesses = useSelector(state => state.guesses);
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
+  const currentGuessLetters = useSelector(state => state.currentGuessLetters);
   console.log('guesses:', guesses);
   console.log('secretWordLetters:', secretWordLetters);
   return (
-    <View style={styleSheet.guessList}>
-      <FlatList
-        data={guesses.map((g, i) => {
-          return {
-            index: i,
-            guess: g,
-            isActive: i === currentGuessNumber,
-            isCompleted: i < currentGuessNumber,
-            guessAnnotation: guessAnnotations[i],
-          };
-        })}
-        renderItem={({item}) => {
-          console.log('item:', item);
-          return (
-            <Guess
-              guess={item.guess}
-              isActive={item.isActive}
-              isCompleted={item.isCompleted}
-              onSubmitGuess={props.onSubmitGuess}
-              guessAnnotation={item.guessAnnotation}
-            />
-          );
-        }}
-      />
-    </View>
+    // <View style={styleSheet.guessList}>
+    <FlatList
+      data={guesses.map((g, i) => {
+        return {
+          index: i,
+          guess: i === currentGuessNumber ? currentGuessLetters : g,
+          isActive: i === currentGuessNumber,
+          isCompleted: i < currentGuessNumber,
+          guessAnnotation: guessAnnotations[i],
+        };
+      })}
+      renderItem={({item}) => {
+        console.log('item:', item);
+        return (
+          <Guess
+            guess={item.guess}
+            isActive={item.isActive}
+            isCompleted={item.isCompleted}
+            onSubmitGuess={props.onSubmitGuess}
+            guessAnnotation={item.guessAnnotation}
+          />
+        );
+      }}
+    />
+    // </View>
   );
 };

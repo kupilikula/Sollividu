@@ -1,6 +1,4 @@
 export const constants = {
-  letterTileSize: 57,
-  halfBorderWidth: 2,
-  numberOfGuesses: 8,
-  wordLength: 6,
+  letterTileSize: 56,
+  tileBorderWidth: 1,
 };
