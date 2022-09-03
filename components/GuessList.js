@@ -9,6 +9,7 @@ import {useSelector} from 'react-redux';
 export const GuessList = props => {
   const secretWord = useSelector(state => state.secretWord);
   const guesses = useSelector(state => state.guesses);
+  const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   console.log('guesses:', guesses);
   console.log('secretWord:', secretWord);
@@ -20,6 +21,8 @@ export const GuessList = props => {
             index: i,
             guess: g,
             isActive: i === currentGuessNumber,
+            isCompleted: i < currentGuessNumber,
+            guessAnnotation: guessAnnotations[i],
           };
         })}
         renderItem={({item}) => {
@@ -28,7 +31,9 @@ export const GuessList = props => {
             <Guess
               guess={item.guess}
               isActive={item.isActive}
+              isCompleted={item.isCompleted}
               onSubmitGuess={props.onSubmitGuess}
+              guessAnnotation={item.guessAnnotation}
             />
           );
         }}

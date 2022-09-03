@@ -49,4 +49,10 @@ export const styleSheet = {
     fontSize: 16,
     color: 'black',
   },
+  letterTileInactive: {
+    backgroundColor: 'grey',
+  },
+  letterTileActive: {
+    backgroundColor: 'white',
+  },
 };

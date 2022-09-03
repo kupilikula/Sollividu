@@ -1,4 +1,6 @@
-// const letterToPos = {};
+import {isEmpty} from 'lodash';
+
+const letterToPos = {};
 const Letters = [
   [
     '\u0b85',
@@ -347,15 +349,27 @@ const Letters = [
   ],
 ];
 
-module.exports = {Letters};
-// export function getLetterPos(letter) {
-//     if(_.isEmpty(letterToPos)) {
-//         for(let i=0; i<Letters.length; i++) {
-//             for(let j=0; j<Letters[i].length; j++) {
-//                 letterToPos[Letters[i][j]] = [i, j];
-//             }
-//         }
-//     }
-//
-//     return letterToPos[letter];
-// }
+export function getLetterPos(letter) {
+  if (isEmpty(letterToPos)) {
+    for (
+      let consonant_index = 0;
+      consonant_index < Letters.length;
+      consonant_index++
+    ) {
+      for (
+        let vowel_index = 0;
+        vowel_index < Letters[consonant_index].length;
+        vowel_index++
+      ) {
+        letterToPos[Letters[consonant_index][vowel_index]] = [
+          consonant_index,
+          vowel_index,
+        ];
+      }
+    }
+  }
+
+  return letterToPos[letter];
+}
+
+module.exports = {Letters, getLetterPos};

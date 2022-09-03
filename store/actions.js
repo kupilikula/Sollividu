@@ -1,6 +1,6 @@
 import {createAction} from '@reduxjs/toolkit';
 
 const addGuess = createAction('guesses/addGuess');
-const initializeGuesses = createAction('guesses/initializeGuesses');
+const initializeState = createAction('guesses/initializeState');
 const currentGuessEdited = createAction('guesses/currentGuessEdited');
-export {addGuess, initializeGuesses, currentGuessEdited};
+export {addGuess, initializeState, currentGuessEdited};

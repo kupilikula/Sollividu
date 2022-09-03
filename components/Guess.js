@@ -2,7 +2,6 @@ import React from 'react';
 import {LetterTile} from './LetterTile';
 import {View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
-import {constants} from '../utils/constants';
 import {useSelector} from 'react-redux';
 
 export const Guess = props => {
@@ -17,6 +16,7 @@ export const Guess = props => {
             key={i.toString()}
             position={i}
             onSubmitGuess={props.onSubmitGuess}
+            annotation={props.guessAnnotation[i]}
           />
         );
       })}
