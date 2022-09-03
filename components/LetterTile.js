@@ -2,10 +2,10 @@ import React, {useEffect, useRef, useState} from 'react';
 import {Pressable, Text, TextInput, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {Letters} from '../utils/tamilLetters.js';
-import '../utils/unicodeUtils';
+import '../utils/TamilStringUtils';
 import {currentGuessEdited} from '../store/actions';
-import {useDispatch, useSelector, useStore} from 'react-redux';
-import {GuessLetterTileStates} from '../utils/annotateGuess';
+import {useDispatch} from 'react-redux';
+import {TamilStringUtils} from '../utils/TamilStringUtils';
 
 export const LetterTile = props => {
   const [letter, setLetter] = useState('');
@@ -22,8 +22,8 @@ export const LetterTile = props => {
 
     if (input === '') {
       setLetter('');
-    } else if (input.unicodeLength() === 1) {
-      let f = input.unicodeCharAt(0);
+    } else if (TamilStringUtils.getTamilWordLength(input) === 1) {
+      let f = TamilStringUtils.getTamilLetterAt(input, 0);
       if (validateLetter(f)) {
         setLetter(f);
       } else {

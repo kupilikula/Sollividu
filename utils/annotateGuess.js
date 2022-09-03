@@ -9,8 +9,8 @@ export const GuessLetterTileStates = {
   NOT_ANNOTATED: 'NOT_ANNOTATED',
 };
 
-export const annotateGuess = (guessLetters, secretWord) => {
-  let n = secretWord.length;
+export const annotateGuess = (guessLetters, secretWordLetters) => {
+  let n = secretWordLetters.length;
   let annotation = [...Array(n)].map(a => {
     return {
       letterState: GuessLetterTileStates.NOT_ANNOTATED,
@@ -18,9 +18,9 @@ export const annotateGuess = (guessLetters, secretWord) => {
     };
   });
   for (let i = 0; i < n; i++) {
-    console.log('i,g[i],w[i]', i, guessLetters[i], secretWord[i]);
-    console.log('i, check:', i, guessLetters[i] === secretWord[i]);
-    if (guessLetters[i] === secretWord[i]) {
+    console.log('i,g[i],w[i]', i, guessLetters[i], secretWordLetters[i]);
+    console.log('i, check:', i, guessLetters[i] === secretWordLetters[i]);
+    if (guessLetters[i] === secretWordLetters[i]) {
       annotation[i].letterState = GuessLetterTileStates.LETTER_MATCHED;
       console.log(
         'inside match, i:',
@@ -28,7 +28,7 @@ export const annotateGuess = (guessLetters, secretWord) => {
         'annotation[i].letterState:',
         annotation[i].letterState
       );
-    } else if (secretWord.includes(guessLetters[i])) {
+    } else if (secretWordLetters.includes(guessLetters[i])) {
       annotation[i].letterState = GuessLetterTileStates.LETTER_ELSEWHERE;
     } else {
       console.log(
@@ -42,7 +42,7 @@ export const annotateGuess = (guessLetters, secretWord) => {
 
     const [consonant_index, vowel_index] = getLetterPos(guessLetters[i]);
     const [secret_consonant_index, secret_vowel_index] = getLetterPos(
-      secretWord[i]
+      secretWordLetters[i]
     );
 
     annotation[i].positionState.mei =

@@ -1,18 +1,16 @@
 import React, {useState} from 'react';
 import {Guess} from './Guess';
 import {FlatList, Text, View} from 'react-native';
-import {keyExtractor} from 'react-native/Libraries/Lists/VirtualizeUtils';
 import {styleSheet} from '../styles/styleSheet';
-import {constants} from '../utils/constants';
 import {useSelector} from 'react-redux';
 
 export const GuessList = props => {
-  const secretWord = useSelector(state => state.secretWord);
+  const secretWordLetters = useSelector(state => state.secretWordLetters);
   const guesses = useSelector(state => state.guesses);
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   console.log('guesses:', guesses);
-  console.log('secretWord:', secretWord);
+  console.log('secretWordLetters:', secretWordLetters);
   return (
     <View style={styleSheet.guessList}>
       <FlatList

@@ -1,4 +1,3 @@
-import type {Node} from 'react';
 import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 
@@ -6,25 +5,26 @@ import {GameContainer} from './GameContainer';
 import {styleSheet} from '../styles/styleSheet';
 import {configureStore} from '@reduxjs/toolkit';
 import {reducer} from '../store/reducer';
-import {initialState} from '../store/initialState';
+import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
-import {initializeState} from '../store/actions';
 import {changeBarColors} from 'react-native-immersive-bars';
-import {composeWithDevTools} from '@redux-devtools/extension';
+
+const secretWord = 'பிரியானிசோறு';
+const numberOfGuesses = 8;
+const currentGameState = newGameState(secretWord, numberOfGuesses);
 
 const gameStore = configureStore({
-  reducer: reducer,
-  preloadedState: initialState,
+  reducer: reducer(currentGameState),
+  preloadedState: currentGameState,
   devTools: true,
 });
 
-const App: () => Node = () => {
+const App = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // loading checks, if anything needs to be loaded before starting app
     if (true) {
       console.log('inside loading effect.');
-      gameStore.dispatch(initializeState(''));
       setLoading(false);
     }
     console.log('inside use effect');

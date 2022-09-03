@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React from 'react';
 import {GuessList} from './GuessList';
-import {Text, View, StyleSheet, Button} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess} from '../store/actions';
