@@ -1,18 +1,18 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Pressable, Text, TextInput, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
-import {Letters} from '../utils/tamilLetters.js';
-import '../utils/TamilStringUtils';
 import {currentGuessEdited} from '../store/actions';
 import {useDispatch} from 'react-redux';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
+const tamilStringUtils = TamilStringUtils();
 
 export const LetterTile = props => {
   const [inputLetter, setInputLetter] = useState('');
   const dispatch = useDispatch();
+  const [useSmallerFontSize, setUseSmallerFontSize] = useState(false);
 
   const validateLetter = l => {
-    return l === '' || Letters.flat().includes(l);
+    return l === '' || tamilStringUtils.Letters.flat().includes(l);
   };
 
   const onLetterInput = textInputValue => {
@@ -22,8 +22,8 @@ export const LetterTile = props => {
 
     if (textInputValue === '') {
       setInputLetter('');
-    } else if (TamilStringUtils.getTamilWordLength(textInputValue) === 1) {
-      let f = TamilStringUtils.getTamilLetterAt(textInputValue, 0);
+    } else if (tamilStringUtils.getTamilWordLength(textInputValue) === 1) {
+      let f = tamilStringUtils.getTamilLetterAt(textInputValue, 0);
       if (validateLetter(f)) {
         setInputLetter(f);
       } else {
@@ -41,6 +41,15 @@ export const LetterTile = props => {
   };
 
   useEffect(() => {
+    console.log(
+      'inside useeffect, inputLetter:',
+      inputLetter,
+      ',check:',
+      tamilStringUtils.LongLetters.includes(inputLetter),
+      'inputLetterUnicode',
+      tamilStringUtils.toUnicode(inputLetter)
+    );
+    setUseSmallerFontSize(tamilStringUtils.LongLetters.includes(inputLetter));
     dispatch(
       currentGuessEdited({position: props.position, letter: inputLetter})
     );
@@ -52,9 +61,6 @@ export const LetterTile = props => {
     );
   }, [inputLetter]);
 
-  // const applyLetterTileStyles = () {
-  //
-  // }
   const annotationToNumber = {
     LETTER_NOT_FOUND: 0,
     LETTER_MATCHED: 1,
@@ -72,7 +78,7 @@ export const LetterTile = props => {
             : styleSheet.letterTileInactive,
         ]}>
         <TextInput
-          style={styleSheet.letterTileInput}
+          style={{fontSize: useSmallerFontSize ? 15 : 22, color: 'black'}}
           onChangeText={textInputValue => onLetterInput(textInputValue)}
           onSubmitEditing={handleSubmitGuess}
           value={inputLetter}
@@ -84,13 +90,12 @@ export const LetterTile = props => {
         />
         {
           <Text style={{fontSize: 16}}>
-            z:
             {props.guessLetter}
-            {/*{annotationToNumber[props.annotation.letterState]},*/}
-            {/*{[*/}
-            {/*  props.annotation.positionState.uyir ? 1 : 0,*/}
-            {/*  props.annotation.positionState.mei ? 1 : 0,*/}
-            {/*]}*/}
+            {annotationToNumber[props.annotation.letterState]},
+            {[
+              props.annotation.positionState.uyir ? 1 : 0,
+              props.annotation.positionState.mei ? 1 : 0,
+            ]}
           </Text>
         }
       </View>

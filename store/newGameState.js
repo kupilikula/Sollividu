@@ -1,8 +1,10 @@
 import {GuessLetterTileStates} from '../utils/annotateGuess';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
 
+const tamilStringUtils = TamilStringUtils();
+
 export const newGameState = (secretWord, numberOfGuesses) => {
-  let secretWordLetters = TamilStringUtils.getTamilLetterArray(secretWord);
+  let secretWordLetters = tamilStringUtils.getTamilLetterArray(secretWord);
   let wordLength = secretWordLetters.length;
   return {
     wordLength: wordLength,
