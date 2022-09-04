@@ -20,7 +20,7 @@ export const GuessList = props => {
           index: i,
           guess: i === currentGuessNumber ? currentGuessLetters : g,
           isActive: i === currentGuessNumber,
-          isCompleted: i < currentGuessNumber,
+          isAnnotated: i < currentGuessNumber,
           guessAnnotation: guessAnnotations[i],
         };
       })}
@@ -30,7 +30,7 @@ export const GuessList = props => {
           <Guess
             guess={item.guess}
             isActive={item.isActive}
-            isCompleted={item.isCompleted}
+            isAnnotated={item.isAnnotated}
             onSubmitGuess={props.onSubmitGuess}
             guessAnnotation={item.guessAnnotation}
           />

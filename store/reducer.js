@@ -27,12 +27,8 @@ export const reducer = currentGameState =>
             i === state.currentGuessNumber ? [...A] : [...a]
           ),
           wordGuessed: wordGuessed,
-          currentGuessNumber: wordGuessed
-            ? state.currentGuessNumber
-            : state.currentGuessNumber + 1,
-          currentGuessLetters: wordGuessed
-            ? state.currentGuessLetters
-            : Array(state.wordLength).fill(''),
+          currentGuessNumber: state.currentGuessNumber + 1,
+          currentGuessLetters: Array(state.wordLength).fill(''),
         };
         console.log('S:', S);
         return S;

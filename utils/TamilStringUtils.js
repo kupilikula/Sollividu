@@ -365,13 +365,13 @@ const TamilStringUtils = () => {
   ];
 
   const LongLetters = [
+    '\u0ba3\u0bbe',
+    '\u0ba3\u0bc2',
     '\u0ba3\u0bc6',
     '\u0ba3\u0bc7',
     '\u0ba3\u0bc8',
-    '\u0ba3\u0bca',
-    '\u0ba3\u0bcb',
-    '\u0ba3\u0bcc',
   ];
+  const VeryLongLetters = ['\u0ba3\u0bca', '\u0ba3\u0bcb', '\u0ba3\u0bcc'];
 
   const computeLetterToIndices = () => {
     const letterToIndices = {};
@@ -433,6 +433,7 @@ const TamilStringUtils = () => {
     Letters,
     Diacritics,
     LongLetters,
+    VeryLongLetters,
     LetterToIndices,
     getTamilLetterAt,
     getTamilLetterArray,

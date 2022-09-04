@@ -13,6 +13,7 @@ export const Guess = props => {
         return (
           <LetterTile
             isActive={props.isActive}
+            isAnnotated={props.isAnnotated}
             key={i.toString()}
             position={i}
             onSubmitGuess={props.onSubmitGuess}
