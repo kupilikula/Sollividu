@@ -3,10 +3,11 @@ import {Pressable, Text, TextInput, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {currentGuessEdited} from '../store/actions';
 import {useDispatch, useSelector} from 'react-redux';
-import {TamilStringUtils} from '../utils/TamilStringUtils';
-const tamilStringUtils = TamilStringUtils();
+import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import Icon from 'react-native-vector-icons/Feather';
 import {GuessLetterTileStates} from '../utils/annotateGuess';
+
+const tamilLetterUtils = TamilLetterUtils();
 
 export const LetterTile = props => {
   // const [inputLetter, setInputLetter] = useState('');
@@ -45,7 +46,7 @@ export const LetterTile = props => {
 
     if (textInputValue === '') {
       inputLetter = '';
-    } else if (tamilStringUtils.Letters.flat().includes(textInputValue)) {
+    } else if (tamilLetterUtils.Letters.flat().includes(textInputValue)) {
       inputLetter = textInputValue;
     } else {
       inputLetter = null;
@@ -71,15 +72,13 @@ export const LetterTile = props => {
       'props.position:',
       props.position,
       'props.guessLetter:',
-      props.guessLetter,
-      'props.guessLetter Unicode',
-      tamilStringUtils.toUnicode(props.guessLetter)
+      props.guessLetter
     );
     setUseSmallerFontSize(
-      tamilStringUtils.LongLetters.includes(props.guessLetter)
+      tamilLetterUtils.LongLetters.includes(props.guessLetter)
     );
     setUseSmallestFontSize(
-      tamilStringUtils.VeryLongLetters.includes(props.guessLetter)
+      tamilLetterUtils.VeryLongLetters.includes(props.guessLetter)
     );
 
     console.log();
@@ -92,6 +91,9 @@ export const LetterTile = props => {
     NOT_ANNOTATED: 'x',
   };
   const letterInputRef = useRef(null);
+
+  const [isFocussed, setIsFocussed] = useState(false);
+
   return (
     <Pressable onPress={focusTextInput}>
       <View
@@ -99,6 +101,8 @@ export const LetterTile = props => {
           styleSheet.letterTile,
           props.isAnnotated
             ? styleSheet.letterTileAnnotated(props.annotation)
+            : isFocussed
+            ? styleSheet.letterTileFocussed
             : styleSheet.letterTileNotAnnotated,
         ]}>
         {/*<View style={{position: 'relative'}}>*/}
@@ -110,7 +114,7 @@ export const LetterTile = props => {
               name="star"
               size={17}
               color="#ffffff"
-              style={{position: 'absolute', top: 1, left: 1}}
+              style={{position: 'absolute', top: 1, right: 1}}
             />
           )}
         {props.isAnnotated &&
@@ -127,7 +131,8 @@ export const LetterTile = props => {
         <Text
           onLayout={onLayout}
           style={{
-            fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 16 : 20,
+            fontWeight: '900',
+            fontSize: useSmallestFontSize ? 18 : useSmallerFontSize ? 22 : 24,
             color: props.isAnnotated ? '#ffffff' : '#000000',
             position: 'absolute',
             top: '50%',
@@ -140,10 +145,16 @@ export const LetterTile = props => {
           {props.guessLetter}
         </Text>
         <TextInput
-          style={{color: 'red'}}
+          style={styleSheet.letterTileInput}
           selection={{
             start: props.guessLetter.length,
             end: props.guessLetter.length,
+          }}
+          onFocus={() => {
+            setIsFocussed(true);
+          }}
+          onBlur={() => {
+            setIsFocussed(false);
           }}
           onChangeText={textInputValue => onLetterInput(textInputValue)}
           onSubmitEditing={handleSubmitGuess}

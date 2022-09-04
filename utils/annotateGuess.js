@@ -1,4 +1,4 @@
-import {TamilStringUtils} from './TamilStringUtils';
+import {TamilLetterUtils} from './TamilLetterUtils';
 
 export const GuessLetterTileStates = {
   LETTER_NOT_FOUND: 'LETTER_NOT_FOUND',
@@ -9,7 +9,7 @@ export const GuessLetterTileStates = {
   NOT_ANNOTATED: 'NOT_ANNOTATED',
 };
 
-const tamilStringUtils = TamilStringUtils();
+const tamilLetterUtils = TamilLetterUtils();
 
 export const annotateGuess = (guessLetters, secretWordLetters) => {
   let n = secretWordLetters.length;
@@ -43,9 +43,9 @@ export const annotateGuess = (guessLetters, secretWordLetters) => {
     }
 
     const [consonant_index, vowel_index] =
-      tamilStringUtils.LetterToIndices[guessLetters[i]];
+      tamilLetterUtils.LetterToIndices[guessLetters[i]];
     const [secret_consonant_index, secret_vowel_index] =
-      tamilStringUtils.LetterToIndices[secretWordLetters[i]];
+      tamilLetterUtils.LetterToIndices[secretWordLetters[i]];
 
     annotation[i].positionState.mei =
       consonant_index === secret_consonant_index;

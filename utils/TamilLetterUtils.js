@@ -1,4 +1,4 @@
-const TamilStringUtils = () => {
+const TamilLetterUtils = () => {
   const Diacritics = [
     '\u0B82',
     '\u0BBE',
@@ -364,14 +364,17 @@ const TamilStringUtils = () => {
     ],
   ];
 
-  const LongLetters = [
-    '\u0ba3\u0bbe',
-    '\u0ba3\u0bc2',
-    '\u0ba3\u0bc6',
-    '\u0ba3\u0bc7',
-    '\u0ba3\u0bc8',
-  ];
-  const VeryLongLetters = ['\u0ba3\u0bca', '\u0ba3\u0bcb', '\u0ba3\u0bcc'];
+  const LongLetters = Letters.filter((a, i) => i > 0 && i !== 6)
+    .map(a => a.filter((b, j) => j >= 9 && j <= 11))
+    .flat()
+    .concat(
+      Letters.filter((a, i) => i === 6)
+        .map(a => a.filter((b, j) => [1, 5, 6, 7, 8].includes(j)))
+        .flat()
+    );
+  const VeryLongLetters = Letters.filter((a, i) => i === 6)
+    .map(a => a.filter((b, j) => j >= 9 && j <= 11))
+    .flat();
 
   const computeLetterToIndices = () => {
     const letterToIndices = {};
@@ -397,49 +400,13 @@ const TamilStringUtils = () => {
 
   const LetterToIndices = computeLetterToIndices();
 
-  const toUnicode = s => {
-    let result = '';
-    for (let i = 0; i < s.length; i++) {
-      // Assumption: all characters are < 0xffff
-      result +=
-        '\\u{' + ('000' + s[i].charCodeAt(0).toString(16)).substring(-4) + '}';
-    }
-    return result;
-  };
-
-  const getTamilLetterArray = s => {
-    let tamilLetterArray = [];
-    for (let i = 0; i < s.length; i++) {
-      let ch = s[i];
-      Diacritics.includes(ch)
-        ? (tamilLetterArray[tamilLetterArray.length - 1] += ch)
-        : tamilLetterArray.push(ch);
-    }
-    return tamilLetterArray;
-  };
-
-  const getTamilWordLength = s => {
-    return getTamilLetterArray(s).length;
-  };
-
-  const getTamilLetterAt = (s, pos) => {
-    if (s.length === 0) {
-      return '';
-    }
-    return getTamilLetterArray(s)[pos];
-  };
-
   return {
     Letters,
     Diacritics,
     LongLetters,
     VeryLongLetters,
     LetterToIndices,
-    getTamilLetterAt,
-    getTamilLetterArray,
-    getTamilWordLength,
-    toUnicode,
   };
 };
 
-module.exports = {TamilStringUtils};
+module.exports = {TamilLetterUtils};

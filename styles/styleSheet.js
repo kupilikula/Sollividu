@@ -21,7 +21,7 @@ export const styleSheet = {
     alignItems: 'center',
     borderWidth: constants.tileBorderWidth,
     marginTop: '10%',
-    width: '90%',
+    width: '95%',
     // marginBottom: '10%',
   },
   // guessList: {
@@ -40,7 +40,7 @@ export const styleSheet = {
   letterTile: {
     height: constants.letterTileSize,
     width: constants.letterTileSize,
-    margin: constants.tileBorderWidth,
+    margin: 2 * constants.tileBorderWidth,
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
@@ -50,6 +50,12 @@ export const styleSheet = {
     borderWidth: constants.tileBorderWidth,
     borderColor: '#d3d6da',
   },
+  letterTileFocussed: {
+    backgroundColor: '#ffffff',
+    borderWidth: constants.tileBorderWidth,
+    borderColor: '#555555',
+  },
+
   letterTileAnnotated: annotation => {
     return {
       backgroundColor:
@@ -66,6 +72,6 @@ export const styleSheet = {
   },
 
   letterTileInput: {
-    color: 'black',
+    color: 'transparent',
   },
 };

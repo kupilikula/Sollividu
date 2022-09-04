@@ -4,9 +4,9 @@ import {Button, Text, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
-import {TamilStringUtils} from '../utils/TamilStringUtils';
+import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 
-const tamilStringUtils = TamilStringUtils();
+const tamilLetterUtils = TamilLetterUtils();
 
 export const GameContainer = props => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const GameContainer = props => {
 
   const validateWord = letters => {
     return letters.every(
-      l => l !== '' && tamilStringUtils.Letters.flat().includes(l)
+      l => l !== '' && tamilLetterUtils.Letters.flat().includes(l)
     );
   };
 
