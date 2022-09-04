@@ -9,12 +9,20 @@ import Icon from 'react-native-vector-icons/Feather';
 import {GuessLetterTileStates} from '../utils/annotateGuess';
 
 export const LetterTile = props => {
-  const [inputLetter, setInputLetter] = useState('');
+  // const [inputLetter, setInputLetter] = useState('');
   const dispatch = useDispatch();
   const [useSmallerFontSize, setUseSmallerFontSize] = useState(false);
   const [useSmallestFontSize, setUseSmallestFontSize] = useState(false);
 
   const [letterDimensions, setLetterDimensions] = useState([0, 0]);
+  // const [selection, setSelection] = useState({
+  //   start: 0,
+  //   end: 0,
+  // });
+  // const handleSelectionChange = ({nativeEvent: {selection}}) => {
+  //   setSelection(selection);
+  // };
+
   const wordGuessed = useSelector(state => state.wordGuessed);
 
   const onLayout = event => {
@@ -22,24 +30,30 @@ export const LetterTile = props => {
     setLetterDimensions([width, height]);
   };
 
-  const validateLetter = l => {
-    return l === '' || tamilStringUtils.Letters.flat().includes(l);
-  };
-
   const onLetterInput = textInputValue => {
+    let inputLetter;
+    console.log(
+      'textInputValue:',
+      textInputValue,
+      'length:',
+      textInputValue.length
+    );
     if (textInputValue.length > 2) {
       textInputValue = textInputValue.substring(0, 2);
+      console.log('after trimming:', textInputValue);
     }
 
     if (textInputValue === '') {
-      setInputLetter('');
-    } else if (tamilStringUtils.getTamilWordLength(textInputValue) === 1) {
-      let f = tamilStringUtils.getTamilLetterAt(textInputValue, 0);
-      if (validateLetter(f)) {
-        setInputLetter(f);
-      } else {
-        setInputLetter('');
-      }
+      inputLetter = '';
+    } else if (tamilStringUtils.Letters.flat().includes(textInputValue)) {
+      inputLetter = textInputValue;
+    } else {
+      inputLetter = null;
+    }
+    if (inputLetter !== null && props.guessLetter !== inputLetter) {
+      dispatch(
+        currentGuessEdited({position: props.position, letter: inputLetter})
+      );
     }
   };
 
@@ -53,27 +67,23 @@ export const LetterTile = props => {
 
   useEffect(() => {
     console.log(
-      'inside useeffect, inputLetter:',
-      inputLetter,
-      ',check:',
-      tamilStringUtils.LongLetters.includes(inputLetter),
-      'inputLetterUnicode',
-      tamilStringUtils.toUnicode(inputLetter)
-    );
-    setUseSmallerFontSize(tamilStringUtils.LongLetters.includes(inputLetter));
-    setUseSmallestFontSize(
-      tamilStringUtils.VeryLongLetters.includes(inputLetter)
-    );
-    dispatch(
-      currentGuessEdited({position: props.position, letter: inputLetter})
-    );
-    console.log(
+      'inside useeffect...',
       'props.position:',
       props.position,
       'props.guessLetter:',
-      props.guessLetter
+      props.guessLetter,
+      'props.guessLetter Unicode',
+      tamilStringUtils.toUnicode(props.guessLetter)
     );
-  }, [inputLetter]);
+    setUseSmallerFontSize(
+      tamilStringUtils.LongLetters.includes(props.guessLetter)
+    );
+    setUseSmallestFontSize(
+      tamilStringUtils.VeryLongLetters.includes(props.guessLetter)
+    );
+
+    console.log();
+  }, [props.guessLetter]);
 
   const annotationToNumber = {
     LETTER_NOT_FOUND: 0,
@@ -114,7 +124,8 @@ export const LetterTile = props => {
               style={{position: 'absolute', top: 0, right: 0}}
             />
           )}
-        <TextInput
+        <Text
+          onLayout={onLayout}
           style={{
             fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 16 : 20,
             color: props.isAnnotated ? '#ffffff' : '#000000',
@@ -125,11 +136,18 @@ export const LetterTile = props => {
               {translateX: -letterDimensions[0] / 2},
               {translateY: -letterDimensions[1] / 2},
             ],
+          }}>
+          {props.guessLetter}
+        </Text>
+        <TextInput
+          style={{color: 'red'}}
+          selection={{
+            start: props.guessLetter.length,
+            end: props.guessLetter.length,
           }}
-          onLayout={onLayout}
           onChangeText={textInputValue => onLetterInput(textInputValue)}
           onSubmitEditing={handleSubmitGuess}
-          value={inputLetter}
+          value={props.guessLetter}
           editable={props.isActive && !wordGuessed}
           maxLength={2}
           caretHidden={true}

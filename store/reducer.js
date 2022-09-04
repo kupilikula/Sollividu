@@ -7,10 +7,13 @@ export const reducer = currentGameState =>
   createReducer(currentGameState, builder => {
     builder
       .addCase(initializeNewGameState, (state, action) => {
-        return newGameState(
-          action.payload.secretWord,
-          action.payload.numberOfGuesses
-        );
+        let s = action.payload.secretWordLetters
+          ? action.payload.secretWordLetters
+          : state.secretWordLetters;
+        let n = action.payload.numberOfGuesses
+          ? action.payload.numberOfGuesses
+          : state.numberOfGuesses;
+        return newGameState(s, n);
       })
       .addCase(addGuess, (state, action) => {
         let wordGuessed =

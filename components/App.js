@@ -6,12 +6,13 @@ import {styleSheet} from '../styles/styleSheet';
 import {configureStore} from '@reduxjs/toolkit';
 import {reducer} from '../store/reducer';
 import {newGameState} from '../store/newGameState';
-import {Provider} from 'react-redux';
+import {Provider, useDispatch} from 'react-redux';
 import {changeBarColors} from 'react-native-immersive-bars';
+import {initializeNewGameState} from '../store/actions';
 
-const secretWord = 'பிரியானிசோறு';
+const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
 const numberOfGuesses = 8;
-const currentGameState = newGameState(secretWord, numberOfGuesses);
+const currentGameState = newGameState(secretWordLetters, numberOfGuesses);
 
 const gameStore = configureStore({
   reducer: reducer(currentGameState),
