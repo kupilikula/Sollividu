@@ -1,4 +1,4 @@
 export const constants = {
-  letterTileSize: 56,
+  letterTileSize: 58,
   tileBorderWidth: 1,
 };

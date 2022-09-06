@@ -1,6 +1,6 @@
 import React from 'react';
 import {GuessList} from './GuessList';
-import {Button, Text, View} from 'react-native';
+import {Button, Text, TouchableOpacity, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
@@ -36,9 +36,29 @@ export const GameContainer = props => {
 
   return (
     <View style={styleSheet.gameContainer}>
-      <Text>Top Area</Text>
       <GuessList onSubmitGuess={onSubmitGuess} />
-      <Button title={'Submit Word'} onPress={onSubmitGuess} />
+      <TouchableOpacity
+        containerStyle={{overflow: 'visible'}}
+        activeOpacity={0.8}
+        style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#5555ff',
+          color: 'white',
+          borderWidth: 0,
+          borderRadius: 4,
+          margin: 5,
+          elevation: 10,
+          shadowRadius: 1,
+          shadowOffset: {width: 0, height: 0},
+          shadowOpacity: 0.6,
+          shadowColor: 'black',
+          overflow: 'visible',
+        }}
+        onPress={onSubmitGuess}>
+        <Text style={{color: 'white', margin: 10}}>Submit Word</Text>
+      </TouchableOpacity>
       <Button title={'Clear Game'} onPress={onClear} />
     </View>
   );

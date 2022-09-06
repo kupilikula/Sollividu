@@ -364,15 +364,15 @@ const TamilLetterUtils = () => {
     ],
   ];
 
-  const LongLetters = Letters.filter((a, i) => i > 0 && i !== 6)
+  const LongLetters = Letters.filter((a, i) => i > 0 && i !== 6 && i !== 20)
     .map(a => a.filter((b, j) => j >= 9 && j <= 11))
     .flat()
     .concat(
-      Letters.filter((a, i) => i === 6)
+      Letters.filter((a, i) => i === 6 || i === 20)
         .map(a => a.filter((b, j) => [1, 5, 6, 7, 8].includes(j)))
         .flat()
     );
-  const VeryLongLetters = Letters.filter((a, i) => i === 6)
+  const VeryLongLetters = Letters.filter((a, i) => i === 6 || i === 20)
     .map(a => a.filter((b, j) => j >= 9 && j <= 11))
     .flat();
 

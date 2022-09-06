@@ -38,7 +38,7 @@ const App = () => {
       {/*<SafeAreaView>*/}
       {/*<StatusBar backgroundColor={'red'} />*/}
       <View style={styleSheet.appBackground}>
-        <Text style={styleSheet.appTitle}>மொழி</Text>
+        <Text style={styleSheet.appTitle}>சொல்லிவிடு</Text>
         <GameContainer />
       </View>
       {/*</SafeAreaView>*/}

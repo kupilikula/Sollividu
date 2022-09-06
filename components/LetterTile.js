@@ -10,26 +10,11 @@ import {GuessLetterTileStates} from '../utils/annotateGuess';
 const tamilLetterUtils = TamilLetterUtils();
 
 export const LetterTile = props => {
-  // const [inputLetter, setInputLetter] = useState('');
   const dispatch = useDispatch();
   const [useSmallerFontSize, setUseSmallerFontSize] = useState(false);
   const [useSmallestFontSize, setUseSmallestFontSize] = useState(false);
 
-  const [letterDimensions, setLetterDimensions] = useState([0, 0]);
-  // const [selection, setSelection] = useState({
-  //   start: 0,
-  //   end: 0,
-  // });
-  // const handleSelectionChange = ({nativeEvent: {selection}}) => {
-  //   setSelection(selection);
-  // };
-
   const wordGuessed = useSelector(state => state.wordGuessed);
-
-  const onLayout = event => {
-    const {width, height} = event.nativeEvent.layout;
-    setLetterDimensions([width, height]);
-  };
 
   const onLetterInput = textInputValue => {
     let inputLetter;
@@ -84,12 +69,6 @@ export const LetterTile = props => {
     console.log();
   }, [props.guessLetter]);
 
-  const annotationToNumber = {
-    LETTER_NOT_FOUND: 0,
-    LETTER_MATCHED: 1,
-    LETTER_ELSEWHERE: 2,
-    NOT_ANNOTATED: 'x',
-  };
   const letterInputRef = useRef(null);
 
   const [isFocussed, setIsFocussed] = useState(false);
@@ -105,7 +84,6 @@ export const LetterTile = props => {
             ? styleSheet.letterTileFocussed
             : styleSheet.letterTileNotAnnotated,
         ]}>
-        {/*<View style={{position: 'relative'}}>*/}
         {props.isAnnotated &&
           props.annotation.positionState.mei &&
           props.annotation.letterState !==
@@ -129,23 +107,22 @@ export const LetterTile = props => {
             />
           )}
         <Text
-          onLayout={onLayout}
           style={{
-            fontWeight: '900',
-            fontSize: useSmallestFontSize ? 18 : useSmallerFontSize ? 22 : 24,
+            alignContent: 'center',
+            justifyContent: 'center',
+            fontWeight: '800',
+            fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
             color: props.isAnnotated ? '#ffffff' : '#000000',
             position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: [
-              {translateX: -letterDimensions[0] / 2},
-              {translateY: -letterDimensions[1] / 2},
-            ],
+            // borderWidth: 1,
+            // borderColor: 'green',
+            padding: 0,
           }}>
           {props.guessLetter}
         </Text>
         <TextInput
-          style={styleSheet.letterTileInput}
+          style={[styleSheet.letterTileInput]}
+          textAlign={'center'}
           selection={{
             start: props.guessLetter.length,
             end: props.guessLetter.length,
@@ -165,17 +142,6 @@ export const LetterTile = props => {
           autoCorrect={false}
           ref={letterInputRef}
         />
-        {
-          // <Text style={{fontSize: 16}}>
-          //   {props.guessLetter}
-          //   {annotationToNumber[props.annotation.letterState]},
-          //   {[
-          //     props.annotation.positionState.uyir ? 1 : 0,
-          //     props.annotation.positionState.mei ? 1 : 0,
-          //   ]}
-          // </Text>
-        }
-        {/*</View>*/}
       </View>
     </Pressable>
   );
