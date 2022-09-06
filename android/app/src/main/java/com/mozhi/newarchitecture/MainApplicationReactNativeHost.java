@@ -1,4 +1,4 @@
-package com.mozhi.newarchitecture;
+package com.sollividu.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.mozhi.BuildConfig;
-import com.mozhi.newarchitecture.components.MainComponentsRegistry;
-import com.mozhi.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.sollividu.BuildConfig;
+import com.sollividu.newarchitecture.components.MainComponentsRegistry;
+import com.sollividu.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
