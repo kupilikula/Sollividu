@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Pressable, Text, TextInput, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
-import {currentGuessEdited, focusY, focusYChanged} from '../store/actions';
+import {currentGuessEdited} from '../store/actions';
 import {useDispatch, useSelector} from 'react-redux';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import Icon from 'react-native-vector-icons/Feather';
@@ -51,11 +51,16 @@ export const LetterTile = props => {
   const focusTextInput = () => {
     console.log('inside LetterTile focus');
     if (!isFocussed) {
-      letterInputRef.current.focus();
       setIsFocussed(true);
+      setTimeout(() => {
+        // letterInputRef.current.blur();
+        letterInputRef.current.focus();
+      }, 10);
+      // props.onTileFocus({
+      //   guessIndex: props.guessIndex,
+      //   position: props.position,
+      // });
     }
-
-    props.onTileFocus(tileRef);
   };
 
   useEffect(() => {

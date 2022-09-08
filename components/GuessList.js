@@ -30,6 +30,7 @@ export const GuessList = props => {
         return (
           <Guess
             key={item.index}
+            guessIndex={item.index}
             guess={item.guess}
             isActive={item.isActive}
             isAnnotated={item.isAnnotated}

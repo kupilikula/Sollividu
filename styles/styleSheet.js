@@ -73,6 +73,7 @@ export const styleSheet = {
     color: 'transparent',
     lineHeight: constants.letterTileSize,
     height: constants.letterTileSize,
+    borderWidth: 1,
   },
 
   button: {
@@ -89,6 +90,6 @@ export const styleSheet = {
     shadowOffset: {width: 0, height: 0},
     shadowOpacity: 0.6,
     shadowColor: 'black',
-    overflow: 'visible',
+    // overflow: 'visible',
   },
 };

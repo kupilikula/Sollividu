@@ -1,7 +1,9 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {GuessList} from './GuessList';
 import {
   Button,
+  Dimensions,
+  Keyboard,
   KeyboardAvoidingView,
   ScrollView,
   Text,
@@ -12,7 +14,7 @@ import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useKeyboard} from '@react-native-community/hooks';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -42,36 +44,63 @@ export const GameContainer = props => {
     );
   };
   const scrollViewRef = useRef(null);
+  // const keyboard = useKeyboard();
+  const windowHeight = Dimensions.get('window').height;
 
-  const onTileFocus = focusedTileRef => {
-    console.log('inside onTileFocus:', focusedTileRef);
-    focusedTileRef.current.measure(({x, y, w, h}) => {
-      console.log('inside measure, y: ', y, 'h:', h);
-      // scrollViewRef.current.scrollTo({y: y + h});
-    });
+  const onTileFocus = focusedTile => {
+    console.log('inside onTileFocus:', focusedTile);
+    let tileBottom = (focusedTile.guessIndex + 1) * 62 + 150;
+    // if (tileBottom > windowHeight - keyboard.keyboardHeight) {
+    //   scrollViewRef.current.scrollTo({
+    //     y: tileBottom - windowHeight + keyboard.keyboardHeight,
+    //   });
+    // }
   };
 
+  // const [keyboardStatus, setKeyboardStatus] = useState(undefined);
+  //
+  // useEffect(() => {
+  //   const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
+  //     console.log('inside keyboarddidshow');
+  //     setKeyboardStatus('Keyboard Shown');
+  //   });
+  //   const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
+  //     console.log('inside keyboarddidhide');
+  //     setKeyboardStatus('Keyboard Hidden');
+  //   });
+  //
+  //   return () => {
+  //     showSubscription.remove();
+  //     hideSubscription.remove();
+  //   };
+  // }, []);
+
   return (
-    <ScrollView
-      contentContainerStyle={styleSheet.gameContainer}
-      ref={scrollViewRef}>
-      <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
-      <TouchableOpacity
-        containerStyle={{overflow: 'visible'}}
-        activeOpacity={0.8}
-        style={styleSheet.button}
-        onPress={onSubmitGuess}>
-        <Text style={{color: 'white', margin: 10}}>Submit Word</Text>
-      </TouchableOpacity>
-      <Button title={'Clear Game'} onPress={onClear} />
-      <View
-        style={{
-          minHeight: 400,
-          backgroundColor: 'yellow',
-          borderWidth: 2,
-          width: '100%',
-        }}
-      />
-    </ScrollView>
+    <KeyboardAvoidingView
+      behavior={'padding'}
+      enabled={true}
+      keyboardVerticalOffset={160}>
+      {/*<ScrollView ref={scrollViewRef}>*/}
+      <View style={styleSheet.gameContainer}>
+        <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
+        <TouchableOpacity
+          containerStyle={{overflow: 'visible'}}
+          activeOpacity={0.8}
+          style={styleSheet.button}
+          onPress={onSubmitGuess}>
+          <Text style={{color: 'white', margin: 10}}>Submit Word</Text>
+        </TouchableOpacity>
+        <Button title={'Clear Game'} onPress={onClear} />
+        <View
+          style={{
+            minHeight: 400,
+            backgroundColor: 'yellow',
+            borderWidth: 2,
+            width: '100%',
+          }}
+        />
+      </View>
+      {/*</ScrollView>*/}
+    </KeyboardAvoidingView>
   );
 };
