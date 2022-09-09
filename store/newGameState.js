@@ -20,5 +20,6 @@ export const newGameState = (secretWordLetters, numberOfGuesses) => {
     currentGuessNumber: 0,
     currentGuessLetters: [...Array(wordLength)].fill(''),
     wordGuessed: false,
+    focusY: null,
   };
 };

@@ -15,8 +15,10 @@ export const Guess = props => {
             isActive={props.isActive}
             isAnnotated={props.isAnnotated}
             key={i.toString()}
+            guessIndex={props.guessIndex}
             position={i}
             onSubmitGuess={props.onSubmitGuess}
+            onTileFocus={props.onTileFocus}
             guessLetter={props.guess[i]}
             annotation={props.guessAnnotation[i]}
           />

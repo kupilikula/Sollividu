@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View} from 'react-native';
 
 import {GameContainer} from './GameContainer';
-import {styleSheet} from '../styles/styleSheet';
 import {configureStore} from '@reduxjs/toolkit';
 import {reducer} from '../store/reducer';
 import {newGameState} from '../store/newGameState';
-import {Provider, useDispatch} from 'react-redux';
+import {Provider} from 'react-redux';
+import Header from './Header';
 import {changeBarColors} from 'react-native-immersive-bars';
-import {initializeNewGameState} from '../store/actions';
 
 const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
 const numberOfGuesses = 8;
@@ -31,17 +29,12 @@ const App = () => {
     console.log('inside use effect');
     changeBarColors(false, 'red', 'red');
   }, []);
-
   // console.log('app guesses:', gameStore.getState());
+
   return (
     <Provider store={gameStore}>
-      {/*<SafeAreaView>*/}
-      {/*<StatusBar backgroundColor={'red'} />*/}
-      <View style={styleSheet.appBackground}>
-        <Text style={styleSheet.appTitle}>சொல்லிவிடு</Text>
-        <GameContainer />
-      </View>
-      {/*</SafeAreaView>*/}
+      <Header />
+      <GameContainer />
     </Provider>
   );
 };

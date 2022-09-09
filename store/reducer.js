@@ -1,5 +1,11 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {addGuess, currentGuessEdited, initializeNewGameState} from './actions';
+import {
+  addGuess,
+  currentGuessEdited,
+  focusY,
+  focusYChanged,
+  initializeNewGameState,
+} from './actions';
 import {annotateGuess} from '../utils/annotateGuess';
 import {newGameState} from './newGameState';
 
@@ -43,5 +49,8 @@ export const reducer = currentGameState =>
             i === action.payload.position ? action.payload.letter : l
           ),
         };
+      })
+      .addCase(focusYChanged, (state, action) => {
+        return {...state, focusY: action.payload.Y};
       });
   });
