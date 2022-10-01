@@ -70,10 +70,11 @@ export const styleSheet = {
   },
 
   letterTileInput: {
-    color: 'transparent',
+    color: 'red',
     lineHeight: constants.letterTileSize,
     height: constants.letterTileSize,
     borderWidth: 1,
+    fontSize: 20,
   },
 
   button: {

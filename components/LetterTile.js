@@ -161,7 +161,7 @@ export const LetterTile = props => {
           value={props.guessLetter}
           editable={props.isActive && !wordGuessed}
           maxLength={2}
-          caretHidden={true}
+          // caretHidden={true}
           autoCorrect={false}
           ref={letterInputRef}
         />

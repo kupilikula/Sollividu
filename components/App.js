@@ -7,6 +7,8 @@ import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
 import Header from './Header';
 import {changeBarColors} from 'react-native-immersive-bars';
+import {Platform} from 'react-native';
+import {loadWordLists} from '../utils/loadWordList';
 
 const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
 const numberOfGuesses = 8;

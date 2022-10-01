@@ -592,6 +592,22 @@
     {
       "path": "assets/fonts/Tiro_Tamil/TiroTamil-Regular.ttf",
       "sha1": "540e67e84b864c5bbd55d39637975fad49c36973"
+    },
+    {
+      "path": "assets/wordLists/tamillexicon_unique_words_of_length_3.txt",
+      "sha1": "6f0584502b7a3975a9e273f0e3074d9e90ce676a"
+    },
+    {
+      "path": "assets/wordLists/tamillexicon_unique_words_of_length_4.txt",
+      "sha1": "8ed033c8da696693bd10da1793c3633de1e9b55e"
+    },
+    {
+      "path": "assets/wordLists/tamillexicon_unique_words_of_length_5.txt",
+      "sha1": "635580ad310baff5aa808e297407432358f11e60"
+    },
+    {
+      "path": "assets/wordLists/tamillexicon_unique_words_of_length_6.txt",
+      "sha1": "34d83f06b9c4b02a1494466a7b624188ea46b5bc"
     }
   ]
 }

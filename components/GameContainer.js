@@ -15,12 +15,25 @@ import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import {useKeyboard} from '@react-native-community/hooks';
+import {TamilStringUtils} from '../utils/TamilStringUtils';
+import DropDownPicker from 'react-native-dropdown-picker';
+import {getNewRandomWord} from '../utils/getNewRandomWord';
 
 const tamilLetterUtils = TamilLetterUtils();
 
 export const GameContainer = props => {
   const dispatch = useDispatch();
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
+
+  const [wordLength, setWordLength] = useState(6);
+  const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
+  const [wlDropDownItems, setWlDropDownItems] = useState([
+    {label: '3', value: 3},
+    {label: '4', value: 4},
+    {label: '5', value: 5},
+    {label: '6', value: 6},
+    {label: 'ஏதேனும்', value: -1},
+  ]);
 
   const validateWord = letters => {
     return letters.every(
@@ -38,11 +51,26 @@ export const GameContainer = props => {
   const onClear = () => {
     dispatch(
       initializeNewGameState({
-        secretWord: null,
+        secretWordLetters: null,
         numberOfGuesses: null,
       })
     );
   };
+  const onNewGame = async () => {
+    const newSecretWord = await getNewRandomWord(wordLength);
+    console.log(
+      'letters:',
+      TamilStringUtils().splitIntoTamilLetters(newSecretWord)
+    );
+    dispatch(
+      initializeNewGameState({
+        secretWordLetters:
+          TamilStringUtils().splitIntoTamilLetters(newSecretWord),
+        numberOfGuesses: 8,
+      })
+    );
+  };
+
   const scrollViewRef = useRef(null);
   // const keyboard = useKeyboard();
   const windowHeight = Dimensions.get('window').height;
@@ -57,50 +85,34 @@ export const GameContainer = props => {
     // }
   };
 
-  // const [keyboardStatus, setKeyboardStatus] = useState(undefined);
-  //
-  // useEffect(() => {
-  //   const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
-  //     console.log('inside keyboarddidshow');
-  //     setKeyboardStatus('Keyboard Shown');
-  //   });
-  //   const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
-  //     console.log('inside keyboarddidhide');
-  //     setKeyboardStatus('Keyboard Hidden');
-  //   });
-  //
-  //   return () => {
-  //     showSubscription.remove();
-  //     hideSubscription.remove();
-  //   };
-  // }, []);
-
   return (
-    <KeyboardAvoidingView
-      behavior={'padding'}
-      enabled={true}
-      keyboardVerticalOffset={160}>
-      {/*<ScrollView ref={scrollViewRef}>*/}
-      <View style={styleSheet.gameContainer}>
-        <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
-        <TouchableOpacity
-          containerStyle={{overflow: 'visible'}}
-          activeOpacity={0.8}
-          style={styleSheet.button}
-          onPress={onSubmitGuess}>
-          <Text style={{color: 'white', margin: 10}}>Submit Word</Text>
-        </TouchableOpacity>
-        <Button title={'Clear Game'} onPress={onClear} />
-        <View
-          style={{
-            minHeight: 400,
-            backgroundColor: 'yellow',
-            borderWidth: 2,
-            width: '100%',
-          }}
-        />
-      </View>
-      {/*</ScrollView>*/}
-    </KeyboardAvoidingView>
+    <View style={styleSheet.gameContainer}>
+      <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
+      <TouchableOpacity
+        containerStyle={{overflow: 'visible'}}
+        activeOpacity={0.8}
+        style={styleSheet.button}
+        onPress={onSubmitGuess}>
+        <Text style={{color: 'white', margin: 10}}>Submit Word</Text>
+      </TouchableOpacity>
+      <Button title={'Clear Game'} onPress={onClear} />
+      <Button title={'New Game'} onPress={onNewGame} />
+      <DropDownPicker
+        open={wlDropDownOpen}
+        value={wordLength}
+        items={wlDropDownItems}
+        setOpen={setWlDropDownOpen}
+        setValue={setWordLength}
+        setItems={setWlDropDownItems}
+      />
+      <View
+        style={{
+          minHeight: 800,
+          backgroundColor: 'yellow',
+          borderWidth: 2,
+          width: '100%',
+        }}
+      />
+    </View>
   );
 };
