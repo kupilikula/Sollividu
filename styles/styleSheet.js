@@ -82,7 +82,6 @@ export const styleSheet = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#5555ff',
-    color: 'white',
     borderWidth: 0,
     borderRadius: 4,
     margin: 5,

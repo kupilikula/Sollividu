@@ -3,9 +3,24 @@ const {TamilLetterUtils} = require('./TamilLetterUtils');
 const tamilLetterUtils = TamilLetterUtils();
 
 const TamilStringUtils = () => {
-  const removeDashes = s => {
-    return s.replace(/-/g, '');
+  const processHeadWord = s => {
+    s = s.trim().replace(/-/g, ''); // trim and remove dashes
+    if (s.includes(',')) {
+      return s
+        .split(',')
+        .map(a => processHeadWord(a))
+        .flat();
+    }
+
+    if (s.includes(' ')) {
+      return s
+        .split(' ')
+        .map(a => processHeadWord(a))
+        .flat();
+    }
+    return [s];
   };
+
   const validateTamilString = s => {
     let previousCharWasDiacritic = true;
 
@@ -53,7 +68,7 @@ const TamilStringUtils = () => {
   };
 
   return {
-    removeDashes,
+    processHeadWord,
     validateTamilString,
     splitIntoTamilLetters,
     tamilWordLength,
