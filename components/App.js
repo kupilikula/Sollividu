@@ -7,8 +7,9 @@ import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
 import Header from './Header';
 import {changeBarColors} from 'react-native-immersive-bars';
-import {Platform} from 'react-native';
+import {Platform, View} from 'react-native';
 import {loadWordLists} from '../utils/loadWordList';
+import {NavigationContainer} from '@react-navigation/native';
 
 const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
 const numberOfGuesses = 8;
@@ -33,10 +34,19 @@ const App = () => {
   }, []);
   // console.log('app guesses:', gameStore.getState());
 
+  const [headerHeight, setHeaderHeight] = useState(120);
+  const storeHeaderHeight = h => {
+    setHeaderHeight(h);
+  };
+
   return (
     <Provider store={gameStore}>
-      <Header />
-      <GameContainer />
+      <NavigationContainer>
+        <View style={{flex: 1, height: 1800}}>
+          <Header storeHeaderHeight={storeHeaderHeight} />
+          <GameContainer headerHeight={headerHeight} />
+        </View>
+      </NavigationContainer>
     </Provider>
   );
 };

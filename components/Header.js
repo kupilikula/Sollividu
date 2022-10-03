@@ -2,7 +2,7 @@ import {Platform, Text, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import React from 'react';
 
-const Header = () => {
+const Header = props => {
   return (
     <View
       style={{
@@ -21,6 +21,11 @@ const Header = () => {
             elevation: 15,
           },
         }),
+      }}
+      onLayout={event => {
+        const {x, y, width, height} = event.nativeEvent.layout;
+        console.log('height:', height);
+        props.storeHeaderHeight(height);
       }}>
       <Text style={styleSheet.appTitle}>சொல்லிவிடு</Text>
     </View>

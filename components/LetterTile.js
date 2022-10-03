@@ -48,18 +48,16 @@ export const LetterTile = props => {
     props.onSubmitGuess();
   };
 
-  const focusTextInput = () => {
+  const onFocusTextInput = event => {
     console.log('inside LetterTile focus');
     if (!isFocussed) {
+      console.log('inside !isFocussed condition. event:', event);
       setIsFocussed(true);
-      setTimeout(() => {
-        // letterInputRef.current.blur();
-        letterInputRef.current.focus();
-      }, 10);
-      // props.onTileFocus({
-      //   guessIndex: props.guessIndex,
-      //   position: props.position,
-      // });
+      // setTimeout(async () => {
+      //   // letterInputRef.current.blur();
+      //   await letterInputRef.current.focus();
+      // }, 10);
+      props.onTileFocus(event.target);
     }
   };
 
@@ -86,86 +84,80 @@ export const LetterTile = props => {
   const [isFocussed, setIsFocussed] = useState(false);
 
   return (
-    <Pressable
-      onPress={() => {
-        console.log('onPress');
-        focusTextInput();
-      }}>
-      <View
-        ref={tileRef}
-        onLayout={() => {
-          console.log('inside onlayout of lettertile view');
+    <View
+      ref={tileRef}
+      onLayout={() => {
+        console.log('inside onlayout of lettertile view');
+      }}
+      collapsable={false}
+      style={[
+        styleSheet.letterTile,
+        props.isAnnotated
+          ? styleSheet.letterTileAnnotated(props.annotation)
+          : isFocussed
+          ? styleSheet.letterTileFocussed
+          : styleSheet.letterTileNotAnnotated,
+      ]}>
+      {props.isAnnotated &&
+        props.annotation.positionState.mei &&
+        props.annotation.letterState !==
+          GuessLetterTileStates.LETTER_MATCHED && (
+          <Icon
+            name="star"
+            size={17}
+            color="#ffffff"
+            style={{position: 'absolute', top: 1, right: 1}}
+          />
+        )}
+      {props.isAnnotated &&
+        props.annotation.positionState.uyir &&
+        props.annotation.letterState !==
+          GuessLetterTileStates.LETTER_MATCHED && (
+          <Icon
+            name="volume-1"
+            size={20}
+            color="#ffffff"
+            style={{position: 'absolute', top: 0, right: 0}}
+          />
+        )}
+      <Text
+        style={{
+          alignContent: 'center',
+          justifyContent: 'center',
+          fontFamily: 'Noto Sans Tamil',
+          fontWeight: '700',
+          fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
+          color: props.isAnnotated ? '#ffffff' : '#000000',
+          position: 'absolute',
+          // borderWidth: 1,
+          // borderColor: 'green',
+          // backgroundColor: 'green',
+          // paddingBottom: 10,
+          // paddingTop: 10,
+          lineHeight: constants.letterTileSize,
+        }}>
+        {props.guessLetter}
+      </Text>
+      <TextInput
+        style={[styleSheet.letterTileInput]}
+        textAlign={'center'}
+        selection={{
+          start: props.guessLetter.length,
+          end: props.guessLetter.length,
         }}
-        collapsable={false}
-        style={[
-          styleSheet.letterTile,
-          props.isAnnotated
-            ? styleSheet.letterTileAnnotated(props.annotation)
-            : isFocussed
-            ? styleSheet.letterTileFocussed
-            : styleSheet.letterTileNotAnnotated,
-        ]}>
-        {props.isAnnotated &&
-          props.annotation.positionState.mei &&
-          props.annotation.letterState !==
-            GuessLetterTileStates.LETTER_MATCHED && (
-            <Icon
-              name="star"
-              size={17}
-              color="#ffffff"
-              style={{position: 'absolute', top: 1, right: 1}}
-            />
-          )}
-        {props.isAnnotated &&
-          props.annotation.positionState.uyir &&
-          props.annotation.letterState !==
-            GuessLetterTileStates.LETTER_MATCHED && (
-            <Icon
-              name="volume-1"
-              size={20}
-              color="#ffffff"
-              style={{position: 'absolute', top: 0, right: 0}}
-            />
-          )}
-        <Text
-          style={{
-            alignContent: 'center',
-            justifyContent: 'center',
-            fontFamily: 'Noto Sans Tamil',
-            fontWeight: '700',
-            fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
-            color: props.isAnnotated ? '#ffffff' : '#000000',
-            position: 'absolute',
-            // borderWidth: 1,
-            // borderColor: 'green',
-            // backgroundColor: 'green',
-            // paddingBottom: 10,
-            // paddingTop: 10,
-            lineHeight: constants.letterTileSize,
-          }}>
-          {props.guessLetter}
-        </Text>
-        <TextInput
-          style={[styleSheet.letterTileInput]}
-          textAlign={'center'}
-          selection={{
-            start: props.guessLetter.length,
-            end: props.guessLetter.length,
-          }}
-          onFocus={focusTextInput}
-          onBlur={() => {
-            setIsFocussed(false);
-          }}
-          onChangeText={textInputValue => onLetterInput(textInputValue)}
-          onSubmitEditing={handleSubmitGuess}
-          value={props.guessLetter}
-          editable={props.isActive && !wordGuessed}
-          maxLength={2}
-          // caretHidden={true}
-          autoCorrect={false}
-          ref={letterInputRef}
-        />
-      </View>
-    </Pressable>
+        onFocus={event => onFocusTextInput(event)}
+        onBlur={() => {
+          setIsFocussed(false);
+        }}
+        onChangeText={textInputValue => onLetterInput(textInputValue)}
+        onSubmitEditing={handleSubmitGuess}
+        value={props.guessLetter}
+        editable={props.isActive && !wordGuessed}
+        maxLength={2}
+        // caretHidden={true}
+        autoCorrect={false}
+        ref={letterInputRef}
+      />
+    </View>
   );
 };

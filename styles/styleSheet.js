@@ -27,9 +27,9 @@ export const styleSheet = {
     borderColor: 'black',
     // marginTop: '5%',
     width: '100%',
-    height: 1200,
-    position: 'absolute',
-    top: 0,
+    height: 1600,
+    // position: 'absolute',
+    // top: 0,
     // marginBottom: '10%',
   },
   guess: {
@@ -73,8 +73,9 @@ export const styleSheet = {
     color: 'red',
     lineHeight: constants.letterTileSize,
     height: constants.letterTileSize,
-    borderWidth: 1,
+    borderWidth: 0,
     fontSize: 20,
+    width: '100%',
   },
 
   button: {
