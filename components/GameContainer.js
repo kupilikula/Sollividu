@@ -76,7 +76,6 @@ export const GameContainer = props => {
       })
     );
   };
-  const [currentPageY, setCurrentPageY] = useState(0);
   const scrollViewRef = useRef(null);
   const screenHeight = Dimensions.get('screen').height;
 
@@ -91,13 +90,12 @@ export const GameContainer = props => {
       newPageY = pageY;
       console.log('measure:', x, y, width, height, pageX, pageY);
       console.log('newPageY', newPageY);
-      console.log('currentPageY:', currentPageY);
       // console.log('scrollPosition before:', scrollPosition);
       console.log('screenHeight:', screenHeight);
       console.log('headerHeight:', props.headerHeight);
       if (
-        Math.abs(newPageY - currentPageY) > 10 &&
-        (newPageY < props.headerHeight * 1.2 || newPageY > screenHeight * 0.5)
+        newPageY < props.headerHeight * 1.2 ||
+        newPageY > screenHeight * 0.4
       ) {
         scrollViewRef.current.scrollTo({
           y: handle,
@@ -114,9 +112,6 @@ export const GameContainer = props => {
     focusedInput.current = focusedInputNode;
     scrollToInput(focusedInputNode);
   };
-
-  const updateFocusedPageY = handle =>
-    UIManager.measure(handle, (x1, y1, w, h, pX, pY) => setCurrentPageY(pY));
 
   return (
     <KeyboardAwareScrollView
