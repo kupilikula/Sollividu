@@ -63,6 +63,7 @@ export const GameContainer = props => {
   };
   const onNewGame = async () => {
     console.log('inside onNewGame');
+    //TODO : There is a bug here probably in getNewRandomWord. It fails occasionally with an error 'cannot call split on undefined.'
     const newSecretWord = await getNewRandomWord(wordLength);
     console.log(
       'letters:',
@@ -76,13 +77,12 @@ export const GameContainer = props => {
       })
     );
   };
-  const [currentPageY, setCurrentPageY] = useState(0);
   const scrollViewRef = useRef(null);
   const screenHeight = Dimensions.get('screen').height;
 
   const scrollToInput = inputNode => {
     // Add a 'scroll' ref to your ScrollView
-    console.log('scrollViewRef.current:', scrollViewRef);
+    console.log('scrollViewRef.current:', scrollViewRef.current);
     console.log('inputNode:', inputNode);
     let handle = findNodeHandle(inputNode);
     console.log('handle:', handle);
@@ -91,14 +91,8 @@ export const GameContainer = props => {
       newPageY = pageY;
       console.log('measure:', x, y, width, height, pageX, pageY);
       console.log('newPageY', newPageY);
-      console.log('currentPageY:', currentPageY);
-      // console.log('scrollPosition before:', scrollPosition);
       console.log('screenHeight:', screenHeight);
-      console.log('headerHeight:', props.headerHeight);
-      if (
-        Math.abs(newPageY - currentPageY) > 10 &&
-        (newPageY < props.headerHeight * 1.2 || newPageY > screenHeight * 0.5)
-      ) {
+      if (newPageY > screenHeight * 0.4) {
         scrollViewRef.current.scrollTo({
           y: handle,
           animated: true,
@@ -107,16 +101,10 @@ export const GameContainer = props => {
     });
   };
 
-  const focusedInput = useRef(null);
-
   const onTileFocus = focusedInputNode => {
     console.log('inside onTileFocus:', focusedInputNode);
-    focusedInput.current = focusedInputNode;
     scrollToInput(focusedInputNode);
   };
-
-  const updateFocusedPageY = handle =>
-    UIManager.measure(handle, (x1, y1, w, h, pX, pY) => setCurrentPageY(pY));
 
   return (
     <KeyboardAwareScrollView
@@ -134,8 +122,6 @@ export const GameContainer = props => {
       bounces={false}
       extraHeight={0}
       extraScrollHeight={0}>
-      onScrollEndDrag={() => updateFocusedPageY(focusedInput.current)}
-      onMomentumScrollEnd={() => updateFocusedPageY(focusedInput.current)}
       <View style={styleSheet.gameContainer}>
         <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
         <View

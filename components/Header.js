@@ -21,11 +21,6 @@ const Header = props => {
             elevation: 15,
           },
         }),
-      }}
-      onLayout={event => {
-        const {x, y, width, height} = event.nativeEvent.layout;
-        console.log('height:', height);
-        props.storeHeaderHeight(height);
       }}>
       <Text style={styleSheet.appTitle}>சொல்லிவிடு</Text>
     </View>

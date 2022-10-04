@@ -34,17 +34,12 @@ const App = () => {
   }, []);
   // console.log('app guesses:', gameStore.getState());
 
-  const [headerHeight, setHeaderHeight] = useState(120);
-  const storeHeaderHeight = h => {
-    setHeaderHeight(h);
-  };
-
   return (
     <Provider store={gameStore}>
       <NavigationContainer>
         <View style={{flex: 1, height: 1800}}>
-          <Header storeHeaderHeight={storeHeaderHeight} />
-          <GameContainer headerHeight={headerHeight} />
+          <Header />
+          <GameContainer />
         </View>
       </NavigationContainer>
     </Provider>

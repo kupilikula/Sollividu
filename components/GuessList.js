@@ -17,7 +17,7 @@ export const GuessList = props => {
     return {
       index: i,
       guess: i === currentGuessNumber ? currentGuessLetters : g,
-      isActive: true,
+      isActive: i === currentGuessNumber,
       isAnnotated: i < currentGuessNumber,
       guessAnnotation: guessAnnotations[i],
     };
