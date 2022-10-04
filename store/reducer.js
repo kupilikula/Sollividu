@@ -10,10 +10,7 @@ export const reducer = currentGameState =>
         let s = action.payload.secretWordLetters
           ? action.payload.secretWordLetters
           : state.secretWordLetters;
-        let n = action.payload.numberOfGuesses
-          ? action.payload.numberOfGuesses
-          : state.numberOfGuesses;
-        return newGameState(s, n);
+        return newGameState(s);
       })
       .addCase(addGuess, (state, action) => {
         let wordGuessed =
@@ -23,12 +20,8 @@ export const reducer = currentGameState =>
         console.log('A:', A);
         let S = {
           ...state,
-          guesses: state.guesses.map((g, i) =>
-            i === state.currentGuessNumber ? action.payload : [...g]
-          ),
-          guessAnnotations: state.guessAnnotations.map((a, i) =>
-            i === state.currentGuessNumber ? [...A] : [...a]
-          ),
+          guesses: state.guesses.concat([action.payload]),
+          guessAnnotations: state.guessAnnotations.concat([[...A]]),
           wordGuessed: wordGuessed,
           currentGuessNumber: state.currentGuessNumber + 1,
           currentGuessLetters: Array(state.wordLength).fill(''),

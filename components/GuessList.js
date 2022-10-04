@@ -6,6 +6,7 @@ import {useSelector} from 'react-redux';
 
 export const GuessList = props => {
   const secretWordLetters = useSelector(state => state.secretWordLetters);
+  const wordLength = useSelector(state => state.wordLength);
   const guesses = useSelector(state => state.guesses);
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
@@ -13,13 +14,16 @@ export const GuessList = props => {
   console.log('guesses:', guesses);
   console.log('secretWordLetters:', secretWordLetters);
 
-  let data = guesses.map((g, i) => {
+  let data = [...Array(currentGuessNumber + 1)].map((_, i) => {
     return {
       index: i,
-      guess: i === currentGuessNumber ? currentGuessLetters : g,
+      guess: i === currentGuessNumber ? currentGuessLetters : guesses[i],
       isActive: i === currentGuessNumber,
       isAnnotated: i < currentGuessNumber,
-      guessAnnotation: guessAnnotations[i],
+      guessAnnotation:
+        i < currentGuessNumber
+          ? guessAnnotations[i]
+          : Array(wordLength).fill(null),
     };
   });
 
