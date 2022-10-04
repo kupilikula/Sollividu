@@ -134,8 +134,6 @@ export const GameContainer = props => {
       bounces={false}
       extraHeight={0}
       extraScrollHeight={0}>
-      onScrollEndDrag={() => updateFocusedPageY(focusedInput.current)}
-      onMomentumScrollEnd={() => updateFocusedPageY(focusedInput.current)}
       <View style={styleSheet.gameContainer}>
         <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
         <View
