@@ -57,7 +57,6 @@ export const GameContainer = props => {
     dispatch(
       initializeNewGameState({
         secretWordLetters: null,
-        numberOfGuesses: null,
       })
     );
   };
@@ -73,7 +72,6 @@ export const GameContainer = props => {
       initializeNewGameState({
         secretWordLetters:
           TamilStringUtils().splitIntoTamilLetters(newSecretWord),
-        numberOfGuesses: 8,
       })
     );
   };
