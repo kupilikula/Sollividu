@@ -12,8 +12,7 @@ import {loadWordLists} from '../utils/loadWordList';
 import {NavigationContainer} from '@react-navigation/native';
 
 const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
-const numberOfGuesses = 8;
-const currentGameState = newGameState(secretWordLetters, numberOfGuesses);
+const currentGameState = newGameState(secretWordLetters);
 
 const gameStore = configureStore({
   reducer: reducer(currentGameState),
