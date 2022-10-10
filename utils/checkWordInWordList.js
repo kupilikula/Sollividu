@@ -1,4 +1,4 @@
-import {AsyncStorage} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const checkWordInWordList = async (word, wordLength) => {
   const wlKey = wordLength.toString() + 'LetterWords';

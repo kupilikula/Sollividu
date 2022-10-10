@@ -43,15 +43,18 @@ export const styleSheet = {
     justifyContent: 'center',
     position: 'relative',
   },
-  letterTileNotAnnotated: {
+  letterTileActive: {
     backgroundColor: '#ffffff',
     borderWidth: constants.tileBorderWidth,
     borderColor: '#d3d6da',
   },
   letterTileFocussed: {
-    backgroundColor: '#ffffff',
-    borderWidth: constants.tileBorderWidth,
     borderColor: '#555555',
+  },
+  letterTileFuture: {
+    backgroundColor: '#222222',
+    borderWidth: constants.tileBorderWidth,
+    borderColor: '#d3d6da',
   },
 
   letterTileAnnotated: annotation => {

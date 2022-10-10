@@ -16,7 +16,7 @@ const words_processed = [];
 words_raw.forEach(s =>
   words_processed.push(...tamilStringUtils.processHeadWord(s))
 );
-const unique_words = Array.from(new Set(words_processed));
+const unique_words = Array.from(new Set(words_processed)).filter(s => s);
 writeArrayToFile(unique_words, 'tamillexicon_unique_words_processed.txt');
 
 const wordLengths = unique_words.map(s => tamilStringUtils.tamilWordLength(s));

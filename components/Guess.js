@@ -14,6 +14,7 @@ export const Guess = props => {
           <LetterTile
             isActive={props.isActive}
             isAnnotated={props.isAnnotated}
+            isFuture={props.isFuture}
             key={i.toString()}
             guessIndex={props.guessIndex}
             position={i}

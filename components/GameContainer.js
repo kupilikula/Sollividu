@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {GuessList} from './GuessList';
 import {Dimensions, findNodeHandle, Text, UIManager, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
@@ -11,6 +11,10 @@ import {getNewRandomWord} from '../utils/getNewRandomWord';
 import {Button} from './Button';
 import {checkWordInWordList} from '../utils/checkWordInWordList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {newGameState} from '../store/newGameState';
+import {configureStore} from '@reduxjs/toolkit';
+import {reducer} from '../store/reducer';
+import {constants} from '../utils/constants';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -18,7 +22,7 @@ export const GameContainer = props => {
   const dispatch = useDispatch();
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
 
-  const [wordLength, setWordLength] = useState(6);
+  const [wordLength, setWordLength] = useState(5);
   const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
   const [wlDropDownItems, setWlDropDownItems] = useState([
     {label: '3', value: 3},
@@ -73,7 +77,7 @@ export const GameContainer = props => {
       initializeNewGameState({
         secretWordLetters:
           TamilStringUtils().splitIntoTamilLetters(newSecretWord),
-        numberOfGuesses: 8,
+        numberOfGuesses: constants.numberOfGuesses,
       })
     );
   };
@@ -105,6 +109,13 @@ export const GameContainer = props => {
     console.log('inside onTileFocus:', focusedInputNode);
     scrollToInput(focusedInputNode);
   };
+
+  useEffect(() => {
+    const callOnNewGame = async () => {
+      await onNewGame();
+    };
+    callOnNewGame().catch(console.error);
+  }, []);
 
   return (
     <KeyboardAwareScrollView
@@ -161,14 +172,15 @@ export const GameContainer = props => {
             listMode="SCROLLVIEW"
           />
         </View>
-        <View
-          style={{
-            minHeight: 800,
-            backgroundColor: 'yellow',
-            borderWidth: 2,
-            width: '100%',
-          }}
-        />
+        {/*<View*/}
+        {/*  style={{*/}
+        {/*    minHeight: 800,*/}
+        {/*    backgroundColor: 'yellow',*/}
+        {/*    borderWidth: 2,*/}
+        {/*    width: '100%',*/}
+        {/*    zIndex: 0,*/}
+        {/*  }}*/}
+        {/*/>*/}
       </View>
     </KeyboardAwareScrollView>
   );

@@ -94,9 +94,12 @@ export const LetterTile = props => {
         styleSheet.letterTile,
         props.isAnnotated
           ? styleSheet.letterTileAnnotated(props.annotation)
-          : isFocussed
-          ? styleSheet.letterTileFocussed
-          : styleSheet.letterTileNotAnnotated,
+          : props.isActive
+          ? styleSheet.letterTileActive
+          : props.isFuture
+          ? styleSheet.letterTileFuture
+          : {},
+        isFocussed ? styleSheet.letterTileFocussed : {},
       ]}>
       {props.isAnnotated &&
         props.annotation.positionState.mei &&

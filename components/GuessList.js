@@ -6,6 +6,7 @@ import {useSelector} from 'react-redux';
 
 export const GuessList = props => {
   const secretWordLetters = useSelector(state => state.secretWordLetters);
+  const wordLength = useSelector(state => state.wordLength);
   const guesses = useSelector(state => state.guesses);
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
@@ -19,10 +20,13 @@ export const GuessList = props => {
       guess: i === currentGuessNumber ? currentGuessLetters : g,
       isActive: i === currentGuessNumber,
       isAnnotated: i < currentGuessNumber,
-      guessAnnotation: guessAnnotations[i],
+      isFuture: i > currentGuessNumber,
+      guessAnnotation:
+        i < currentGuessNumber
+          ? guessAnnotations[i]
+          : [...Array(wordLength).fill(null)],
     };
   });
-
   return (
     <View style={{marginTop: 150}}>
       {data.map(item => {
@@ -34,6 +38,7 @@ export const GuessList = props => {
             guess={item.guess}
             isActive={item.isActive}
             isAnnotated={item.isAnnotated}
+            isFuture={item.isFuture}
             onSubmitGuess={props.onSubmitGuess}
             onTileFocus={props.onTileFocus}
             guessAnnotation={item.guessAnnotation}

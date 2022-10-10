@@ -7,15 +7,22 @@ import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
 import Header from './Header';
 import {changeBarColors} from 'react-native-immersive-bars';
-import {Platform, View} from 'react-native';
-import {loadWordLists} from '../utils/loadWordList';
+import {View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {getNewRandomWord} from '../utils/getNewRandomWord';
+import {TamilStringUtils} from '../utils/TamilStringUtils';
+import {constants} from '../utils/constants';
 
-const secretWordLetters = ['பி', 'ரி', 'யா', 'னி', 'சோ', 'று'];
-const numberOfGuesses = 8;
-const currentGameState = newGameState(secretWordLetters, numberOfGuesses);
+let gameStore;
 
-const gameStore = configureStore({
+const initialSecretWordLetters =
+  TamilStringUtils().splitIntoTamilLetters('மரவள்ளி');
+const currentGameState = newGameState(
+  initialSecretWordLetters,
+  constants.numberOfGuesses
+);
+
+gameStore = configureStore({
   reducer: reducer(currentGameState),
   preloadedState: currentGameState,
   devTools: true,
@@ -32,7 +39,6 @@ const App = () => {
     console.log('inside use effect');
     changeBarColors(false, 'red', 'red');
   }, []);
-  // console.log('app guesses:', gameStore.getState());
 
   return (
     <Provider store={gameStore}>
