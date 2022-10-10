@@ -14,7 +14,6 @@ import {TamilStringUtils} from '../utils/TamilStringUtils';
 import {constants} from '../utils/constants';
 
 let gameStore;
-
 const initialSecretWordLetters =
   TamilStringUtils().splitIntoTamilLetters('மரவள்ளி');
 const currentGameState = newGameState(

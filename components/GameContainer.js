@@ -61,7 +61,6 @@ export const GameContainer = props => {
     dispatch(
       initializeNewGameState({
         secretWordLetters: null,
-        numberOfGuesses: null,
       })
     );
   };

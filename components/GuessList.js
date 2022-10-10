@@ -14,10 +14,10 @@ export const GuessList = props => {
   console.log('guesses:', guesses);
   console.log('secretWordLetters:', secretWordLetters);
 
-  let data = guesses.map((g, i) => {
+  let data = [...Array(currentGuessNumber + 1)].map((_, i) => {
     return {
       index: i,
-      guess: i === currentGuessNumber ? currentGuessLetters : g,
+      guess: i === currentGuessNumber ? currentGuessLetters : guesses[i],
       isActive: i === currentGuessNumber,
       isAnnotated: i < currentGuessNumber,
       isFuture: i > currentGuessNumber,
