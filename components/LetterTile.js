@@ -30,9 +30,14 @@ export const LetterTile = props => {
       console.log('after trimming:', textInputValue);
     }
 
+    console.log('Letters:', tamilLetterUtils.Letters.flat());
     if (textInputValue === '') {
       inputLetter = '';
     } else if (tamilLetterUtils.Letters.flat().includes(textInputValue)) {
+      console.log(
+        'inside Letters includes true. textInputValue:',
+        textInputValue
+      );
       inputLetter = textInputValue;
     } else {
       inputLetter = null;
@@ -157,7 +162,7 @@ export const LetterTile = props => {
         value={props.guessLetter}
         editable={props.isActive && !wordGuessed}
         maxLength={2}
-        // caretHidden={true}
+        caretHidden={true}
         autoCorrect={false}
         ref={letterInputRef}
       />

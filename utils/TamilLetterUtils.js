@@ -39,7 +39,7 @@ const TamilLetterUtils = () => {
       '\u0b95\u0bc0',
       '\u0b95\u0bc1',
       '\u0b95\u0bc2',
-      '\u0bc6\u0b95',
+      '\u0b95\u0bc6',
       '\u0b95\u0bc7',
       '\u0b95\u0bc8',
       '\u0b95\u0bca',

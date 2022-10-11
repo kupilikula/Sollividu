@@ -14,14 +14,16 @@ const loadWordList = async wordLength => {
         `${RNFS.MainBundlePath}/tamillexicon_unique_words_of_length_` +
         wordLength.toString() +
         '.txt';
-      RNFS.readFile(path).then(async result => {
+      console.log('path:', path);
+      await RNFS.readFile(path).then(async result => {
+        console.log('result:', result);
         await AsyncStorage.setItem(
           wordLength.toString() + 'LetterWords',
           result
         );
       });
     } else if (Platform.OS === 'android') {
-      RNFS.readFileAssets(
+      await RNFS.readFileAssets(
         'custom/tamillexicon_unique_words_of_length_' +
           wordLength.toString() +
           '.txt'
@@ -35,7 +37,7 @@ const loadWordList = async wordLength => {
         .catch(console.error);
     }
   }
-  console.log('after loading');
+  console.log('after loading: item:', AsyncStorage.getItem(key));
 };
 
 module.exports = {loadWordList};

@@ -595,19 +595,19 @@
     },
     {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_3.txt",
-      "sha1": "d79fd15f46beab718fec3aa00acb40bc12a97517"
+      "sha1": "ab7e3b6fd97866e0ee4592ff00679bb2909b65f5"
     },
     {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_4.txt",
-      "sha1": "ee33c3847bb67c8ece56a2585aa04ed460b04519"
+      "sha1": "b4f579ece8721921c7c2505bc37528de9ead53d2"
     },
     {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_5.txt",
-      "sha1": "a1dec1fe7b9da377ac8d81c9c15ee71f772c018c"
+      "sha1": "6a85b368af135f4fb8c8887017dd7d2492e1a6f3"
     },
     {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_6.txt",
-      "sha1": "84509ff30ab785c4362603bd19fe8e10e20094a7"
+      "sha1": "af8709d66d184c825457e317fcf0ed0a13558aff"
     }
   ]
 }

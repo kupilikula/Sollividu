@@ -38,6 +38,7 @@ export const styleSheet = {
   letterTile: {
     height: constants.letterTileSize,
     width: constants.letterTileSize,
+    padding: constants.tileBorderWidth,
     margin: 2 * constants.tileBorderWidth,
     alignItems: 'center',
     justifyContent: 'center',
@@ -45,15 +46,15 @@ export const styleSheet = {
   },
   letterTileActive: {
     backgroundColor: '#ffffff',
-    borderWidth: constants.tileBorderWidth,
-    borderColor: '#d3d6da',
+    borderWidth: 0,
   },
   letterTileFocussed: {
-    borderColor: '#555555',
+    borderWidth: 2,
+    borderColor: '#222222',
   },
   letterTileFuture: {
-    backgroundColor: '#222222',
-    borderWidth: constants.tileBorderWidth,
+    backgroundColor: '#000000',
+    borderWidth: 0,
     borderColor: '#d3d6da',
   },
 
@@ -73,7 +74,7 @@ export const styleSheet = {
   },
 
   letterTileInput: {
-    color: 'red',
+    color: 'transparent',
     lineHeight: constants.letterTileSize,
     height: constants.letterTileSize,
     borderWidth: 0,

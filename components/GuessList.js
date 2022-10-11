@@ -11,14 +11,18 @@ export const GuessList = props => {
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
+  const wordGuessed = useSelector(state => state.wordGuessed);
+
   console.log('guesses:', guesses);
   console.log('secretWordLetters:', secretWordLetters);
 
-  let data = guesses.map((g, i) => {
+  let G = wordGuessed ? guesses.slice(0, currentGuessNumber) : guesses;
+
+  let data = G.map((g, i) => {
     return {
       index: i,
       guess: i === currentGuessNumber ? currentGuessLetters : g,
-      isActive: i === currentGuessNumber,
+      isActive: i === currentGuessNumber && !wordGuessed,
       isAnnotated: i < currentGuessNumber,
       isFuture: i > currentGuessNumber,
       guessAnnotation:
@@ -27,6 +31,7 @@ export const GuessList = props => {
           : [...Array(wordLength).fill(null)],
     };
   });
+
   return (
     <View style={{marginTop: 150}}>
       {data.map(item => {
