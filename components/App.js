@@ -7,9 +7,7 @@ import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
 import Header from './Header';
 import {changeBarColors} from 'react-native-immersive-bars';
-import {View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {getNewRandomWord} from '../utils/getNewRandomWord';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
 import {constants} from '../utils/constants';
 
@@ -43,10 +41,8 @@ const App = () => {
   return (
     <Provider store={gameStore}>
       <NavigationContainer>
-        <View style={{flex: 1, height: 1800}}>
-          <Header />
-          <GameContainer />
-        </View>
+        <Header />
+        <GameContainer />
       </NavigationContainer>
     </Provider>
   );

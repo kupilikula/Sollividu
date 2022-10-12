@@ -7,6 +7,7 @@ import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import Icon from 'react-native-vector-icons/Feather';
 import {GuessLetterTileStates} from '../utils/annotateGuess';
 import {constants} from '../utils/constants';
+import {colorPalette} from '../styles/colorPalette';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -58,10 +59,6 @@ export const LetterTile = props => {
     if (!isFocussed) {
       console.log('inside !isFocussed condition. event:', event);
       setIsFocussed(true);
-      // setTimeout(async () => {
-      //   // letterInputRef.current.blur();
-      //   await letterInputRef.current.focus();
-      // }, 10);
       props.onTileFocus(event.target);
     }
   };
@@ -113,7 +110,7 @@ export const LetterTile = props => {
           <Icon
             name="star"
             size={17}
-            color="#ffffff"
+            color={colorPalette.white}
             style={{position: 'absolute', top: 1, right: 1}}
           />
         )}
@@ -124,7 +121,7 @@ export const LetterTile = props => {
           <Icon
             name="volume-1"
             size={20}
-            color="#ffffff"
+            color={colorPalette.white}
             style={{position: 'absolute', top: 0, right: 0}}
           />
         )}
@@ -135,13 +132,8 @@ export const LetterTile = props => {
           fontFamily: 'Noto Sans Tamil',
           fontWeight: '700',
           fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
-          color: props.isAnnotated ? '#ffffff' : '#000000',
+          color: props.isAnnotated ? colorPalette.white : colorPalette.black,
           position: 'absolute',
-          // borderWidth: 1,
-          // borderColor: 'green',
-          // backgroundColor: 'green',
-          // paddingBottom: 10,
-          // paddingTop: 10,
           lineHeight: constants.letterTileSize,
         }}>
         {props.guessLetter}

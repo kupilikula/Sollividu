@@ -1,5 +1,6 @@
 import {constants} from '../utils/constants';
 import {GuessLetterTileStates} from '../utils/annotateGuess';
+import {colorPalette} from './colorPalette';
 
 export const styleSheet = {
   appTitle: {
@@ -18,16 +19,15 @@ export const styleSheet = {
   gameContainer: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'green',
+    backgroundColor: colorPalette.blue,
     justifyContent: 'flex-start',
     alignSelf: 'center',
     alignItems: 'center',
     // alignContent: 'center',
-    borderWidth: 1,
-    borderColor: 'black',
+    // borderWidth: 1,
+    // borderColor: 'black',
     // marginTop: '5%',
     width: '100%',
-    height: 1600,
     // position: 'absolute',
     // top: 0,
     // marginBottom: '10%',
@@ -45,31 +45,30 @@ export const styleSheet = {
     position: 'relative',
   },
   letterTileActive: {
-    backgroundColor: '#ffffff',
+    backgroundColor: colorPalette.white,
     borderWidth: 0,
   },
   letterTileFocussed: {
     borderWidth: 2,
-    borderColor: '#222222',
+    borderColor: colorPalette.black,
   },
   letterTileFuture: {
-    backgroundColor: '#000000',
+    backgroundColor: colorPalette.black,
     borderWidth: 0,
-    borderColor: '#d3d6da',
   },
 
   letterTileAnnotated: annotation => {
     return {
       backgroundColor:
         annotation.letterState === GuessLetterTileStates.LETTER_MATCHED
-          ? '#6aaa64'
+          ? colorPalette.green
           : annotation.letterState === GuessLetterTileStates.LETTER_NOT_FOUND
-          ? '#787c7e' // dark gray
+          ? colorPalette.gray // dark gray
           : annotation.letterState === GuessLetterTileStates.LETTER_ELSEWHERE
-          ? '#c9b458'
+          ? colorPalette.yellow
           : null, // this color should never actually be applied
       borderWidth: 0,
-      color: '#ffffff',
+      color: colorPalette.white,
     };
   },
 

@@ -11,10 +11,8 @@ import {getNewRandomWord} from '../utils/getNewRandomWord';
 import {Button} from './Button';
 import {checkWordInWordList} from '../utils/checkWordInWordList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {newGameState} from '../store/newGameState';
-import {configureStore} from '@reduxjs/toolkit';
-import {reducer} from '../store/reducer';
 import {constants} from '../utils/constants';
+import {colorPalette} from '../styles/colorPalette';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -122,14 +120,14 @@ export const GameContainer = props => {
       innerRef={val => {
         scrollViewRef.current = val;
       }}
-      style={{backgroundColor: 'red', flex: 1, height: 1500}}
+      style={{backgroundColor: colorPalette.blue, flex: 1}}
       contentContainerStyle={{flexGrow: 1}}
       nestedScrollEnabled={true}
       enableOnAndroid={true}
       enableResetScrollToCoords={false}
       contentInsetAdjustmentBehavior="always"
       overScrollMode="always"
-      showsVerticalScrollIndicator={true}
+      showsVerticalScrollIndicator={false}
       bounces={false}
       extraHeight={0}
       extraScrollHeight={0}>
@@ -172,15 +170,6 @@ export const GameContainer = props => {
             listMode="SCROLLVIEW"
           />
         </View>
-        {/*<View*/}
-        {/*  style={{*/}
-        {/*    minHeight: 800,*/}
-        {/*    backgroundColor: 'yellow',*/}
-        {/*    borderWidth: 2,*/}
-        {/*    width: '100%',*/}
-        {/*    zIndex: 0,*/}
-        {/*  }}*/}
-        {/*/>*/}
       </View>
     </KeyboardAwareScrollView>
   );
