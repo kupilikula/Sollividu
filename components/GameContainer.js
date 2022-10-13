@@ -13,6 +13,7 @@ import {checkWordInWordList} from '../utils/checkWordInWordList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {constants} from '../utils/constants';
 import {colorPalette} from '../styles/colorPalette';
+import {useKeyboard} from '@react-native-community/hooks';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -81,6 +82,7 @@ export const GameContainer = props => {
   };
   const scrollViewRef = useRef(null);
   const screenHeight = Dimensions.get('screen').height;
+  const keyboard = useKeyboard();
 
   const scrollToInput = inputNode => {
     // Add a 'scroll' ref to your ScrollView
@@ -94,7 +96,7 @@ export const GameContainer = props => {
       console.log('measure:', x, y, width, height, pageX, pageY);
       console.log('newPageY', newPageY);
       console.log('screenHeight:', screenHeight);
-      if (newPageY > screenHeight * 0.7) {
+      if (newPageY > (screenHeight - keyboard.keyboardHeight) * 1.2) {
         scrollViewRef.current.scrollTo({
           y: handle,
           animated: true,
