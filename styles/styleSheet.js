@@ -23,6 +23,7 @@ export const styleSheet = {
     justifyContent: 'flex-start',
     alignSelf: 'center',
     alignItems: 'center',
+    height: constants.screenHeight * 1.5,
     // alignContent: 'center',
     // borderWidth: 1,
     // borderColor: 'black',

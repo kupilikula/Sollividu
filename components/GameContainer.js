@@ -81,8 +81,6 @@ export const GameContainer = props => {
     );
   };
   const scrollViewRef = useRef(null);
-  const screenHeight = Dimensions.get('screen').height;
-  const keyboard = useKeyboard();
 
   const scrollToInput = inputNode => {
     // Add a 'scroll' ref to your ScrollView
@@ -95,8 +93,10 @@ export const GameContainer = props => {
       newPageY = pageY;
       console.log('measure:', x, y, width, height, pageX, pageY);
       console.log('newPageY', newPageY);
-      console.log('screenHeight:', screenHeight);
-      if (newPageY > (screenHeight - keyboard.keyboardHeight) * 1.2) {
+      console.log('screenHeight:', constants.screenHeight);
+
+      if (newPageY > constants.screenHeight * 0.5) {
+        console.log('inside condition for scroll');
         scrollViewRef.current.scrollTo({
           y: handle,
           animated: true,
@@ -122,7 +122,7 @@ export const GameContainer = props => {
       innerRef={val => {
         scrollViewRef.current = val;
       }}
-      style={{backgroundColor: colorPalette.blue, flex: 1}}
+      style={{backgroundColor: colorPalette.blue, height: 2000, flex: 1}}
       contentContainerStyle={{flexGrow: 1}}
       nestedScrollEnabled={true}
       enableOnAndroid={true}
