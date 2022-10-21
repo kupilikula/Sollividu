@@ -126,16 +126,11 @@ export const LetterTile = props => {
           />
         )}
       <Text
-        style={{
-          alignContent: 'center',
-          justifyContent: 'center',
-          fontFamily: 'Noto Sans Tamil',
-          fontWeight: '700',
-          fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
-          color: props.isAnnotated ? colorPalette.white : colorPalette.black,
-          position: 'absolute',
-          lineHeight: constants.letterTileSize,
-        }}>
+        style={styleSheet.letterTileText(
+          props.isAnnotated,
+          useSmallerFontSize,
+          useSmallestFontSize
+        )}>
         {props.guessLetter}
       </Text>
       <TextInput
