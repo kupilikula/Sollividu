@@ -20,7 +20,8 @@ const tamilLetterUtils = TamilLetterUtils();
 export const GameContainer = props => {
   const dispatch = useDispatch();
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
-
+  const secretWordLetters = useSelector(state => state.secretWordLetters);
+  const gameOver = useSelector(state => state.gameOver);
   const [wordLength, setWordLength] = useState(5);
   const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
   const [wlDropDownItems, setWlDropDownItems] = useState([
@@ -136,6 +137,13 @@ export const GameContainer = props => {
       extraScrollHeight={0}>
       <View style={styleSheet.gameContainer}>
         <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
+        {gameOver && (
+          <View>
+            <Text style={styleSheet.secretWord}>
+              {secretWordLetters.join('')}
+            </Text>
+          </View>
+        )}
         <View
           style={{
             flexDirection: 'row',

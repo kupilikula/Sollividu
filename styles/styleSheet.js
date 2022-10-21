@@ -81,6 +81,18 @@ export const styleSheet = {
     fontSize: 20,
     width: '100%',
   },
+  letterTileText: (isAnnotated, useSmallerFontSize, useSmallestFontSize) => {
+    return {
+      alignContent: 'center',
+      justifyContent: 'center',
+      fontFamily: 'Noto Sans Tamil',
+      fontWeight: '700',
+      fontSize: useSmallestFontSize ? 13 : useSmallerFontSize ? 14 : 16,
+      color: isAnnotated ? colorPalette.white : colorPalette.black,
+      position: 'absolute',
+      lineHeight: constants.letterTileSize,
+    };
+  },
 
   button: {
     flexDirection: 'column',
@@ -96,5 +108,14 @@ export const styleSheet = {
     shadowOpacity: 0.6,
     shadowColor: 'black',
     // overflow: 'visible',
+  },
+
+  secretWord: {
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: '700',
+    fontSize: 20,
+    color: colorPalette.white,
+    marginTop: 15,
+    marginBottom: 15,
   },
 };
