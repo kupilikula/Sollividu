@@ -1,9 +1,9 @@
 export const colorPalette = {
-  red: '#aa2222',
-  blue: '#1111ee',
+  red: '#ff6961',
+  blue: '#0073ff',
   white: '#ffffff',
   black: '#000000',
-  green: '#6aaa64',
-  gray: '#787c7e',
+  green: '#3aaa34',
+  gray: '#989c9e',
   yellow: '#c9b458',
 };

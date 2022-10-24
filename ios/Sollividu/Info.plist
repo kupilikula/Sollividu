@@ -187,6 +187,8 @@
 		<string>TiroTamil-Italic.ttf</string>
 		<string>TiroTamil-Regular.ttf</string>
 		<string>Feather.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -54,7 +54,7 @@ export const styleSheet = {
     borderColor: colorPalette.black,
   },
   letterTileFuture: {
-    backgroundColor: colorPalette.black,
+    backgroundColor: 'transparent',
     borderWidth: 0,
   },
 
@@ -115,7 +115,43 @@ export const styleSheet = {
     fontWeight: '700',
     fontSize: 20,
     color: colorPalette.white,
-    marginTop: 15,
+  },
+  secretWordLabel: {
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: '500',
+    fontSize: 16,
+    color: colorPalette.black,
+    marginRight: 15,
+  },
+
+  helpModalTitle: {
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: '700',
+    fontSize: 24,
+    color: colorPalette.white,
     marginBottom: 15,
+    marginTop: 15,
+    alignSelf: 'center',
+  },
+
+  helpModalText: {
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: '500',
+    fontSize: 15,
+    color: colorPalette.white,
+    alignSelf: 'center',
+    marginLeft: 10,
+    marginRight: 10,
+    flexShrink: 1,
+  },
+
+  helpModalSmallText: {
+    fontFamily: 'Noto Sans Tamil',
+    fontWeight: '500',
+    fontSize: 12,
+    color: colorPalette.white,
+    alignSelf: 'center',
+    margin: 10,
+    flexShrink: 1,
   },
 };

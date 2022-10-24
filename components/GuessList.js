@@ -33,7 +33,7 @@ export const GuessList = props => {
   });
 
   return (
-    <View style={{marginTop: 150}}>
+    <View>
       {data.map(item => {
         console.log('item:', item);
         return (

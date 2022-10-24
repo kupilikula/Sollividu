@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {GuessList} from './GuessList';
-import {Dimensions, findNodeHandle, Text, UIManager, View} from 'react-native';
+import {findNodeHandle, Pressable, Text, UIManager, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
@@ -13,7 +13,8 @@ import {checkWordInWordList} from '../utils/checkWordInWordList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {constants} from '../utils/constants';
 import {colorPalette} from '../styles/colorPalette';
-import {useKeyboard} from '@react-native-community/hooks';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import {HelpModal} from './HelpModal';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -22,6 +23,7 @@ export const GameContainer = props => {
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
   const secretWordLetters = useSelector(state => state.secretWordLetters);
   const gameOver = useSelector(state => state.gameOver);
+  const storeWordLength = useSelector(state => state.wordLength);
   const [wordLength, setWordLength] = useState(5);
   const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
   const [wlDropDownItems, setWlDropDownItems] = useState([
@@ -111,6 +113,8 @@ export const GameContainer = props => {
     scrollToInput(focusedInputNode);
   };
 
+  const [helpModalVisible, setHelpModalVisible] = useState(false);
+
   useEffect(() => {
     const callOnNewGame = async () => {
       await onNewGame();
@@ -136,50 +140,96 @@ export const GameContainer = props => {
       extraHeight={0}
       extraScrollHeight={0}>
       <View style={styleSheet.gameContainer}>
-        <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
-        {gameOver && (
-          <View>
-            <Text style={styleSheet.secretWord}>
-              {secretWordLetters.join('')}
-            </Text>
-          </View>
-        )}
+        <HelpModal
+          visible={helpModalVisible}
+          setHelpModalVisible={setHelpModalVisible}
+        />
         <View
           style={{
-            flexDirection: 'row',
-            alignItems: 'center',
+            marginTop: 150,
+            borderWidth: 2,
             justifyContent: 'center',
-          }}>
-          <Button label="Submit Word" onPress={onSubmitGuess} />
-          <Button label="Clear Game" onPress={onClear} />
-          <Button label="New Game" onPress={onNewGame} />
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            alignContent: 'center',
           }}>
-          <Text
+          <View
             style={{
-              fontFamily: 'Noto Sans Tamil',
-              fontWeight: '500',
-              marginRight: 10,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              borderWidth: 2,
+              width:
+                storeWordLength * constants.letterTileSize +
+                storeWordLength * 4 * constants.tileBorderWidth,
+              marginBottom: 15,
             }}>
-            எழுத்துக்கள்:
-          </Text>
-          <DropDownPicker
-            open={wlDropDownOpen}
-            value={wordLength}
-            items={wlDropDownItems}
-            setOpen={setWlDropDownOpen}
-            setValue={setWordLength}
-            setItems={setWlDropDownItems}
-            containerStyle={{
-              width: 60,
-            }}
-            listMode="SCROLLVIEW"
-          />
+            <View />
+            <Pressable
+              style={{}}
+              onPress={() => {
+                console.log('inside onPress HelpIcon');
+                setHelpModalVisible(true);
+                console.log(
+                  'helpModalVisible inside onPress after set to true:',
+                  helpModalVisible
+                );
+              }}>
+              <Icon name="help" size={30} color={colorPalette.white} />
+            </Pressable>
+          </View>
+          <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
+          {gameOver && (
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignContent: 'center',
+                marginTop: 15,
+                marginBottom: 15,
+              }}>
+              <Text style={styleSheet.secretWordLabel}>விடை:</Text>
+              <Text style={styleSheet.secretWord}>
+                {secretWordLetters.join('')}
+              </Text>
+            </View>
+          )}
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Button label="Submit Word" onPress={onSubmitGuess} />
+            <Button label="Clear Game" onPress={onClear} />
+            <Button label="New Game" onPress={onNewGame} />
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}>
+            <Text
+              style={{
+                fontFamily: 'Noto Sans Tamil',
+                fontWeight: '500',
+                marginRight: 10,
+              }}>
+              எழுத்துக்கள்:
+            </Text>
+            <DropDownPicker
+              open={wlDropDownOpen}
+              value={wordLength}
+              items={wlDropDownItems}
+              setOpen={setWlDropDownOpen}
+              setValue={setWordLength}
+              setItems={setWlDropDownItems}
+              containerStyle={{
+                width: 60,
+              }}
+              listMode="SCROLLVIEW"
+            />
+          </View>
         </View>
       </View>
     </KeyboardAwareScrollView>
