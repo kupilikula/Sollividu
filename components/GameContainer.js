@@ -14,7 +14,10 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {constants} from '../utils/constants';
 import {colorPalette} from '../styles/colorPalette';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 import {HelpModal} from './HelpModal';
+import statisticsUtils from '../utils/statisticsUtils';
+import {StatisticsModal} from './StatisticsModal';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -23,6 +26,8 @@ export const GameContainer = props => {
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
   const secretWordLetters = useSelector(state => state.secretWordLetters);
   const gameOver = useSelector(state => state.gameOver);
+  const wordGuessed = useSelector(state => state.wordGuessed);
+  const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   const storeWordLength = useSelector(state => state.wordLength);
   const [wordLength, setWordLength] = useState(5);
   const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
@@ -114,13 +119,36 @@ export const GameContainer = props => {
   };
 
   const [helpModalVisible, setHelpModalVisible] = useState(false);
+  const [statisticsModalVisible, setStatisticsModalVisible] = useState(false);
 
   useEffect(() => {
     const callOnNewGame = async () => {
       await onNewGame();
     };
     callOnNewGame().catch(console.error);
+    const data = statisticsUtils.getStatistics();
+    console.log('data:', data);
+    setStats(data);
   }, []);
+
+  useEffect(() => {
+    if (gameOver) {
+      statisticsUtils.updateGameHistory(
+        secretWordLetters.join(''),
+        wordGuessed,
+        currentGuessNumber,
+        storeWordLength
+      );
+      const data = statisticsUtils.getStatistics();
+      console.log('data:', data);
+      setStats(data);
+    }
+  }, [gameOver]);
+
+  const [stats, setStats] = useState({
+    totalGamesPlayed: -1,
+    totalVictories: -1,
+  });
 
   return (
     <KeyboardAwareScrollView
@@ -144,6 +172,11 @@ export const GameContainer = props => {
           visible={helpModalVisible}
           setHelpModalVisible={setHelpModalVisible}
         />
+        <StatisticsModal
+          visible={statisticsModalVisible}
+          setStatisticsModalVisible={setStatisticsModalVisible}
+          stats={stats}
+        />
         <View
           style={{
             marginTop: 150,
@@ -162,7 +195,22 @@ export const GameContainer = props => {
                 storeWordLength * 4 * constants.tileBorderWidth,
               marginBottom: 15,
             }}>
-            <View />
+            <Pressable
+              style={{}}
+              onPress={() => {
+                console.log('inside onPress StatisticsIcon');
+                setStatisticsModalVisible(true);
+                console.log(
+                  'statsModalVisible inside onPress after set to true:',
+                  statisticsModalVisible
+                );
+              }}>
+              <IoniconsIcon
+                name="stats-chart-sharp"
+                size={30}
+                color={colorPalette.white}
+              />
+            </Pressable>
             <Pressable
               style={{}}
               onPress={() => {

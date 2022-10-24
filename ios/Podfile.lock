@@ -11,6 +11,9 @@ PODS:
     - ReactCommon/turbomodule/core (= 0.70.0)
   - fmt (6.2.1)
   - glog (0.3.5)
+  - MMKV (1.2.14):
+    - MMKVCore (~> 1.2.14)
+  - MMKVCore (1.2.14)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -224,6 +227,9 @@ PODS:
     - React-Core
   - react-native-file-asset (0.1.2):
     - React-Core
+  - react-native-mmkv (2.5.1):
+    - MMKV (>= 1.2.13)
+    - React-Core
   - React-perflogger (0.70.0)
   - React-RCTActionSheet (0.70.0):
     - React-Core/RCTActionSheetHeaders (= 0.70.0)
@@ -321,6 +327,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-avoid-softinput (from `../node_modules/react-native-avoid-softinput`)
   - react-native-file-asset (from `../node_modules/react-native-file-asset`)
+  - react-native-mmkv (from `../node_modules/react-native-mmkv`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -341,6 +348,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - fmt
+    - MMKV
+    - MMKVCore
 
 EXTERNAL SOURCES:
   boost:
@@ -385,6 +394,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-avoid-softinput"
   react-native-file-asset:
     :path: "../node_modules/react-native-file-asset"
+  react-native-mmkv:
+    :path: "../node_modules/react-native-mmkv"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -425,6 +436,8 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 1a270246542f5c52248cb26a96db119cfe3cb760
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
+  MMKV: 9c4663aa7ca255d478ff10f2f5cb7d17c1651ccd
+  MMKVCore: 89f5c8a66bba2dcd551779dea4d412eeec8ff5bb
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
   RCTRequired: d0e501e8024056451424aa341daa078c0c620b0d
   RCTTypeSafety: 14a3928ef69eeb4e5bb4f36fefb5ed6a392643ac
@@ -441,6 +454,7 @@ SPEC CHECKSUMS:
   React-logger: 48d82b9be8e44d86668de4453fdb60255516388b
   react-native-avoid-softinput: 71a692888f0c1d426ad9045dc8325773583962cd
   react-native-file-asset: d3d79689a2c8a92ec545b8134570d6145e5b5548
+  react-native-mmkv: 69b9c003f10afdd01addf7c6ee784ce42ee2eff3
   React-perflogger: 77947e49d84e31eb87d454d4ef327542dcfeaebc
   React-RCTActionSheet: 9f5fd6c1666c1a834ab7f45a452ed08b1de44eb8
   React-RCTAnimation: 6fd3db6ca387c8432fd6a26428e940a081bcb476

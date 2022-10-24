@@ -66,6 +66,7 @@
 		4F166AAAD8904893AD766932 /* NotoSerifTamil_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78ECE76626F442FABFC405C /* NotoSerifTamil_Condensed-Regular.ttf */; };
 		5094D4EE1DB34327B3B02ECD /* NotoSerifTamil-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB1E6AF717D6477AA2EE2214 /* NotoSerifTamil-ExtraLightItalic.ttf */; };
 		52455C2065C445C1A892BE86 /* Catamaran-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ACFA6FBA68E451FB8456B40 /* Catamaran-Bold.ttf */; };
+		59CCC5454B774807928394DB /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */; };
 		5AFD3E939AD14A7285603433 /* MuktaMalar-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EC98FF90D472F8422B0A9 /* MuktaMalar-ExtraBold.ttf */; };
 		5DA5D4DEBF084D448E2C746B /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91D0905548B94836BF2E00E0 /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf */; };
 		5F200C66D03543889C15820E /* NotoSansTamil-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A245DC15CD6E403488708906 /* NotoSansTamil-Medium.ttf */; };
@@ -211,6 +212,7 @@
 		20F3CC60EB78442D84284616 /* NotoSerifTamil_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		214C05C379BC493A8924020D /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		2244B95ADD4B41F88194428F /* NotoSerifTamil_SemiCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Thin.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = ../assets/fonts/Ionicons.ttf; sourceTree = "<group>"; };
 		23E1E6941E5F46D1953EB615 /* NotoSansTamil_Condensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Regular.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Regular.ttf"; sourceTree = "<group>"; };
 		25B889E2B8C64DE588D02408 /* NotoSerifTamil_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
 		27BC965B9E5A4E9FB812CD9A /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-MediumItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				95598F1CFBE14CA6BAA4695D /* tamillexicon_unique_words_of_length_6.txt */,
 				F74D19D803494407A0145C2B /* MaterialIcons.ttf */,
 				F57688B5927249E18B182D4E /* MaterialCommunityIcons.ttf */,
+				22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				203B62D2BBFB4D76A769668E /* tamillexicon_unique_words_of_length_6.txt in Resources */,
 				CE93933EBC5545E0AE90DFCE /* MaterialIcons.ttf in Resources */,
 				9C111EC30C0E429BA51D1BBE /* MaterialCommunityIcons.ttf in Resources */,
+				59CCC5454B774807928394DB /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
