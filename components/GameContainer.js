@@ -7,9 +7,7 @@ import {addGuess, initializeNewGameState} from '../store/actions';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {getNewRandomWord} from '../utils/getNewRandomWord';
 import {Button} from './Button';
-import {checkWordInWordList} from '../utils/checkWordInWordList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {constants} from '../utils/constants';
 import {colorPalette} from '../styles/colorPalette';
@@ -18,6 +16,7 @@ import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 import {HelpModal} from './HelpModal';
 import statisticsUtils from '../utils/statisticsUtils';
 import {StatisticsModal} from './StatisticsModal';
+import wordListUtils from '../utils/wordListUtils';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -45,7 +44,7 @@ export const GameContainer = props => {
     );
 
     if (letterCheck) {
-      let wordCheck = await checkWordInWordList(
+      let wordCheck = wordListUtils.checkWordInWordList(
         letters.join(''),
         letters.length
       );
@@ -75,7 +74,7 @@ export const GameContainer = props => {
   const onNewGame = async () => {
     console.log('inside onNewGame');
     //TODO : There is a bug here probably in getNewRandomWord. It fails occasionally with an error 'cannot call split on undefined.'
-    const newSecretWord = await getNewRandomWord(wordLength);
+    const newSecretWord = await wordListUtils.getNewRandomWord(wordLength);
     console.log(
       'letters:',
       TamilStringUtils().splitIntoTamilLetters(newSecretWord)
