@@ -1,8 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {forwardRef, useEffect, useRef, useState} from 'react';
 import {Pressable, Text, TextInput, View} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {currentGuessEdited} from '../store/actions';
-import {useDispatch, useSelector} from 'react-redux';
+import {shallowEqual, useDispatch, useSelector} from 'react-redux';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import Icon from 'react-native-vector-icons/Feather';
 import {GuessLetterTileStates} from '../utils/annotateGuess';
@@ -11,10 +11,18 @@ import {colorPalette} from '../styles/colorPalette';
 
 const tamilLetterUtils = TamilLetterUtils();
 
-export const LetterTile = props => {
+export const LetterTile = forwardRef((props, inputRefArray) => {
   const dispatch = useDispatch();
   const [useSmallerFontSize, setUseSmallerFontSize] = useState(false);
   const [useSmallestFontSize, setUseSmallestFontSize] = useState(false);
+  // const currentGuessFilledIn = useSelector(state => state.currentGuessFilledIn);
+
+  // const [localCurrentGuessFilledIn, setLocalCurrentGuessFilledIn] =
+  //   useState(currentGuessFilledIn);
+  //
+  // useEffect(() => {
+  //   setLocalCurrentGuessFilledIn(currentGuessFilledIn);
+  // }, [currentGuessFilledIn]);
 
   const wordGuessed = useSelector(state => state.wordGuessed);
 
@@ -50,8 +58,8 @@ export const LetterTile = props => {
     }
   };
 
-  const handleSubmitGuess = () => {
-    props.onSubmitGuess();
+  const onReturnKeyPress = position => {
+    props.onReturnKeyPress(position);
   };
 
   const onFocusTextInput = event => {
@@ -81,13 +89,13 @@ export const LetterTile = props => {
     console.log();
   }, [props.guessLetter]);
 
-  const letterInputRef = useRef(null);
-  const tileRef = useRef(null);
+  // const letterInputRef = useRef(null);
+  // const tileRef = useRef(null);
   const [isFocussed, setIsFocussed] = useState(false);
 
   return (
     <View
-      ref={tileRef}
+      // ref={tileRef}
       onLayout={() => {
         console.log('inside onlayout of lettertile view');
       }}
@@ -145,14 +153,24 @@ export const LetterTile = props => {
           setIsFocussed(false);
         }}
         onChangeText={textInputValue => onLetterInput(textInputValue)}
-        onSubmitEditing={handleSubmitGuess}
+        blurOnSubmit={false}
+        onSubmitEditing={() => onReturnKeyPress(props.position)}
         value={props.guessLetter}
         editable={props.isActive && !wordGuessed}
         maxLength={2}
         caretHidden={true}
         autoCorrect={false}
-        ref={letterInputRef}
+        ref={el => {
+          inputRefArray.current[props.position] = el;
+          // console.log(
+          //   'inside ref function: el, position, inputRefArray:',
+          //   el,
+          //   props.position,
+          //   inputRefArray
+          // );
+        }}
+        returnKeyType={'go'}
       />
     </View>
   );
-};
+});

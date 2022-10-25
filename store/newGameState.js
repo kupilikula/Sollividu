@@ -19,6 +19,7 @@ export const newGameState = (secretWordLetters, numberOfGuesses) => {
     ),
     currentGuessNumber: 0,
     currentGuessLetters: [...Array(wordLength)].fill(''),
+    currentGuessFilledIn: false,
     wordGuessed: false,
     gameOver: false,
   };

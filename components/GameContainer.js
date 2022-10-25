@@ -1,6 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {GuessList} from './GuessList';
-import {findNodeHandle, Pressable, Text, UIManager, View} from 'react-native';
+import {
+  findNodeHandle,
+  Linking,
+  Pressable,
+  Text,
+  UIManager,
+  View,
+} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, initializeNewGameState} from '../store/actions';
@@ -37,6 +44,10 @@ export const GameContainer = props => {
     {label: '6', value: 6},
     {label: '*', value: -1},
   ]);
+  const secretWordMeaningURL =
+    'https://dsal.uchicago.edu/cgi-bin/app/tamil-lex_query.py?qs=' +
+    secretWordLetters.join('') +
+    '&searchhws=yes&matchtype=exact';
 
   const validateWord = async letters => {
     let letterCheck = letters.every(
@@ -235,7 +246,9 @@ export const GameContainer = props => {
                 marginBottom: 15,
               }}>
               <Text style={styleSheet.secretWordLabel}>விடை:</Text>
-              <Text style={styleSheet.secretWord}>
+              <Text
+                style={styleSheet.secretWord}
+                onPress={() => Linking.openURL(secretWordMeaningURL)}>
                 {secretWordLetters.join('')}
               </Text>
             </View>

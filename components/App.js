@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import {GameContainer} from './GameContainer';
-import {configureStore} from '@reduxjs/toolkit';
+import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
 import {reducer} from '../store/reducer';
 import {newGameState} from '../store/newGameState';
 import {Provider} from 'react-redux';
@@ -20,9 +20,20 @@ const currentGameState = newGameState(
   constants.numberOfGuesses
 );
 
+const middlewares = getDefaultMiddleware({
+  // https://github.com/reduxjs/redux-toolkit/issues/415
+  immutableCheck: false,
+});
+
+if (__DEV__) {
+  const createDebugger = require('redux-flipper').default;
+  middlewares.push(createDebugger());
+}
+
 gameStore = configureStore({
   reducer: reducer(currentGameState),
   preloadedState: currentGameState,
+  middleware: middlewares,
   devTools: true,
 });
 

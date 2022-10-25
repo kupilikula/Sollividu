@@ -115,6 +115,7 @@ export const styleSheet = {
     fontWeight: '700',
     fontSize: 20,
     color: colorPalette.white,
+    textDecorationLine: 'underline',
   },
   secretWordLabel: {
     fontFamily: 'Noto Sans Tamil',

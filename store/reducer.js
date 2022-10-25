@@ -36,16 +36,19 @@ export const reducer = currentGameState =>
           gameOver: gameOver,
           currentGuessNumber: state.currentGuessNumber + 1,
           currentGuessLetters: Array(state.wordLength).fill(''),
+          currentGuessFilledIn: false,
         };
         console.log('S:', S);
         return S;
       })
       .addCase(currentGuessEdited, (state, action) => {
+        let newCurrentGuessLetters = state.currentGuessLetters.map((l, i) =>
+          i === action.payload.position ? action.payload.letter : l
+        );
         return {
           ...state,
-          currentGuessLetters: state.currentGuessLetters.map((l, i) =>
-            i === action.payload.position ? action.payload.letter : l
-          ),
+          currentGuessLetters: newCurrentGuessLetters,
+          currentGuessFilledIn: !newCurrentGuessLetters.includes(''),
         };
       });
   });
