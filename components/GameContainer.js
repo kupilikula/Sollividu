@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {GuessList} from './GuessList';
 import {
+  Alert,
   findNodeHandle,
   Linking,
   Pressable,
@@ -10,7 +11,7 @@ import {
 } from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import {useDispatch, useSelector} from 'react-redux';
-import {addGuess, initializeNewGameState} from '../store/actions';
+import {addGuess, giveUpGame, initializeNewGameState} from '../store/actions';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -24,6 +25,7 @@ import {HelpModal} from './HelpModal';
 import statisticsUtils from '../utils/statisticsUtils';
 import {StatisticsModal} from './StatisticsModal';
 import wordListUtils from '../utils/wordListUtils';
+import {SettingsModal} from './SettingsModal';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -35,15 +37,8 @@ export const GameContainer = props => {
   const wordGuessed = useSelector(state => state.wordGuessed);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   const storeWordLength = useSelector(state => state.wordLength);
-  const [wordLength, setWordLength] = useState(5);
-  const [wlDropDownOpen, setWlDropDownOpen] = useState(false);
-  const [wlDropDownItems, setWlDropDownItems] = useState([
-    {label: '3', value: 3},
-    {label: '4', value: 4},
-    {label: '5', value: 5},
-    {label: '6', value: 6},
-    {label: '*', value: -1},
-  ]);
+  let settingsWordLength = storeWordLength;
+
   const secretWordMeaningURL =
     'https://dsal.uchicago.edu/cgi-bin/app/tamil-lex_query.py?qs=' +
     secretWordLetters.join('') +
@@ -82,10 +77,17 @@ export const GameContainer = props => {
       })
     );
   };
-  const onNewGame = async () => {
+  const onNewGame = async wordLength => {
     console.log('inside onNewGame');
-    //TODO : There is a bug here probably in getNewRandomWord. It fails occasionally with an error 'cannot call split on undefined.'
-    const newSecretWord = await wordListUtils.getNewRandomWord(wordLength);
+
+    let newSecretWord;
+    while (true) {
+      newSecretWord = await wordListUtils.getNewRandomWord(wordLength);
+      if (!statisticsUtils.hasWordBeenPlayedAlready(newSecretWord)) {
+        break;
+      }
+    }
+
     console.log(
       'letters:',
       TamilStringUtils().splitIntoTamilLetters(newSecretWord)
@@ -130,10 +132,11 @@ export const GameContainer = props => {
 
   const [helpModalVisible, setHelpModalVisible] = useState(false);
   const [statisticsModalVisible, setStatisticsModalVisible] = useState(false);
+  const [settingsModalVisible, setSettingsModalVisible] = useState(false);
 
   useEffect(() => {
     const callOnNewGame = async () => {
-      await onNewGame();
+      await onNewGame(storeWordLength ? storeWordLength : 5);
     };
     callOnNewGame().catch(console.error);
     const data = statisticsUtils.getStatistics();
@@ -158,7 +161,32 @@ export const GameContainer = props => {
   const [stats, setStats] = useState({
     totalGamesPlayed: -1,
     totalVictories: -1,
+    gamesPlayedByWordLength: {3: -1, 4: -1, 5: -1, 6: -1},
+    victoriesByWordLength: {3: -1, 4: -1, 5: -1, 6: -1},
   });
+
+  const giveUp = () => {
+    dispatch(giveUpGame({}));
+  };
+
+  const onGiveUpPress = () => {
+    if (!gameOver) {
+      Alert.alert('ராஜினாமா செய்?', 'ஆட்டத்தை ராஜினாமா செய்து விடையை காண்பி?', [
+        {
+          text: 'ரத்து செய்',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {
+          text: 'சரி',
+          onPress: () => {
+            giveUp();
+            console.log('OK Pressed');
+          },
+        },
+      ]);
+    }
+  };
 
   return (
     <KeyboardAwareScrollView
@@ -187,10 +215,16 @@ export const GameContainer = props => {
           setStatisticsModalVisible={setStatisticsModalVisible}
           stats={stats}
         />
+        <SettingsModal
+          visible={settingsModalVisible}
+          setSettingsModalVisible={setSettingsModalVisible}
+          currentWordLength={storeWordLength}
+          startNewGame={wl => onNewGame(wl)}
+        />
+
         <View
           style={{
             marginTop: 150,
-            borderWidth: 2,
             justifyContent: 'center',
             alignItems: 'center',
             alignContent: 'center',
@@ -199,40 +233,71 @@ export const GameContainer = props => {
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
-              borderWidth: 2,
               width:
                 storeWordLength * constants.letterTileSize +
                 storeWordLength * 4 * constants.tileBorderWidth,
               marginBottom: 15,
             }}>
-            <Pressable
-              style={{}}
-              onPress={() => {
-                console.log('inside onPress StatisticsIcon');
-                setStatisticsModalVisible(true);
-                console.log(
-                  'statsModalVisible inside onPress after set to true:',
-                  statisticsModalVisible
-                );
-              }}>
-              <IoniconsIcon
-                name="stats-chart-sharp"
-                size={30}
-                color={colorPalette.white}
-              />
-            </Pressable>
-            <Pressable
-              style={{}}
-              onPress={() => {
-                console.log('inside onPress HelpIcon');
-                setHelpModalVisible(true);
-                console.log(
-                  'helpModalVisible inside onPress after set to true:',
-                  helpModalVisible
-                );
-              }}>
-              <Icon name="help" size={30} color={colorPalette.white} />
-            </Pressable>
+            <View style={{flexDirection: 'row', alignItems: 'baseline'}}>
+              <Pressable
+                style={{marginRight: 10}}
+                onPress={() => {
+                  console.log('inside onPress SettingsIcon');
+                  setSettingsModalVisible(true);
+                  console.log(
+                    'statsModalVisible inside onPress after set to true:',
+                    settingsModalVisible
+                  );
+                }}>
+                <IoniconsIcon
+                  name="settings-sharp"
+                  size={30}
+                  color={colorPalette.white}
+                />
+              </Pressable>
+              <Pressable
+                style={{}}
+                onPress={() => {
+                  console.log('inside onPress StatisticsIcon');
+                  setStatisticsModalVisible(true);
+                  console.log(
+                    'statsModalVisible inside onPress after set to true:',
+                    statisticsModalVisible
+                  );
+                }}>
+                <IoniconsIcon
+                  name="stats-chart-sharp"
+                  size={30}
+                  color={colorPalette.white}
+                />
+              </Pressable>
+            </View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Pressable
+                style={{marginRight: 8}}
+                onPress={() => {
+                  console.log('inside onPress GiveUpIcon');
+                  onGiveUpPress();
+                }}>
+                <IoniconsIcon
+                  name="exit"
+                  size={35}
+                  color={colorPalette.white}
+                />
+              </Pressable>
+              <Pressable
+                style={{}}
+                onPress={() => {
+                  console.log('inside onPress HelpIcon');
+                  setHelpModalVisible(true);
+                  console.log(
+                    'helpModalVisible inside onPress after set to true:',
+                    helpModalVisible
+                  );
+                }}>
+                <Icon name="help" size={30} color={colorPalette.white} />
+              </Pressable>
+            </View>
           </View>
           <GuessList onSubmitGuess={onSubmitGuess} onTileFocus={onTileFocus} />
           {gameOver && (
@@ -259,36 +324,14 @@ export const GameContainer = props => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Button label="Submit Word" onPress={onSubmitGuess} />
-            <Button label="Clear Game" onPress={onClear} />
-            <Button label="New Game" onPress={onNewGame} />
-          </View>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}>
-            <Text
-              style={{
-                fontFamily: 'Noto Sans Tamil',
-                fontWeight: '500',
-                marginRight: 10,
-              }}>
-              எழுத்துக்கள்:
-            </Text>
-            <DropDownPicker
-              open={wlDropDownOpen}
-              value={wordLength}
-              items={wlDropDownItems}
-              setOpen={setWlDropDownOpen}
-              setValue={setWordLength}
-              setItems={setWlDropDownItems}
-              containerStyle={{
-                width: 60,
-              }}
-              listMode="SCROLLVIEW"
-            />
+            {/*<Button label="Submit Word" onPress={onSubmitGuess} />*/}
+            {/*<Button label="Clear Game" onPress={onClear} />*/}
+            {gameOver && (
+              <Button
+                label="புது ஆட்டம்"
+                onPress={() => onNewGame(storeWordLength)}
+              />
+            )}
           </View>
         </View>
       </View>

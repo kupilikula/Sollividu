@@ -11,7 +11,7 @@ export const HelpModal = props => {
     <Modal
       isVisible={props.visible}
       backdropColor={'black'}
-      backdropOpacity={0.7}>
+      backdropOpacity={0.5}>
       <View
         style={{
           flex: 1,

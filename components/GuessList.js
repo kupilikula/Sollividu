@@ -11,12 +11,12 @@ export const GuessList = props => {
   const guessAnnotations = useSelector(state => state.guessAnnotations);
   const currentGuessNumber = useSelector(state => state.currentGuessNumber);
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
-  const wordGuessed = useSelector(state => state.wordGuessed);
+  const gameOver = useSelector(state => state.gameOver);
 
   console.log('guesses:', guesses);
   console.log('secretWordLetters:', secretWordLetters);
 
-  let G = wordGuessed ? guesses.slice(0, currentGuessNumber) : guesses;
+  let G = gameOver ? guesses.slice(0, currentGuessNumber) : guesses;
 
   let data = G.map((g, i) => {
     return {

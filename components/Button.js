@@ -2,6 +2,7 @@ import {Text} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import {styleSheet} from '../styles/styleSheet';
 import React from 'react';
+import {colorPalette} from '../styles/colorPalette';
 
 export const Button = props => {
   return (
@@ -10,7 +11,7 @@ export const Button = props => {
       activeOpacity={0.8}
       style={styleSheet.button}
       onPress={props.onPress}>
-      <Text style={{color: 'white', margin: 10}}>{props.label}</Text>
+      <Text style={{color: colorPalette.black, margin: 10}}>{props.label}</Text>
     </TouchableOpacity>
   );
 };

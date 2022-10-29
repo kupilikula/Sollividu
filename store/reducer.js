@@ -1,5 +1,10 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {addGuess, currentGuessEdited, initializeNewGameState} from './actions';
+import {
+  addGuess,
+  currentGuessEdited,
+  initializeNewGameState,
+  giveUpGame,
+} from './actions';
 import {annotateGuess} from '../utils/annotateGuess';
 import {newGameState} from './newGameState';
 
@@ -35,7 +40,7 @@ export const reducer = currentGameState =>
           wordGuessed: wordGuessed,
           gameOver: gameOver,
           currentGuessNumber: state.currentGuessNumber + 1,
-          currentGuessLetters: Array(state.wordLength).fill(''),
+          currentGuessLetters: [...Array(state.wordLength).fill('')],
           currentGuessFilledIn: false,
         };
         console.log('S:', S);
@@ -49,6 +54,13 @@ export const reducer = currentGameState =>
           ...state,
           currentGuessLetters: newCurrentGuessLetters,
           currentGuessFilledIn: !newCurrentGuessLetters.includes(''),
+        };
+      })
+      .addCase(giveUpGame, (state, action) => {
+        return {
+          ...state,
+          gameOver: true,
+          wordGuessed: false,
         };
       });
   });

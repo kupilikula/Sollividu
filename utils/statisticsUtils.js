@@ -57,9 +57,21 @@ const getStatistics = () => {
   let totalGamesPlayed = gameResultList.length;
   let totalVictories = gameResultList.reduce((S, v) => S + (v ? 1 : 0), 0);
 
+  let i;
+  let gamesPlayedByWordLength = {3: 0, 4: 0, 5: 0, 6: 0};
+  let victoriesByWordLength = {3: 0, 4: 0, 5: 0, 6: 0};
+  for (i = 0; i < wordLengthList.length; i++) {
+    gamesPlayedByWordLength[wordLengthList[i]]++;
+    if (gameResultList[i]) {
+      victoriesByWordLength[wordLengthList[i]]++;
+    }
+  }
+
   return {
     totalGamesPlayed: totalGamesPlayed,
     totalVictories: totalVictories,
+    gamesPlayedByWordLength: gamesPlayedByWordLength,
+    victoriesByWordLength: victoriesByWordLength,
   };
 };
 
