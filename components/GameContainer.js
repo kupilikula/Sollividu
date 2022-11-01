@@ -26,6 +26,7 @@ import statisticsUtils from '../utils/statisticsUtils';
 import {StatisticsModal} from './StatisticsModal';
 import wordListUtils from '../utils/wordListUtils';
 import {SettingsModal} from './SettingsModal';
+import usageDataUtils from '../utils/usageDataUtils';
 
 const tamilLetterUtils = TamilLetterUtils();
 
@@ -155,6 +156,7 @@ export const GameContainer = props => {
       const data = statisticsUtils.getStatistics();
       console.log('data:', data);
       setStats(data);
+      usageDataUtils.sendUsageData();
     }
   }, [gameOver]);
 

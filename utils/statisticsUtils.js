@@ -38,32 +38,21 @@ const hasWordBeenPlayedAlready = word => {
 
 const getStatistics = () => {
   initializeGameHistoryIfEmpty();
-  let gameResultList = mmkvStore
-    .getString('gameResultList')
-    .split(',')
-    .filter(s => s)
-    .map(s => s === 'true');
-  let numberOfGuessesList = mmkvStore
-    .getString('numberOfGuessesList')
-    .split(',')
-    .filter(s => s)
-    .map(s => parseInt(s, 10));
-  let wordLengthList = mmkvStore
-    .getString('wordLengthList')
-    .split(',')
-    .filter(s => s)
-    .map(s => parseInt(s, 10));
+  let gamesData = getGameDataArrays();
 
-  let totalGamesPlayed = gameResultList.length;
-  let totalVictories = gameResultList.reduce((S, v) => S + (v ? 1 : 0), 0);
+  let totalGamesPlayed = gamesData.gameResultList.length;
+  let totalVictories = gamesData.gameResultList.reduce(
+    (S, v) => S + (v ? 1 : 0),
+    0
+  );
 
   let i;
   let gamesPlayedByWordLength = {3: 0, 4: 0, 5: 0, 6: 0};
   let victoriesByWordLength = {3: 0, 4: 0, 5: 0, 6: 0};
-  for (i = 0; i < wordLengthList.length; i++) {
-    gamesPlayedByWordLength[wordLengthList[i]]++;
-    if (gameResultList[i]) {
-      victoriesByWordLength[wordLengthList[i]]++;
+  for (i = 0; i < gamesData.wordLengthList.length; i++) {
+    gamesPlayedByWordLength[gamesData.wordLengthList[i]]++;
+    if (gamesData.gameResultList[i]) {
+      victoriesByWordLength[gamesData.wordLengthList[i]]++;
     }
   }
 
@@ -93,9 +82,35 @@ const initializeGameHistoryIfEmpty = () => {
   }
 };
 
+const getGameDataArrays = () => {
+  let playedWordList = mmkvStore
+    .getString('playedWordList')
+    .split(',')
+    .filter(s => s);
+
+  let gameResultList = mmkvStore
+    .getString('gameResultList')
+    .split(',')
+    .filter(s => s)
+    .map(s => s === 'true');
+  let numberOfGuessesList = mmkvStore
+    .getString('numberOfGuessesList')
+    .split(',')
+    .filter(s => s)
+    .map(s => parseInt(s, 10));
+  let wordLengthList = mmkvStore
+    .getString('wordLengthList')
+    .split(',')
+    .filter(s => s)
+    .map(s => parseInt(s, 10));
+
+  return {playedWordList, gameResultList, numberOfGuessesList, wordLengthList};
+};
+
 module.exports = {
   updateGameHistory,
   hasWordBeenPlayedAlready,
   getStatistics,
   initializeGameHistoryIfEmpty,
+  getGameDataArrays,
 };
