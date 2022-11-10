@@ -1,0 +1,23 @@
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - cd backend
+      - npm install
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+  build:
+    commands:
+      - cd ..
+      - zip -r backend.zip backend
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - aws lambda update-function-code \--function-name  sollividu_backend \--zip-file fileb://backend.zip
+      - echo Build completed on `date`
+artifacts:
+  type: zip
+  files:
+    - backend.zip
