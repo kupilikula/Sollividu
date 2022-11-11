@@ -23,7 +23,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/postGameData', (req, res) => {
-  console.log('body:', req.body);
+  console.log('req:', req);
+  console.log('req.body:', req.body);
+  console.log('JSON.parse(req.body):', JSON.parse(req.body));
   console.log('headers:', req.headers);
   res.send('Hello World!');
 });
