@@ -17,6 +17,11 @@ app.use(cors());
 //   next();
 // });
 
+app.get('/', (req, res) => {
+  console.log(req);
+  res.send('Test /');
+});
+
 app.post('/postGameData', (req, res) => {
   console.log('body:', req.body);
   console.log('headers:', req.headers);
