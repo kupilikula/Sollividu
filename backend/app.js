@@ -1,6 +1,7 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
-const port = 3000;
+// const port = 3000;
 const cors = require('cors');
 app.use(cors());
 // app.use(function (req, res, next) {
@@ -27,6 +28,8 @@ app.get('/test', (req, res) => {
   res.send('Test success');
 });
 
-app.listen(port, () => {
-  console.log(`Sollividu Backend listening on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Sollividu Backend listening on port ${port}`);
+// });
+
+module.exports.handler = serverless(app);
