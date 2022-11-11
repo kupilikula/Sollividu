@@ -12,8 +12,7 @@ phases:
       - echo Installing source NPM dependencies...
   build:
     commands:
-      - cd ..
-      - zip -r backend.zip backend
+      - zip -r backend.zip .
       - echo Build started on `date`
   post_build:
     commands:
