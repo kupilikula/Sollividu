@@ -45,7 +45,7 @@ app.get('/getGameData/:deviceUniqueId', (req, res) => {
         res.status(500).send('Failure');
       } else {
         console.log('fetched item from db:', data);
-        res.status(200).body(data).send();
+        res.status(200).send(data);
       }
     }
   );
