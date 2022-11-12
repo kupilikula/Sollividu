@@ -22,9 +22,15 @@ app.post('/postGameData', (req, res) => {
   console.log('headers:', req.headers);
   const newData = JSON.parse(req.body);
   const uniqueId = newData.deviceUniqueId;
-  docClient.put({TableName: gamesDataTableName, Item: newData});
-
-  res.status(200).send('Success');
+  docClient.put({TableName: gamesDataTableName, Item: newData}, (err, data) => {
+    if (err) {
+      console.log('Error writing to DynamoDB:', err);
+      res.status(500).send('Failure');
+    } else {
+      console.log('Wrote data to table:', data);
+      res.status(200).send('Success');
+    }
+  });
 });
 
 app.get('/getGameData/:deviceUniqueId', (req, res) => {
