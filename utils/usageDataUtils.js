@@ -8,11 +8,11 @@ const SOLLIVIDU_POST_DATA_URL =
 const APP_ID = 'BCB9C644-3F19-4BA1-B2C8-39B2463EBDE3';
 
 const sendUsageData = () => {
+  const deviceUniqueId = DeviceInfo.getUniqueIdSync();
   const deviceInfo = {
     deviceId: DeviceInfo.getDeviceId(),
     deviceManufacturer: DeviceInfo.getManufacturerSync(),
     deviceModel: DeviceInfo.getModel(),
-    deviceUniqueId: DeviceInfo.getUniqueIdSync(),
     systemVersion: DeviceInfo.getSystemVersion(),
     appVersion: DeviceInfo.getVersion(),
     appName: DeviceInfo.getApplicationName(),
@@ -34,7 +34,11 @@ const sendUsageData = () => {
     games
   );
   axios
-    .post(SOLLIVIDU_POST_DATA_URL, {deviceInfo, games}, {app_id: APP_ID})
+    .post(
+      SOLLIVIDU_POST_DATA_URL,
+      {deviceUniqueId, deviceInfo, games},
+      {app_id: APP_ID}
+    )
     .then(response => console.log('post game data response:', response))
     .catch(err => console.log('post game data err:', err));
 };
