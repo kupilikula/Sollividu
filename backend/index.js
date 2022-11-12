@@ -37,7 +37,7 @@ app.get('/getGameData/:deviceUniqueId', (req, res) => {
   docClient.get(
     {
       TableName: gamesDataTableName,
-      Key: req.params.deviceUniqueId,
+      Key: {deviceUniqueId: req.params.deviceUniqueId},
     },
     (err, data) => {
       if (err) {
