@@ -40,7 +40,13 @@ app.get('/getGameData/:deviceUniqueId', (req, res) => {
       Key: req.params.deviceUniqueId,
     },
     (err, data) => {
-      res.send(data);
+      if (err) {
+        console.log('error:', err);
+        res.status(500).send('Failure');
+      } else {
+        console.log('fetched item from db:', data);
+        res.status(200).body(data).send();
+      }
     }
   );
 });
