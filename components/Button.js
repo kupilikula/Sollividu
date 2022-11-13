@@ -11,7 +11,16 @@ export const Button = props => {
       activeOpacity={0.8}
       style={styleSheet.button}
       onPress={props.onPress}>
-      <Text style={{color: colorPalette.black, margin: 10}}>{props.label}</Text>
+      <Text
+        style={{
+          fontFamily: 'Noto Sans Tamil',
+          fontWeight: '400',
+          fontSize: 14,
+          color: colorPalette.black,
+          margin: 10,
+        }}>
+        {props.label}
+      </Text>
     </TouchableOpacity>
   );
 };
