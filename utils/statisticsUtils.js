@@ -22,7 +22,9 @@ const updateGameHistory = (
   );
   mmkvStore.set(
     'numberOfGuessesList',
-    mmkvStore.getString('numberOfGuessesList') + ',' + wordLength.toString()
+    mmkvStore.getString('numberOfGuessesList') +
+      ',' +
+      numberOfGuesses.toString()
   );
 
   console.log(

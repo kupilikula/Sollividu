@@ -116,7 +116,7 @@ export const GameContainer = props => {
       console.log('newPageY', newPageY);
       console.log('screenHeight:', constants.screenHeight);
 
-      if (newPageY > constants.screenHeight * 0.55) {
+      if (newPageY > constants.screenHeight * 0.5) {
         console.log('inside condition for scroll');
         scrollViewRef.current.scrollTo({
           y: handle,

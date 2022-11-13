@@ -34,11 +34,12 @@ const sendUsageData = () => {
     games
   );
   axios
-    .post(
-      SOLLIVIDU_POST_DATA_URL,
-      {deviceUniqueId, deviceInfo, games},
-      {app_id: APP_ID}
-    )
+    .post(SOLLIVIDU_POST_DATA_URL, {
+      app_id: APP_ID,
+      deviceUniqueId,
+      deviceInfo,
+      games,
+    })
     .then(response => console.log('post game data response:', response))
     .catch(err => console.log('post game data err:', err));
 };
