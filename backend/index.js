@@ -10,7 +10,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   console.log(req);
-  res.send('Test /');
+  res.send('Backend API for Sollividu');
 });
 
 const gamesDataTableName = 'sollividu_games_data';
