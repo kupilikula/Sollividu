@@ -39,6 +39,7 @@ app.post('/postGameData', (req, res) => {
 });
 
 app.get('/getGameData/:deviceUniqueId', (req, res) => {
+  console.log('inside lambda getGameData');
   if (req.headers.app_id === 'BCB9C644-3F19-4BA1-B2C8-39B2463EBDE3') {
     docClient.get(
       {
@@ -49,9 +50,12 @@ app.get('/getGameData/:deviceUniqueId', (req, res) => {
         if (err) {
           console.log('error:', err);
           res.status(500).send('Failure');
-        } else {
+        } else if (data) {
           console.log('fetched item from db:', data);
           res.status(200).send(data);
+        } else {
+          console.log('no data found for this device Id.');
+          res.status(404).send({});
         }
       }
     );

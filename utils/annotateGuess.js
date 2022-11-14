@@ -20,25 +20,25 @@ export const annotateGuess = (guessLetters, secretWordLetters) => {
     };
   });
   for (let i = 0; i < n; i++) {
-    console.log('i,g[i],w[i]', i, guessLetters[i], secretWordLetters[i]);
-    console.log('i, check:', i, guessLetters[i] === secretWordLetters[i]);
+    // console.log('i,g[i],w[i]', i, guessLetters[i], secretWordLetters[i]);
+    // console.log('i, check:', i, guessLetters[i] === secretWordLetters[i]);
     if (guessLetters[i] === secretWordLetters[i]) {
       annotation[i].letterState = GuessLetterTileStates.LETTER_MATCHED;
-      console.log(
-        'inside match, i:',
-        i,
-        'annotation[i].letterState:',
-        annotation[i].letterState
-      );
+      // console.log(
+      //   'inside match, i:',
+      //   i,
+      //   'annotation[i].letterState:',
+      //   annotation[i].letterState
+      // );
     } else if (secretWordLetters.includes(guessLetters[i])) {
       annotation[i].letterState = GuessLetterTileStates.LETTER_ELSEWHERE;
     } else {
-      console.log(
-        'inside else, i:',
-        i,
-        ', annotation[i].letterState: ',
-        annotation[i].letterState
-      );
+      // console.log(
+      //   'inside else, i:',
+      //   i,
+      //   ', annotation[i].letterState: ',
+      //   annotation[i].letterState
+      // );
       annotation[i].letterState = GuessLetterTileStates.LETTER_NOT_FOUND;
     }
 
@@ -52,6 +52,6 @@ export const annotateGuess = (guessLetters, secretWordLetters) => {
     annotation[i].positionState.uyir = vowel_index === secret_vowel_index;
   }
 
-  console.log('inside annotateGuess, annotation:', annotation);
+  // console.log('inside annotateGuess, annotation:', annotation);
   return annotation;
 };

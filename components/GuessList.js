@@ -13,8 +13,8 @@ export const GuessList = props => {
   const currentGuessLetters = useSelector(state => state.currentGuessLetters);
   const gameOver = useSelector(state => state.gameOver);
 
-  console.log('guesses:', guesses);
-  console.log('secretWordLetters:', secretWordLetters);
+  // console.log('guesses:', guesses);
+  // console.log('secretWordLetters:', secretWordLetters);
 
   let G = gameOver ? guesses.slice(0, currentGuessNumber) : guesses;
 
@@ -35,7 +35,7 @@ export const GuessList = props => {
   return (
     <View>
       {data.map(item => {
-        console.log('item:', item);
+        // console.log('item:', item);
         return (
           <Guess
             key={item.index}

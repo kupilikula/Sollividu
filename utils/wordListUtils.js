@@ -8,7 +8,7 @@ const loadWordList = async wordLength => {
   let key = wordLength.toString() + 'LetterWords';
   if (!mmkvStore.contains(key)) {
     if (Platform.OS === 'ios') {
-      console.log('calling readFile:');
+      // console.log('calling readFile:');
 
       const path =
         `${RNFS.MainBundlePath}/tamillexicon_unique_words_of_length_` +
@@ -29,7 +29,7 @@ const loadWordList = async wordLength => {
         .catch(console.error);
     }
   }
-  console.log('after loading: item:', mmkvStore.getString(key));
+  // console.log('after loading: item:', mmkvStore.getString(key));
 };
 
 const getNewRandomWord = async wordLength => {
@@ -40,12 +40,12 @@ const getNewRandomWord = async wordLength => {
   const wlKey = wl.toString() + 'LetterWords';
   await loadWordList(wl);
   const wordList = mmkvStore.getString(wlKey).split('\n');
-  console.log('wordList.length:', wordList.length);
+  // console.log('wordList.length:', wordList.length);
   const newRandomIndex = Math.floor(Math.random() * wordList.length);
   // console.log('wordList:', wordList);
   const newRandomWord = wordList[newRandomIndex];
-  console.log('newRandomIndex:', newRandomIndex);
-  console.log('newRandomWord:', newRandomWord);
+  // console.log('newRandomIndex:', newRandomIndex);
+  // console.log('newRandomWord:', newRandomWord);
   return newRandomWord;
 };
 

@@ -6,7 +6,7 @@ import {styleSheet} from '../styles/styleSheet';
 import {StackedBarChart} from 'react-native-chart-kit';
 
 export const StatisticsModal = props => {
-  console.log('props.stats', props.stats);
+  // console.log('props.stats', props.stats);
   const data = {
     labels: ['3', '4', '5', '6'],
     legend: ['வெற்றி', 'தோல்வி'],

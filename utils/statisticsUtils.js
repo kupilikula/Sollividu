@@ -27,10 +27,10 @@ const updateGameHistory = (
       numberOfGuesses.toString()
   );
 
-  console.log(
-    'inside update game history, after:',
-    mmkvStore.getString('playedWordList')
-  );
+  // console.log(
+  //   'inside update game history, after:',
+  //   mmkvStore.getString('playedWordList')
+  // );
 };
 
 const hasWordBeenPlayedAlready = word => {

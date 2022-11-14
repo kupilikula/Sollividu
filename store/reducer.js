@@ -26,9 +26,9 @@ export const reducer = currentGameState =>
           JSON.stringify(state.secretWordLetters);
         let gameOver =
           wordGuessed || state.currentGuessNumber + 1 === state.numberOfGuesses;
-        console.log('gameOver:', gameOver);
+        // console.log('gameOver:', gameOver);
         let A = annotateGuess(action.payload, state.secretWordLetters);
-        console.log('A:', A);
+        // console.log('A:', A);
         let S = {
           ...state,
           guesses: state.guesses.map((g, i) =>
@@ -43,7 +43,7 @@ export const reducer = currentGameState =>
           currentGuessLetters: [...Array(state.wordLength).fill('')],
           currentGuessFilledIn: false,
         };
-        console.log('S:', S);
+        // console.log('S:', S);
         return S;
       })
       .addCase(currentGuessEdited, (state, action) => {

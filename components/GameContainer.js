@@ -62,9 +62,9 @@ export const GameContainer = props => {
   };
 
   const onSubmitGuess = async () => {
-    console.log('inside gamecontainer onsubmitGuess');
+    // console.log('inside gamecontainer onsubmitGuess');
     let check = await validateWord(currentGuessLetters);
-    console.log('validateWord:', check);
+    // console.log('validateWord:', check);
     if (check) {
       dispatch(addGuess(currentGuessLetters));
     }
@@ -79,7 +79,7 @@ export const GameContainer = props => {
     );
   };
   const onNewGame = async wordLength => {
-    console.log('inside onNewGame');
+    // console.log('inside onNewGame');
 
     let newSecretWord;
     while (true) {
@@ -89,10 +89,10 @@ export const GameContainer = props => {
       }
     }
 
-    console.log(
-      'letters:',
-      TamilStringUtils().splitIntoTamilLetters(newSecretWord)
-    );
+    // console.log(
+    //   'letters:',
+    //   TamilStringUtils().splitIntoTamilLetters(newSecretWord)
+    // );
     dispatch(
       initializeNewGameState({
         secretWordLetters:
@@ -105,19 +105,19 @@ export const GameContainer = props => {
 
   const scrollToInput = inputNode => {
     // Add a 'scroll' ref to your ScrollView
-    console.log('scrollViewRef.current:', scrollViewRef.current);
-    console.log('inputNode:', inputNode);
+    // console.log('scrollViewRef.current:', scrollViewRef.current);
+    // console.log('inputNode:', inputNode);
     let handle = findNodeHandle(inputNode);
-    console.log('handle:', handle);
+    // console.log('handle:', handle);
     let newPageY;
     UIManager.measure(handle, (x, y, width, height, pageX, pageY) => {
       newPageY = pageY;
-      console.log('measure:', x, y, width, height, pageX, pageY);
-      console.log('newPageY', newPageY);
-      console.log('screenHeight:', constants.screenHeight);
+      // console.log('measure:', x, y, width, height, pageX, pageY);
+      // console.log('newPageY', newPageY);
+      // console.log('screenHeight:', constants.screenHeight);
 
       if (newPageY > constants.screenHeight * 0.5) {
-        console.log('inside condition for scroll');
+        // console.log('inside condition for scroll');
         scrollViewRef.current.scrollTo({
           y: handle,
           animated: true,
@@ -127,7 +127,7 @@ export const GameContainer = props => {
   };
 
   const onTileFocus = focusedInputNode => {
-    console.log('inside onTileFocus:', focusedInputNode);
+    // console.log('inside onTileFocus:', focusedInputNode);
     scrollToInput(focusedInputNode);
   };
 
@@ -141,7 +141,7 @@ export const GameContainer = props => {
     };
     callOnNewGame().catch(console.error);
     const data = statisticsUtils.getStatistics();
-    console.log('data:', data);
+    // console.log('data:', data);
     setStats(data);
   }, []);
 
@@ -154,7 +154,7 @@ export const GameContainer = props => {
         storeWordLength
       );
       const data = statisticsUtils.getStatistics();
-      console.log('data:', data);
+      // console.log('data:', data);
       setStats(data);
       usageDataUtils.sendUsageData();
     }
@@ -176,14 +176,14 @@ export const GameContainer = props => {
       Alert.alert('ராஜினாமா செய்?', 'ஆட்டத்தை ராஜினாமா செய்து விடையை காண்பி?', [
         {
           text: 'ரத்து செய்',
-          onPress: () => console.log('Cancel Pressed'),
+          // onPress: () => console.log('Cancel Pressed'),
           style: 'cancel',
         },
         {
           text: 'சரி',
           onPress: () => {
             giveUp();
-            console.log('OK Pressed');
+            // console.log('OK Pressed');
           },
         },
       ]);
@@ -244,12 +244,12 @@ export const GameContainer = props => {
               <Pressable
                 style={{marginRight: 10}}
                 onPress={() => {
-                  console.log('inside onPress SettingsIcon');
+                  // console.log('inside onPress SettingsIcon');
                   setSettingsModalVisible(true);
-                  console.log(
-                    'statsModalVisible inside onPress after set to true:',
-                    settingsModalVisible
-                  );
+                  // console.log(
+                  //   'statsModalVisible inside onPress after set to true:',
+                  //   settingsModalVisible
+                  // );
                 }}>
                 <IoniconsIcon
                   name="settings-sharp"
@@ -260,12 +260,12 @@ export const GameContainer = props => {
               <Pressable
                 style={{}}
                 onPress={() => {
-                  console.log('inside onPress StatisticsIcon');
+                  // console.log('inside onPress StatisticsIcon');
                   setStatisticsModalVisible(true);
-                  console.log(
-                    'statsModalVisible inside onPress after set to true:',
-                    statisticsModalVisible
-                  );
+                  // console.log(
+                  //   'statsModalVisible inside onPress after set to true:',
+                  //   statisticsModalVisible
+                  // );
                 }}>
                 <IoniconsIcon
                   name="stats-chart-sharp"
@@ -278,7 +278,7 @@ export const GameContainer = props => {
               <Pressable
                 style={{marginRight: 8}}
                 onPress={() => {
-                  console.log('inside onPress GiveUpIcon');
+                  // console.log('inside onPress GiveUpIcon');
                   onGiveUpPress();
                 }}>
                 <IoniconsIcon
@@ -290,12 +290,12 @@ export const GameContainer = props => {
               <Pressable
                 style={{}}
                 onPress={() => {
-                  console.log('inside onPress HelpIcon');
+                  // console.log('inside onPress HelpIcon');
                   setHelpModalVisible(true);
-                  console.log(
-                    'helpModalVisible inside onPress after set to true:',
-                    helpModalVisible
-                  );
+                  // console.log(
+                  //   'helpModalVisible inside onPress after set to true:',
+                  //   helpModalVisible
+                  // );
                 }}>
                 <Icon name="help" size={30} color={colorPalette.white} />
               </Pressable>

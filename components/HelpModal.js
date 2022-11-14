@@ -27,7 +27,7 @@ export const HelpModal = props => {
           }}>
           <Pressable
             onPress={() => {
-              console.log('onPress of close help modal');
+              // console.log('onPress of close help modal');
               props.setHelpModalVisible(false);
             }}>
             <View

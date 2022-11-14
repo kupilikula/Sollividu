@@ -28,25 +28,25 @@ export const LetterTile = forwardRef((props, inputRefArray) => {
 
   const onLetterInput = textInputValue => {
     let inputLetter;
-    console.log(
-      'textInputValue:',
-      textInputValue,
-      'length:',
-      textInputValue.length
-    );
+    // console.log(
+    //   'textInputValue:',
+    //   textInputValue,
+    //   'length:',
+    //   textInputValue.length
+    // );
     if (textInputValue.length > 2) {
       textInputValue = textInputValue.substring(0, 2);
-      console.log('after trimming:', textInputValue);
+      // console.log('after trimming:', textInputValue);
     }
 
-    console.log('Letters:', tamilLetterUtils.Letters.flat());
+    // console.log('Letters:', tamilLetterUtils.Letters.flat());
     if (textInputValue === '') {
       inputLetter = '';
     } else if (tamilLetterUtils.Letters.flat().includes(textInputValue)) {
-      console.log(
-        'inside Letters includes true. textInputValue:',
-        textInputValue
-      );
+      // console.log(
+      //   'inside Letters includes true. textInputValue:',
+      //   textInputValue
+      // );
       inputLetter = textInputValue;
     } else {
       inputLetter = null;
@@ -63,22 +63,22 @@ export const LetterTile = forwardRef((props, inputRefArray) => {
   };
 
   const onFocusTextInput = event => {
-    console.log('inside LetterTile focus');
+    // console.log('inside LetterTile focus');
     if (!isFocussed) {
-      console.log('inside !isFocussed condition. event:', event);
+      // console.log('inside !isFocussed condition. event:', event);
       setIsFocussed(true);
       props.onTileFocus(event.target);
     }
   };
 
   useEffect(() => {
-    console.log(
-      'inside useeffect...',
-      'props.position:',
-      props.position,
-      'props.guessLetter:',
-      props.guessLetter
-    );
+    // console.log(
+    //   'inside useeffect...',
+    //   'props.position:',
+    //   props.position,
+    //   'props.guessLetter:',
+    //   props.guessLetter
+    // );
     setUseSmallerFontSize(
       tamilLetterUtils.LongLetters.includes(props.guessLetter)
     );
@@ -86,7 +86,7 @@ export const LetterTile = forwardRef((props, inputRefArray) => {
       tamilLetterUtils.VeryLongLetters.includes(props.guessLetter)
     );
 
-    console.log();
+    // console.log();
   }, [props.guessLetter]);
 
   // const letterInputRef = useRef(null);
@@ -96,9 +96,9 @@ export const LetterTile = forwardRef((props, inputRefArray) => {
   return (
     <View
       // ref={tileRef}
-      onLayout={() => {
-        console.log('inside onlayout of lettertile view');
-      }}
+      // onLayout={() => {
+      //   console.log('inside onlayout of lettertile view');
+      // }}
       collapsable={false}
       style={[
         styleSheet.letterTile,

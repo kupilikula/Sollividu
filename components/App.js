@@ -42,10 +42,10 @@ const App = () => {
   useEffect(() => {
     // loading checks, if anything needs to be loaded before starting app
     if (true) {
-      console.log('inside loading effect.');
+      // console.log('inside loading effect.');
       setLoading(false);
     }
-    console.log('inside use effect');
+    // console.log('inside use effect');
     changeBarColors(false, 'red', 'red');
   }, []);
 
