@@ -3,8 +3,7 @@ import axios from 'axios';
 import DeviceInfo from 'react-native-device-info';
 import * as RNLocalize from 'react-native-localize';
 
-const SOLLIVIDU_POST_DATA_URL =
-  'https://ztuholx66bs4szatgqasabzxci0gepqv.lambda-url.us-east-2.on.aws/postGameData';
+const SOLLIVIDU_POST_DATA_URL = 'https://api.sollividu.com/postGameData';
 const APP_ID = 'BCB9C644-3F19-4BA1-B2C8-39B2463EBDE3';
 
 const sendUsageData = () => {
