@@ -11,7 +11,9 @@ export const HelpModal = props => {
     <Modal
       isVisible={props.visible}
       backdropColor={'black'}
-      backdropOpacity={0.5}>
+      backdropOpacity={0.5}
+      statusBarTranslucent={true}
+      deviceHeight={constants.screenHeight}>
       <View
         style={{
           flex: 1,

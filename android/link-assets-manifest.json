@@ -34,70 +34,6 @@
       "sha1": "96f3f4080a59eb9679d6171f3a4a07520f51e33f"
     },
     {
-      "path": "assets/fonts/Baloo_Thambi_2/BalooThambi2-VariableFont_wght.ttf",
-      "sha1": "69a4a8ec460f8b380178afe9bc10cfe6dffac642"
-    },
-    {
-      "path": "assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Bold.ttf",
-      "sha1": "4d7f5ac00ad1fcda50527f3553da3d31e25df132"
-    },
-    {
-      "path": "assets/fonts/Baloo_Thambi_2/static/BalooThambi2-ExtraBold.ttf",
-      "sha1": "c37e78affe724701524942bbe0c932b37a86d6ce"
-    },
-    {
-      "path": "assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Medium.ttf",
-      "sha1": "c95be53d117743cf5b806ffd8e4a40e841e85f60"
-    },
-    {
-      "path": "assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Regular.ttf",
-      "sha1": "50b32052332e2f6e49eb31c750022c7e69f724ae"
-    },
-    {
-      "path": "assets/fonts/Baloo_Thambi_2/static/BalooThambi2-SemiBold.ttf",
-      "sha1": "6a09857aba3a43fb554ab833a8b0771e1faed344"
-    },
-    {
-      "path": "assets/fonts/Catamaran/Catamaran-VariableFont_wght.ttf",
-      "sha1": "d57d1b8c2192fd913494968c96bce33a5919472e"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Black.ttf",
-      "sha1": "39d20580d6f4fbeae5e13b55005ab098552c03ee"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Bold.ttf",
-      "sha1": "af7004e81d7c29cffffcf0b254488dd9f941c65c"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-ExtraBold.ttf",
-      "sha1": "693c63418e01b07c810606e372c83ec8cdfffe7f"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-ExtraLight.ttf",
-      "sha1": "fd7fbe1d036fa95ca55d0e6f6309a550d4fbd102"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Light.ttf",
-      "sha1": "524de367cd1d3de4f9ecebc3dc70f1f4942509a6"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Medium.ttf",
-      "sha1": "d16a9723519b6f07b73f1e37df7d0c46872cbeab"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Regular.ttf",
-      "sha1": "8b7489f2e66feebb8ef54da968f756f4b95d4125"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-SemiBold.ttf",
-      "sha1": "64649a52da681ea0bafed8ea1a0f0d243ce511e2"
-    },
-    {
-      "path": "assets/fonts/Catamaran/static/Catamaran-Thin.ttf",
-      "sha1": "b88a159edb1261586d445bf1a85080845563fcf0"
-    },
-    {
       "path": "assets/fonts/Feather.ttf",
       "sha1": "e6604258b1ced5efd51360875d782fca65381d47"
     },
@@ -106,48 +42,12 @@
       "sha1": "b5281fbfa43129abc3e412dd938cfcf0b77de999"
     },
     {
-      "path": "assets/fonts/Kavivanar/Kavivanar-Regular.ttf",
-      "sha1": "402a38872bdc1350ca186205b9fcd5e1fbf2d3e1"
-    },
-    {
       "path": "assets/fonts/MaterialCommunityIcons.ttf",
       "sha1": "4c2a838b00dbb5e8bb1b368fce0de534e8eb241c"
     },
     {
       "path": "assets/fonts/MaterialIcons.ttf",
       "sha1": "1943803d652750c8ec60415f1e57401c70e72d25"
-    },
-    {
-      "path": "assets/fonts/Meera_Inimai/MeeraInimai-Regular.ttf",
-      "sha1": "aa69431f7adaf3debd7e79e976f2d6e90aee8b7e"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-Bold.ttf",
-      "sha1": "3879dd61f6f5ed94396872ddae630cb84968f48d"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-ExtraBold.ttf",
-      "sha1": "9eec5b183b0216731d45d26fa3e41d4895525412"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-ExtraLight.ttf",
-      "sha1": "43b3ec138a0a73a0099c4a50e808d144747a39ff"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-Light.ttf",
-      "sha1": "cd652696b8874c9c82cd11705807a340ebce3c05"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-Medium.ttf",
-      "sha1": "bbfc3fb47ea866b3d73d4103def72d0ff2454df6"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-Regular.ttf",
-      "sha1": "71fc7730563e9585c9fa05126c89427277a89b09"
-    },
-    {
-      "path": "assets/fonts/Mukta_Malar/MuktaMalar-SemiBold.ttf",
-      "sha1": "b5f98b5e74da3c99ae39394ef2472a24b0d80136"
     },
     {
       "path": "assets/fonts/Noto_Sans_Tamil/NotoSansTamil-VariableFont_wdth,wght.ttf",
@@ -298,314 +198,6 @@
       "sha1": "fd7bcdce09580095a5e1fdaec119e41fa8274e8a"
     },
     {
-      "path": "assets/fonts/Noto_Serif_Tamil/NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf",
-      "sha1": "2f605967d118bdf5255eee896aef484daa1f3f5e"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/NotoSerifTamil-VariableFont_wdth,wght.ttf",
-      "sha1": "c23c60717b4e9102600fa02da76334de088cf348"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Black.ttf",
-      "sha1": "be05c90b12331f922e14a3820203d2b03bc019b5"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-BlackItalic.ttf",
-      "sha1": "6f2cacfa13ee39901992fdc88206fcd4848c5f34"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Bold.ttf",
-      "sha1": "1156e031abd4aa697de619758e33af9a6b59088f"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-BoldItalic.ttf",
-      "sha1": "5a7c36bfabe3fed5b9f45fb494de6d4500db1f03"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraBold.ttf",
-      "sha1": "bf6be18468fdf438a9a2547651bc9a481dbaef31"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraBoldItalic.ttf",
-      "sha1": "555ff2b5f78829af2e3e07b3e294baa05f881f7a"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraLight.ttf",
-      "sha1": "0b69f095925fe324b0a9f2a114c29137dfd60e54"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraLightItalic.ttf",
-      "sha1": "6c565e63fcb2a4399c046d1008b486bc6985bd8c"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Italic.ttf",
-      "sha1": "8095854ad9e2b8d1c0691df2b9be89e0ab766aeb"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Light.ttf",
-      "sha1": "efc3ec28d56a2eb4b076919eb283333643717398"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-LightItalic.ttf",
-      "sha1": "8b8cd9f32ff3a190664debfc927d3ae1be47f2b8"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Medium.ttf",
-      "sha1": "52a244b9d54e2b22411769140899c3390177e970"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-MediumItalic.ttf",
-      "sha1": "8f80ad9a94e8f4cde2f432f0244973163cb1a7f3"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Regular.ttf",
-      "sha1": "fbc6785223fd66ddddf02a05cda85a404c02f939"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-SemiBold.ttf",
-      "sha1": "cc6ee35b20831dec236e5f7c5e29d18ed504b575"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-SemiBoldItalic.ttf",
-      "sha1": "ad5a3057eab1f0b9a2e48fc112c3cf80813a6470"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Thin.ttf",
-      "sha1": "21bc303adbb08a8aa1f2fbe88cfdfd53830d68c8"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ThinItalic.ttf",
-      "sha1": "d99d2f744e27fea152b92ab1940de55fca8dace7"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Black.ttf",
-      "sha1": "a9f048cf718d8aceae2e36959e4362d1103c3d6b"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-BlackItalic.ttf",
-      "sha1": "6314db1d6fdc406c9a4dedf67d3fb6cd211c40bc"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Bold.ttf",
-      "sha1": "ebe10c87dbd39cb213af75b42f849d97ab86afe2"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-BoldItalic.ttf",
-      "sha1": "5a22735366ce923eaec1c06ebb8d3a3ecfaa1419"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraBold.ttf",
-      "sha1": "3a8a2d6c45f5a85dad78e298dd8d5437b010debe"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraBoldItalic.ttf",
-      "sha1": "8ba0331857f3e498ff517eb04116235bac6bfd64"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraLight.ttf",
-      "sha1": "ed46bf1e4cfaeab4e15ef1cf9f97d69d5f5a9959"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraLightItalic.ttf",
-      "sha1": "614bce288492e8cf5ba63c905d09925d11e3efa3"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Italic.ttf",
-      "sha1": "e02a616ba76b5a4f5923516fd411ccbb45545a2c"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Light.ttf",
-      "sha1": "055b80203ed026e5b556959338b853437c146629"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-LightItalic.ttf",
-      "sha1": "41349eaf4a3f527ca8bf14d650bad8fa23d7e3ee"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Medium.ttf",
-      "sha1": "01937ec68955e346f25cbef1ad18c7d41a261910"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-MediumItalic.ttf",
-      "sha1": "7a57762554c6320d13aa78a99457bc8af70ce982"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Regular.ttf",
-      "sha1": "c4ccf8224fd5741103d55a1710957c5a5510287f"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-SemiBold.ttf",
-      "sha1": "cd47d3a62c16c6b3b107fbd350968d579081a99d"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-SemiBoldItalic.ttf",
-      "sha1": "98493e55b080305a4fe94fea1b9feafdf58c205c"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Thin.ttf",
-      "sha1": "fc5c32513b1382c2c5013365c7654caf4af486f7"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ThinItalic.ttf",
-      "sha1": "a179bad7e88d5158bdc028076f32b6bd1d06ea8d"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Black.ttf",
-      "sha1": "6e3b6d3ee4a892ac50419ce56b7d1d8ba8d58638"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-BlackItalic.ttf",
-      "sha1": "08dd0aaf9b00ed992521df2e3102432fad131dac"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Bold.ttf",
-      "sha1": "003fa85cd93ad0eb098e77ddd3db684d45d91827"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-BoldItalic.ttf",
-      "sha1": "894853fd974309b40cb243cdd70feb8fa6126a30"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraBold.ttf",
-      "sha1": "a4e13174d102af61c694d8ad52969d886ec0ad35"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf",
-      "sha1": "bf7e2dac1026d1545ad8f2fc2ab902c0dff67af9"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraLight.ttf",
-      "sha1": "ac8790941d3d0707bb58dc8ced6d6929c31e4070"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf",
-      "sha1": "b4c3dc6ea017df7f1b8a9d1c9624be6474876a09"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Italic.ttf",
-      "sha1": "10d1ea00bc9a53bddf7cbcf1ade81896d9f35ba7"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Light.ttf",
-      "sha1": "b581887195e747fd79a48155f6db6576604e6040"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-LightItalic.ttf",
-      "sha1": "89d0e1f40a12b34e9f652f27fcc66d38bf1b4245"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Medium.ttf",
-      "sha1": "b60c5700fd91c55d8ef24b673e2cc97fe789bb45"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-MediumItalic.ttf",
-      "sha1": "901a41eb7b8584064c4b16a5c5e6c442710c9bf8"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Regular.ttf",
-      "sha1": "ae1542145311f637653a0231859ed6f5b0b5b87d"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-SemiBold.ttf",
-      "sha1": "79c6473684b854dd3b9ff9e954673a4ffa26ee51"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf",
-      "sha1": "3a9ee30ada49ad6695d2081cb98afc729abf21e0"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Thin.ttf",
-      "sha1": "3ff8766549e74c8a2b433750a71fa237482ec626"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ThinItalic.ttf",
-      "sha1": "44256dd40038d1f62918e23c95d7afdb57adc8c2"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Black.ttf",
-      "sha1": "0ab4c5874bd97f60e3b93c938340ac4ac3a03f54"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-BlackItalic.ttf",
-      "sha1": "8df59a8ca95f1fb7d6712397f963813e95afaefb"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Bold.ttf",
-      "sha1": "e167dfd62ae9d526f4bc8a74c71b7b09f8493a2a"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-BoldItalic.ttf",
-      "sha1": "7ea59fc1fbd2438ad63b8364cab71b185059a0f4"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraBold.ttf",
-      "sha1": "e6a15dffd9335d75ffb37f1276d41d8d17cb0e1b"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf",
-      "sha1": "ebf2324d1037eaf7889043b8ee361dbc974d6465"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraLight.ttf",
-      "sha1": "6b957584ab8a7276b6984f4da55432581808246d"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf",
-      "sha1": "360a0d385a96c911542d4c80864db27fd1d286b2"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Italic.ttf",
-      "sha1": "1d4566f945a8ca5da72fc2f011ec34a25fd4a6b0"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Light.ttf",
-      "sha1": "9ba9f01654d4863487ad9139f8da27ac2186564b"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-LightItalic.ttf",
-      "sha1": "f39314050d8db385365beb20d4243c93b5fa0dcc"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Medium.ttf",
-      "sha1": "4280c77d5fa670a7deb6f543b3b7270ae74accee"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-MediumItalic.ttf",
-      "sha1": "1b4267b339106e13f0cfb6e7efd91a249cd0f39f"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Regular.ttf",
-      "sha1": "74d5b1f699f20a8ccfcddc41fc2281a81cd9ac18"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-SemiBold.ttf",
-      "sha1": "a50ca31d0aeeb850c60371dae831e5c33b247a1a"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf",
-      "sha1": "6fe3638b1ca2a7a7e09e6c49d6dc026b3a14f08b"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Thin.ttf",
-      "sha1": "d1b7ac0804fd099e5de34f7822a9914359496bce"
-    },
-    {
-      "path": "assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ThinItalic.ttf",
-      "sha1": "7b910c650a60dd05309b6c099c0bba1180d4a91f"
-    },
-    {
-      "path": "assets/fonts/Pavanam/Pavanam-Regular.ttf",
-      "sha1": "a7ec3f1144ec789f6dd9f67692349805ace53df6"
-    },
-    {
-      "path": "assets/fonts/Tiro_Tamil/TiroTamil-Italic.ttf",
-      "sha1": "30e9bfcb7165651697e2af087f2ec99a917fef57"
-    },
-    {
-      "path": "assets/fonts/Tiro_Tamil/TiroTamil-Regular.ttf",
-      "sha1": "540e67e84b864c5bbd55d39637975fad49c36973"
-    },
-    {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_3.txt",
       "sha1": "ab7e3b6fd97866e0ee4592ff00679bb2909b65f5"
     },
@@ -620,6 +212,26 @@
     {
       "path": "assets/wordLists/tamillexicon_unique_words_of_length_6.txt",
       "sha1": "af8709d66d184c825457e317fcf0ed0a13558aff"
+    },
+    {
+      "path": "assets/images/AppIcon.png",
+      "sha1": "e4ef29f287b7ef6eca7a5a1de05194ab954b0e7f"
+    },
+    {
+      "path": "assets/images/AppIconBackground.png",
+      "sha1": "d5c875f4896ea7a8dd352167330a562aedf8fe57"
+    },
+    {
+      "path": "assets/images/AppIconForeground.png",
+      "sha1": "f453cc629f2822fbd0aa39dbe1e41e321f05c716"
+    },
+    {
+      "path": "assets/images/AppIcon_512x512.png",
+      "sha1": "867b516d3b60edfe8907e9cdad0f7a49486ae242"
+    },
+    {
+      "path": "assets/images/AppSplash.png",
+      "sha1": "a63ac91fa182c62515599a44b54004a2bd85d6bd"
     }
   ]
 }

@@ -7,168 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0012535DC9B848F8AA9440B3 /* NotoSerifTamil-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7987D0E97FD04EA0BD43929A /* NotoSerifTamil-Italic.ttf */; };
 		00E356F31AD99517003FC87E /* SollividuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SollividuTests.m */; };
 		01B140ED3CF4464B973DC1AF /* NotoSansTamil_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3E8AF6E85F4F8AA6B06326 /* NotoSansTamil_Condensed-Bold.ttf */; };
-		01DE94A2BB9F487C8A4655DC /* NotoSerifTamil_SemiCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B41184C0134923872D2D36 /* NotoSerifTamil_SemiCondensed-BoldItalic.ttf */; };
-		02075B2643CE4776828ABBC8 /* NotoSerifTamil_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D01DBE1F6243B098CDF2D1 /* NotoSerifTamil_SemiCondensed-Regular.ttf */; };
-		02863D7FB24140B7A34FE206 /* NotoSerifTamil_SemiCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA6A2251182941B58B2A7DE3 /* NotoSerifTamil_SemiCondensed-ThinItalic.ttf */; };
 		03F1687CA2574075875A17B8 /* NotoSansTamil_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69ADEE7AFB3B4929B78129C0 /* NotoSansTamil_SemiCondensed-ExtraBold.ttf */; };
-		0A73487BFF484B04BC592B54 /* NotoSerifTamil_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CAA33FDC4534D3DBA0AA94F /* NotoSerifTamil_SemiCondensed-Bold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-Sollividu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Sollividu.a */; };
-		0CE630BA839F48EC940F6E7D /* NotoSerifTamil_ExtraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06B8FDC50B004CF9BCF95373 /* NotoSerifTamil_ExtraCondensed-Bold.ttf */; };
-		0E7A8308D92A42FFB89E515A /* Kavivanar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE5E0A2C4C99482184BFCE5A /* Kavivanar-Regular.ttf */; };
+		10FA5493B7534E19B70A437A /* AppIcon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D928963C4D4DD286FBD381 /* AppIcon_512x512.png */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1A1A2FC6413F432A8A2BCCA1 /* NotoSansTamil_ExtraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7853393DB38243639614E75E /* NotoSansTamil_ExtraCondensed-Regular.ttf */; };
-		1A1F4EE9851B434A81A9C4F3 /* TiroTamil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B12205CCBE6A4BEDBA16F805 /* TiroTamil-Regular.ttf */; };
 		1A9462CC2F90449B8DB786CA /* NotoSansTamil_ExtraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E62C982C56489AAF224F9D /* NotoSansTamil_ExtraCondensed-Thin.ttf */; };
 		1C14810E90F24292AC65457F /* tamillexicon_unique_words_of_length_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C833398DB43EA8BCC5D4E /* tamillexicon_unique_words_of_length_5.txt */; };
-		1D9F627F3E2E4DF7B82D6D6A /* MeeraInimai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E4C92DE4AAF4B3D823A88FA /* MeeraInimai-Regular.ttf */; };
+		1D8FD02472D341FC89FFBEE2 /* AppIconBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA0D4135C1C4A2F92E08AD0 /* AppIconBackground.png */; };
 		1F6D8AC5F8614251A7C12100 /* Arima-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6D07D7D274441825BB7A3 /* Arima-Light.ttf */; };
 		203B62D2BBFB4D76A769668E /* tamillexicon_unique_words_of_length_6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95598F1CFBE14CA6BAA4695D /* tamillexicon_unique_words_of_length_6.txt */; };
-		2062A0362CE4430BA25BEC36 /* NotoSerifTamil_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4660A76AA4158901C9530 /* NotoSerifTamil_Condensed-SemiBold.ttf */; };
 		2067216995A54F6BB0565E1A /* NotoSansTamil_ExtraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74445C8E4CEE47CB82AE10D6 /* NotoSansTamil_ExtraCondensed-Medium.ttf */; };
-		21EFAA7457654C1CAF7BD68C /* NotoSerifTamil_ExtraCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80987BA0F63F4457B2226526 /* NotoSerifTamil_ExtraCondensed-ThinItalic.ttf */; };
-		23B775AA95E5401796B4A75A /* NotoSerifTamil_Condensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E04F6BAA6C0946C3B4985D34 /* NotoSerifTamil_Condensed-BlackItalic.ttf */; };
 		25CDF46DB51C4FB1AC3FFADF /* NotoSansTamil_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B84FDBEE53E4BA8ACC738F5 /* NotoSansTamil_Condensed-SemiBold.ttf */; };
-		281D5B83B6A7403EBE820591 /* NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 600AEF57589F42AC904CA3B3 /* NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf */; };
-		299314EF4FF8433C93964666 /* NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FF8085E27194637B1BECF12 /* NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf */; };
-		2ABA77F4DD3F4DC5B2C7F560 /* NotoSerifTamil_SemiCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0DD13342DD4519849175A5 /* NotoSerifTamil_SemiCondensed-ExtraLight.ttf */; };
 		2BA726D598734338840AB198 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C147466BE384911B5891E6D /* Feather.ttf */; };
-		2BD6BCFCF272400BA7BB374F /* MuktaMalar-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE620EEDA0594BB08064FB4C /* MuktaMalar-ExtraLight.ttf */; };
-		2CE5D1847B3A43CCADFC4F73 /* NotoSerifTamil-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72C3E67D37094E6699F979F9 /* NotoSerifTamil-ExtraLight.ttf */; };
-		2DA850766CD440CC9CB4EA22 /* NotoSerifTamil_Condensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605F449F9A9E4B1990847FAB /* NotoSerifTamil_Condensed-MediumItalic.ttf */; };
-		2F58B2ACF6B4438FB10C9BDA /* NotoSerifTamil-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B50635CD6A244CBB8D653C1 /* NotoSerifTamil-Thin.ttf */; };
 		303847FACBDE4EF7B2826E68 /* NotoSansTamil_Condensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F77F02ADA34A4995974CC4C0 /* NotoSansTamil_Condensed-ExtraLight.ttf */; };
-		30C883BE089A4A3E90844F4B /* NotoSerifTamil_ExtraCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A8306FDEE0F4748863642EF /* NotoSerifTamil_ExtraCondensed-BoldItalic.ttf */; };
-		35A2B3A2B44E49C2AFE46F97 /* NotoSerifTamil_Condensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6854959033A343D8AF19E6B0 /* NotoSerifTamil_Condensed-BoldItalic.ttf */; };
 		369D842AF6E6430781B04780 /* tamillexicon_unique_words_of_length_4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1CE93F67B0DC464F9B4CDC96 /* tamillexicon_unique_words_of_length_4.txt */; };
-		3A68A714BB61492E90757F82 /* MuktaMalar-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54401D0106149998E7B63A7 /* MuktaMalar-Light.ttf */; };
-		3AC079596E5743BC899C789C /* NotoSerifTamil_ExtraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A66B60C3CDE40159819E2E2 /* NotoSerifTamil_ExtraCondensed-SemiBold.ttf */; };
-		3B2728DB39044FF8A55C23D2 /* NotoSerifTamil_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1898AC56AA04F9FBA9E596E /* NotoSerifTamil_Condensed-SemiBoldItalic.ttf */; };
+		38B668FAD9EC49C9A9661F9A /* AppIconForeground.png in Resources */ = {isa = PBXBuildFile; fileRef = 11CFF1D8721F4D9D9751B49F /* AppIconForeground.png */; };
 		3C49C201DD9748D891DAF6D4 /* NotoSansTamil-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA62784BCE048678ADD20C9 /* NotoSansTamil-Bold.ttf */; };
-		3CB430AD89E34F6F930D5759 /* NotoSerifTamil_Condensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36E9E852B3F4AD6B58E1E32 /* NotoSerifTamil_Condensed-ExtraBoldItalic.ttf */; };
 		3E585F38681D475FAAC574AC /* tamillexicon_unique_words_of_length_3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEB34BE889814531A3ED7037 /* tamillexicon_unique_words_of_length_3.txt */; };
-		3EB068655968475CB4C2F7F8 /* NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F08A5DD82EDD4E71A00F7B89 /* NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf */; };
 		3F31F4B19B3C498A8F812FFB /* NotoSansTamil_SemiCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD18922948224BC1A6E6A897 /* NotoSansTamil_SemiCondensed-Black.ttf */; };
-		42F4ED6BE885402CAF2F4748 /* Catamaran-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41886EDD4FC45DFADE1EB34 /* Catamaran-ExtraLight.ttf */; };
 		4452679839354292ADCE61D5 /* Arima-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35DA1BB3F2B545E7AAA14DCA /* Arima-SemiBold.ttf */; };
 		44940DCD273E449AAD33ECE6 /* NotoSansTamil-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1390AB880202431199C69A27 /* NotoSansTamil-ExtraBold.ttf */; };
-		46A91793EF64421899C15F5E /* NotoSerifTamil-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005D0720E3104F27BED987BD /* NotoSerifTamil-ThinItalic.ttf */; };
-		46FBAA6815244588BF57B579 /* NotoSerifTamil_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C760F4D02C014855A13DF6EE /* NotoSerifTamil_SemiCondensed-ExtraBold.ttf */; };
-		4842ECFF35E84AE48E0A0C00 /* NotoSerifTamil-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DADBDC7E2642C99D44B75D /* NotoSerifTamil-ExtraBoldItalic.ttf */; };
-		49D087D844ED4602BE03319B /* NotoSerifTamil_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B889E2B8C64DE588D02408 /* NotoSerifTamil_Condensed-ExtraBold.ttf */; };
-		4BF572FA49194628B71B69A4 /* Catamaran-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E994AF56F764F97A26AAEBB /* Catamaran-SemiBold.ttf */; };
-		4EE2D62015D34462B57FF70F /* NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28D1278DEFD34FF09F5FD1A1 /* NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf */; };
-		4EE6526D8588498887A38DF8 /* Catamaran-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF8E4E1CC5CD40AC9988F67A /* Catamaran-Medium.ttf */; };
-		4F166AAAD8904893AD766932 /* NotoSerifTamil_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78ECE76626F442FABFC405C /* NotoSerifTamil_Condensed-Regular.ttf */; };
-		5094D4EE1DB34327B3B02ECD /* NotoSerifTamil-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB1E6AF717D6477AA2EE2214 /* NotoSerifTamil-ExtraLightItalic.ttf */; };
-		52455C2065C445C1A892BE86 /* Catamaran-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ACFA6FBA68E451FB8456B40 /* Catamaran-Bold.ttf */; };
 		59CCC5454B774807928394DB /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */; };
-		5AFD3E939AD14A7285603433 /* MuktaMalar-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EC98FF90D472F8422B0A9 /* MuktaMalar-ExtraBold.ttf */; };
-		5DA5D4DEBF084D448E2C746B /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91D0905548B94836BF2E00E0 /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf */; };
 		5F200C66D03543889C15820E /* NotoSansTamil-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A245DC15CD6E403488708906 /* NotoSansTamil-Medium.ttf */; };
-		616BC544E547450A98F46016 /* NotoSerifTamil-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F10D302F67B94C7E8DA17896 /* NotoSerifTamil-Light.ttf */; };
 		63345195139A41898F100289 /* NotoSansTamil_ExtraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0124926EEB7D4F5DA54C2E09 /* NotoSansTamil_ExtraCondensed-ExtraBold.ttf */; };
-		64C4CA8BA2E444EEB9CD5F6E /* Catamaran-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9892DEB62ED042A1B62A8ABC /* Catamaran-Regular.ttf */; };
-		654D797BB1534C05952EC77F /* NotoSerifTamil_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C8A7915FE704A8597220FD3 /* NotoSerifTamil_SemiCondensed-Light.ttf */; };
-		656252356AC746DDA8A0DD52 /* NotoSerifTamil_ExtraCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DEADECB7FE24A02ADEA8850 /* NotoSerifTamil_ExtraCondensed-Italic.ttf */; };
-		669CEE27A50446909202888D /* Catamaran-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0552B830800445EB2F0579F /* Catamaran-ExtraBold.ttf */; };
-		6763A52D972E497E9352B47E /* MuktaMalar-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C594D4C8F592451EB3562A2D /* MuktaMalar-Medium.ttf */; };
-		68CA8F0BF9FB46AC89B012C7 /* NotoSerifTamil_ExtraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9908DC581554C5C885E0748 /* NotoSerifTamil_ExtraCondensed-ExtraBold.ttf */; };
+		66727CC4190F4B82A7B0121D /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F835F1EC64615961E2D26 /* AppIcon.png */; };
 		69D33D65C59540B3BF7167FE /* NotoSansTamil_ExtraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB5AD5C41454A958150CD21 /* NotoSansTamil_ExtraCondensed-SemiBold.ttf */; };
 		6D7E22C910CE44CD92364DBA /* Arima-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F40CAA5EA5CA4F17AC4A45A3 /* Arima-VariableFont_wght.ttf */; };
 		714FEF9131DD4C6CBF93B99D /* NotoSansTamil-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CF4FDEBF0F74CE78AC8195D /* NotoSansTamil-Black.ttf */; };
-		71A3163EA3A44D148CD5750C /* Pavanam-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE0C4FFB0749423D868473FE /* Pavanam-Regular.ttf */; };
-		72CCEF608BF045888D99B960 /* NotoSerifTamil-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDF6A43A6A8D470ABB761078 /* NotoSerifTamil-ExtraBold.ttf */; };
 		73CA71D243854123A4CD891B /* NotoSansTamil_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5568B58A17474E009D8CF166 /* NotoSansTamil_Condensed-Light.ttf */; };
 		74BAA89B66AF403E871EE9B6 /* NotoSansTamil_ExtraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14130EC017A54765AEF343CD /* NotoSansTamil_ExtraCondensed-ExtraLight.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-Sollividu-SollividuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Sollividu-SollividuTests.a */; };
-		78BD4519C71942D4A40B7603 /* NotoSerifTamil_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 433F4028E30D44D4B2FC3A6B /* NotoSerifTamil_SemiCondensed-Medium.ttf */; };
-		7AD2D96303014BD88DB30453 /* NotoSerifTamil_Condensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CD3328410D54CA6BBD9C225 /* NotoSerifTamil_Condensed-LightItalic.ttf */; };
-		7C2516B98FF740D597170F8E /* NotoSerifTamil_SemiCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A6441D40C24F5CB3897F52 /* NotoSerifTamil_SemiCondensed-BlackItalic.ttf */; };
-		7E08854F5355454A886461D8 /* Catamaran-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E633BB7A99914C23B7A60A70 /* Catamaran-Thin.ttf */; };
-		7E9F340D4D3B493ABAED5240 /* NotoSerifTamil_Condensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FC2784E643F412FB462E161 /* NotoSerifTamil_Condensed-Italic.ttf */; };
 		803E97A6F15B4AA8A2C491E3 /* NotoSansTamil-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7532C6DC9F6547CEA93268CD /* NotoSansTamil-ExtraLight.ttf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		85D0D431F19848B1A05FE3CC /* NotoSerifTamil_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15610E4F9EE5451BAF1E8D04 /* NotoSerifTamil_Condensed-Bold.ttf */; };
-		866901F775D749B18F247B8E /* NotoSerifTamil-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71315F571F98492CA372D25D /* NotoSerifTamil-SemiBoldItalic.ttf */; };
 		872035BC692D4A2CA5AFA995 /* NotoSansTamil_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D075E4AEB8415BB0CD3BD3 /* NotoSansTamil_Condensed-Medium.ttf */; };
-		89151DB1884841099DF4A778 /* BalooThambi2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E165D36457C547B499BEECEA /* BalooThambi2-Regular.ttf */; };
 		8AD679A425144279A0777CDC /* NotoSansTamil_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2689A4825F42AFA31B7BB1 /* NotoSansTamil_Condensed-ExtraBold.ttf */; };
 		8EDAFE5CE0D24A5099A302F9 /* NotoSansTamil_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68C9BF5C66884240837EAC5C /* NotoSansTamil_SemiCondensed-Bold.ttf */; };
-		8F100E5B76194F09AB5B133D /* NotoSerifTamil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABAD1F68100143888CF6A2AA /* NotoSerifTamil-Regular.ttf */; };
 		911A0890F1F244AB9B880B2E /* Arima-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DA31005174406A32E8C6F /* Arima-ExtraLight.ttf */; };
-		95DEDD543FE84C07B2837D7F /* NotoSerifTamil_Condensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1870824209174670B0AD19B7 /* NotoSerifTamil_Condensed-Thin.ttf */; };
-		978E225AB0BA434B82BDB794 /* NotoSerifTamil-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B889807D131433BA9B96E63 /* NotoSerifTamil-LightItalic.ttf */; };
 		97EAC438C34E46F892FACA26 /* NotoSansTamil_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1730F8D37C64A00BC3D98FE /* NotoSansTamil_SemiCondensed-Regular.ttf */; };
-		99E741C7E8334220848E8C63 /* NotoSerifTamil-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E89D18CECCB44194A8A542E6 /* NotoSerifTamil-Black.ttf */; };
-		9A58785D9C13491A9C1CE6E8 /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 214C05C379BC493A8924020D /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf */; };
-		9AEC774790F54556B189D06D /* NotoSerifTamil_Condensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE4A0FF58BCC4401BAE4B85A /* NotoSerifTamil_Condensed-Black.ttf */; };
 		9C111EC30C0E429BA51D1BBE /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F57688B5927249E18B182D4E /* MaterialCommunityIcons.ttf */; };
-		9C5596A0D93E4A85AAB3CE81 /* BalooThambi2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD4BF100F24EF58E565087 /* BalooThambi2-ExtraBold.ttf */; };
 		9D957A66F6EE46F28B59ADC5 /* NotoSansTamil_SemiCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90899E18F6B4B86958603DE /* NotoSansTamil_SemiCondensed-ExtraLight.ttf */; };
-		A00EDDEF5DC34333A77A5F3F /* NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A1C1109ACF473CA49643D7 /* NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf */; };
-		A32532BC79FA40A595C049F3 /* NotoSerifTamil_ExtraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79D5BB6C14DE4575BB63202C /* NotoSerifTamil_ExtraCondensed-Black.ttf */; };
-		A6E9FACCD54B496789A780AD /* NotoSerifTamil_SemiCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 453AAD8D980B4A969B19AD01 /* NotoSerifTamil_SemiCondensed-MediumItalic.ttf */; };
-		AD716BD97C394A86B76B04D1 /* NotoSerifTamil_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737A6D2CDEFA40DCB5DEF58F /* NotoSerifTamil_Condensed-Light.ttf */; };
 		AE21D7B7F8A34EB9813400A7 /* NotoSansTamil_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D97D35147314E14A6F8C58F /* NotoSansTamil_SemiCondensed-Light.ttf */; };
-		AE44379D4144414A8EED14CD /* TiroTamil-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED92DAE72BC74BCEA456F004 /* TiroTamil-Italic.ttf */; };
 		AE88B6C4A6004ED89B3F0275 /* Arima-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDAE9088B58B411AA6DE0054 /* Arima-Medium.ttf */; };
-		B059140A869C45B3B4DF4D9D /* NotoSerifTamil_Condensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC8BF71A9E2480BA9A45553 /* NotoSerifTamil_Condensed-ThinItalic.ttf */; };
 		B2B949F8B1774AFAB6C06B79 /* NotoSansTamil_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA3358D3594B1E9FCCCAFB /* NotoSansTamil_SemiCondensed-SemiBold.ttf */; };
 		B32BC354B0E54577AE05EF52 /* NotoSansTamil_SemiCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E60E165926E4768928FF64A /* NotoSansTamil_SemiCondensed-Thin.ttf */; };
 		B3D6AFE94A2343ABB126D668 /* Arima-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4823D3EFC8A34AB58FEC6116 /* Arima-Thin.ttf */; };
-		B456ECC384FC4ABB987AE57E /* NotoSerifTamil_ExtraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD95C30AF844E3BEC28F1E /* NotoSerifTamil_ExtraCondensed-Light.ttf */; };
-		B64F8448D9B74AF289D062CE /* NotoSerifTamil_Condensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73DEE1500D3B4A2DB84A4C6A /* NotoSerifTamil_Condensed-ExtraLight.ttf */; };
 		B658A10722F14E64894C97A9 /* NotoSansTamil_ExtraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19A2434F931B48D0984D67DD /* NotoSansTamil_ExtraCondensed-Bold.ttf */; };
-		B95AB137DB464ECFA8D0E5C8 /* NotoSerifTamil_ExtraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A13874DC23924582A92607FA /* NotoSerifTamil_ExtraCondensed-Thin.ttf */; };
 		B993252EE69549BAB32DE7C4 /* NotoSansTamil_Condensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB90E3C9D15D4CC592D2489C /* NotoSansTamil_Condensed-Black.ttf */; };
-		BB9DE27ED4D446AABF907288 /* NotoSerifTamil-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C30EF22AAA14D18AD5FBDFC /* NotoSerifTamil-SemiBold.ttf */; };
-		C096269005D248BCA9576C6A /* NotoSerifTamil_ExtraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65A77E6328884DCB8AE8F415 /* NotoSerifTamil_ExtraCondensed-ExtraLight.ttf */; };
-		C17A079B21E14585A791A026 /* MuktaMalar-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62D6178AD23C442EB94B9D02 /* MuktaMalar-Bold.ttf */; };
-		C1F340EA8A1A44AE88E72ED0 /* BalooThambi2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93FFD0479DA2400A97EF39D5 /* BalooThambi2-Bold.ttf */; };
-		C28949079E2948D1B555B6CB /* NotoSerifTamil_SemiCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2244B95ADD4B41F88194428F /* NotoSerifTamil_SemiCondensed-Thin.ttf */; };
-		C46CB6FFCEC84274852692A9 /* NotoSerifTamil_SemiCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5152DCD866EB461691A76DE5 /* NotoSerifTamil_SemiCondensed-Black.ttf */; };
 		C48E739EDB374BEDAF71125E /* NotoSansTamil-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E892398444362AEA9D0CF /* NotoSansTamil-Thin.ttf */; };
-		C65BD9A248D148C59C961A59 /* NotoSerifTamil_Condensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C63689B27154CF4871C0706 /* NotoSerifTamil_Condensed-ExtraLightItalic.ttf */; };
-		C91D036D18474B4B8177D63B /* NotoSerifTamil_ExtraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9791F7A93844C37A3ADEB6F /* NotoSerifTamil_ExtraCondensed-Medium.ttf */; };
-		CAB6C452A2FB4AAB84511B42 /* NotoSerifTamil_ExtraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2E2DEBCBB7F4F51B581DDE8 /* NotoSerifTamil_ExtraCondensed-Regular.ttf */; };
+		CDF526E870554AD4A6E9EBCD /* AppSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3CAA832CA4AB5B2B8BD8E /* AppSplash.png */; };
 		CE93933EBC5545E0AE90DFCE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74D19D803494407A0145C2B /* MaterialIcons.ttf */; };
 		CF13F7532EE04D37812AAFFE /* NotoSansTamil_Condensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3380BEC7D8D448A6A5C1BE6E /* NotoSansTamil_Condensed-Thin.ttf */; };
 		CF7983EA734C4ECA928D2C69 /* Arima-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB711C2AF0F44EBF91A812E9 /* Arima-Bold.ttf */; };
-		D250B73E30C84376A787A5E9 /* NotoSerifTamil_ExtraCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3693E1D2DE416DA3CB4703 /* NotoSerifTamil_ExtraCondensed-LightItalic.ttf */; };
+		D00BE942292585FB00017A6D /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00BE940292585FB00017A6D /* BootSplash.storyboard */; };
 		D5038D7B14A943FB81B20098 /* NotoSansTamil-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C416B678408C4F4B986A3D23 /* NotoSansTamil-SemiBold.ttf */; };
-		D60B2CB4BD624A9886A61DB4 /* NotoSerifTamil-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDA54C500C3E44D093F730A9 /* NotoSerifTamil-Bold.ttf */; };
-		D762D36DA82040E799B7E8E9 /* Catamaran-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E00AC8438F21429291FF2C54 /* Catamaran-Black.ttf */; };
-		D846AC6E51014CF89FEC57A8 /* BalooThambi2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F4FE6761C4FAAA3EB0BFE /* BalooThambi2-Medium.ttf */; };
 		D99408943A86416DB85EC7D4 /* NotoSansTamil_ExtraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C047BFB3EFC14D42BA29E9AD /* NotoSansTamil_ExtraCondensed-Black.ttf */; };
-		DAF6A6D87DDF46EA9479DA81 /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77709466EF294D17932ADC4E /* Catamaran-VariableFont_wght.ttf */; };
-		DD13402A234740DA87991723 /* MuktaMalar-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 557B97127E884B74B746453F /* MuktaMalar-SemiBold.ttf */; };
-		DEC85A2F543E48069DD3C5BD /* NotoSerifTamil-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94B816A2F0734576B5466ABB /* NotoSerifTamil-VariableFont_wdth,wght.ttf */; };
-		E19836218D4248DC858AFC57 /* NotoSerifTamil-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13548E91523C441B9C0ED1F7 /* NotoSerifTamil-BlackItalic.ttf */; };
 		E21DF628845F4C029C260B2A /* NotoSansTamil_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23E1E6941E5F46D1953EB615 /* NotoSansTamil_Condensed-Regular.ttf */; };
-		E225146B93094310BFA8399A /* NotoSerifTamil-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5075D4BCFA1A4D61A30A16FB /* NotoSerifTamil-BoldItalic.ttf */; };
 		E2FDD039837E4FA68EF79BF4 /* NotoSansTamil_ExtraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB34E453F403458AB3D5DCDC /* NotoSansTamil_ExtraCondensed-Light.ttf */; };
-		E3846E2E6EE34A569E2CD482 /* MuktaMalar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF0E3FC245D14D1685046ECC /* MuktaMalar-Regular.ttf */; };
 		E4C50DACA95E43FE910C0C57 /* NotoSansTamil-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A90E694B90024CAB966C5622 /* NotoSansTamil-Light.ttf */; };
-		E4E43A6C01FD42CC86144DFD /* NotoSerifTamil_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1830601DC121470A89F6E540 /* NotoSerifTamil_Condensed-Medium.ttf */; };
-		E6D27EDA06564CDABFED48EC /* NotoSerifTamil_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE383FFAD484FD6B9701E9C /* NotoSerifTamil_SemiCondensed-Italic.ttf */; };
-		EAC18A3615D44789BA94C263 /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BC965B9E5A4E9FB812CD9A /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf */; };
-		EBEE4CE5559044A0B0F33674 /* NotoSerifTamil_ExtraCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAABA3236C7047EF9EB873BC /* NotoSerifTamil_ExtraCondensed-BlackItalic.ttf */; };
-		ED0EFE8301584E158AA71B34 /* BalooThambi2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 317DAEBBC4464BE58A113A20 /* BalooThambi2-SemiBold.ttf */; };
-		EDF600441AD8483FA99A6A87 /* NotoSerifTamil-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB4C7F23F6E547458B25E8D7 /* NotoSerifTamil-Medium.ttf */; };
 		EE119EC3C32F4EF0B321D199 /* NotoSansTamil-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E78F3EE5A0466B80F7260D /* NotoSansTamil-VariableFont_wdth,wght.ttf */; };
-		F38556B9E2F34BF7A94FA81F /* NotoSerifTamil-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7484934FC1A4D4AA4352575 /* NotoSerifTamil-MediumItalic.ttf */; };
-		F3E510D4806B436FB4560E3A /* NotoSerifTamil_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F3CC60EB78442D84284616 /* NotoSerifTamil_SemiCondensed-SemiBold.ttf */; };
-		F4F858F697954310997DE28D /* BalooThambi2-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69A0C4B9F234447AB7218ED5 /* BalooThambi2-VariableFont_wght.ttf */; };
 		F5FC5416CFAE4C228F44D2A0 /* NotoSansTamil_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9FFAB794E7450794258841 /* NotoSansTamil_SemiCondensed-Medium.ttf */; };
 		F62EB1BE97A042C39DC8F75B /* Arima-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91C65F4A015A4A1EAF564E40 /* Arima-Regular.ttf */; };
-		F63898BE565346FAAC299BAC /* NotoSerifTamil_SemiCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43DC3889245B40679101B2DD /* NotoSerifTamil_SemiCondensed-LightItalic.ttf */; };
 		FA02F55FD12241C9B043DBED /* NotoSansTamil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927418D0667847408611245A /* NotoSansTamil-Regular.ttf */; };
-		FBE4DF685DFC4802A4D640CF /* Catamaran-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1351ABAD5576454CACBB9DC4 /* Catamaran-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,19 +82,22 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Sollividu;
 		};
+		D00BE93C29255CEA00017A6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00BE93829255CEA00017A6D /* SplashScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7682761D8E76B80014119E;
+			remoteInfo = SplashScreen;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005D0720E3104F27BED987BD /* NotoSerifTamil-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-ThinItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ThinItalic.ttf"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* SollividuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SollividuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SollividuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SollividuTests.m; sourceTree = "<group>"; };
 		0124926EEB7D4F5DA54C2E09 /* NotoSansTamil_ExtraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
-		06B8FDC50B004CF9BCF95373 /* NotoSerifTamil_ExtraCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Bold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		0A8306FDEE0F4748863642EF /* NotoSerifTamil_ExtraCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-BoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
-		0E4C92DE4AAF4B3D823A88FA /* MeeraInimai-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MeeraInimai-Regular.ttf"; path = "../assets/fonts/Meera_Inimai/MeeraInimai-Regular.ttf"; sourceTree = "<group>"; };
-		1351ABAD5576454CACBB9DC4 /* Catamaran-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Light.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Light.ttf"; sourceTree = "<group>"; };
-		13548E91523C441B9C0ED1F7 /* NotoSerifTamil-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-BlackItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-BlackItalic.ttf"; sourceTree = "<group>"; };
+		0CD3CAA832CA4AB5B2B8BD8E /* AppSplash.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AppSplash.png; path = ../assets/images/AppSplash.png; sourceTree = "<group>"; };
+		11CFF1D8721F4D9D9751B49F /* AppIconForeground.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AppIconForeground.png; path = ../assets/images/AppIconForeground.png; sourceTree = "<group>"; };
 		1390AB880202431199C69A27 /* NotoSansTamil-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-ExtraBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Sollividu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sollividu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sollividu/AppDelegate.h; sourceTree = "<group>"; };
@@ -200,80 +106,33 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sollividu/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sollividu/main.m; sourceTree = "<group>"; };
 		14130EC017A54765AEF343CD /* NotoSansTamil_ExtraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
-		15610E4F9EE5451BAF1E8D04 /* NotoSerifTamil_Condensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Bold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Bold.ttf"; sourceTree = "<group>"; };
-		1830601DC121470A89F6E540 /* NotoSerifTamil_Condensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Medium.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Medium.ttf"; sourceTree = "<group>"; };
-		1870824209174670B0AD19B7 /* NotoSerifTamil_Condensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Thin.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Thin.ttf"; sourceTree = "<group>"; };
 		19A2434F931B48D0984D67DD /* NotoSansTamil_ExtraCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Bold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Sollividu-SollividuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sollividu-SollividuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CAA33FDC4534D3DBA0AA94F /* NotoSerifTamil_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Bold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		1CD3328410D54CA6BBD9C225 /* NotoSerifTamil_Condensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-LightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		1CE93F67B0DC464F9B4CDC96 /* tamillexicon_unique_words_of_length_4.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = tamillexicon_unique_words_of_length_4.txt; path = ../assets/wordLists/tamillexicon_unique_words_of_length_4.txt; sourceTree = "<group>"; };
-		1FC2784E643F412FB462E161 /* NotoSerifTamil_Condensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Italic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Italic.ttf"; sourceTree = "<group>"; };
-		20F3CC60EB78442D84284616 /* NotoSerifTamil_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
-		214C05C379BC493A8924020D /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		2244B95ADD4B41F88194428F /* NotoSerifTamil_SemiCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Thin.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		1DA0D4135C1C4A2F92E08AD0 /* AppIconBackground.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AppIconBackground.png; path = ../assets/images/AppIconBackground.png; sourceTree = "<group>"; };
 		22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = ../assets/fonts/Ionicons.ttf; sourceTree = "<group>"; };
 		23E1E6941E5F46D1953EB615 /* NotoSansTamil_Condensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Regular.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Regular.ttf"; sourceTree = "<group>"; };
-		25B889E2B8C64DE588D02408 /* NotoSerifTamil_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
-		27BC965B9E5A4E9FB812CD9A /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-MediumItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
-		28D1278DEFD34FF09F5FD1A1 /* NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
-		2AAD4BF100F24EF58E565087 /* BalooThambi2-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-ExtraBold.ttf"; path = "../assets/fonts/Baloo_Thambi_2/static/BalooThambi2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2F6DA31005174406A32E8C6F /* Arima-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-ExtraLight.ttf"; path = "../assets/fonts/Arima/static/Arima-ExtraLight.ttf"; sourceTree = "<group>"; };
 		2FCA3358D3594B1E9FCCCAFB /* NotoSansTamil_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
-		317DAEBBC4464BE58A113A20 /* BalooThambi2-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-SemiBold.ttf"; path = "../assets/fonts/Baloo_Thambi_2/static/BalooThambi2-SemiBold.ttf"; sourceTree = "<group>"; };
 		3380BEC7D8D448A6A5C1BE6E /* NotoSansTamil_Condensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Thin.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Thin.ttf"; sourceTree = "<group>"; };
 		35DA1BB3F2B545E7AAA14DCA /* Arima-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-SemiBold.ttf"; path = "../assets/fonts/Arima/static/Arima-SemiBold.ttf"; sourceTree = "<group>"; };
-		3A3693E1D2DE416DA3CB4703 /* NotoSerifTamil_ExtraCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-LightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Sollividu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sollividu.debug.xcconfig"; path = "Target Support Files/Pods-Sollividu/Pods-Sollividu.debug.xcconfig"; sourceTree = "<group>"; };
-		3B50635CD6A244CBB8D653C1 /* NotoSerifTamil-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Thin.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Thin.ttf"; sourceTree = "<group>"; };
-		3C8A7915FE704A8597220FD3 /* NotoSerifTamil_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Light.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
 		3CF4FDEBF0F74CE78AC8195D /* NotoSansTamil-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-Black.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-Black.ttf"; sourceTree = "<group>"; };
-		3DEADECB7FE24A02ADEA8850 /* NotoSerifTamil_ExtraCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Italic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Italic.ttf"; sourceTree = "<group>"; };
-		3FF8085E27194637B1BECF12 /* NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		41A6441D40C24F5CB3897F52 /* NotoSerifTamil_SemiCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-BlackItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
-		433F4028E30D44D4B2FC3A6B /* NotoSerifTamil_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Medium.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
-		43A1C1109ACF473CA49643D7 /* NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		43DC3889245B40679101B2DD /* NotoSerifTamil_SemiCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-LightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
-		453AAD8D980B4A969B19AD01 /* NotoSerifTamil_SemiCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-MediumItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
 		4823D3EFC8A34AB58FEC6116 /* Arima-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-Thin.ttf"; path = "../assets/fonts/Arima/static/Arima-Thin.ttf"; sourceTree = "<group>"; };
 		4B84FDBEE53E4BA8ACC738F5 /* NotoSansTamil_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		4D97D35147314E14A6F8C58F /* NotoSansTamil_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-Light.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
-		4EF4660A76AA4158901C9530 /* NotoSerifTamil_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
-		5075D4BCFA1A4D61A30A16FB /* NotoSerifTamil-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-BoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-BoldItalic.ttf"; sourceTree = "<group>"; };
-		5152DCD866EB461691A76DE5 /* NotoSerifTamil_SemiCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Black.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Black.ttf"; sourceTree = "<group>"; };
 		5568B58A17474E009D8CF166 /* NotoSansTamil_Condensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Light.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Light.ttf"; sourceTree = "<group>"; };
-		557B97127E884B74B746453F /* MuktaMalar-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-SemiBold.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Sollividu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sollividu.release.xcconfig"; path = "Target Support Files/Pods-Sollividu/Pods-Sollividu.release.xcconfig"; sourceTree = "<group>"; };
 		5AB5AD5C41454A958150CD21 /* NotoSansTamil_ExtraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Sollividu-SollividuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sollividu-SollividuTests.debug.xcconfig"; path = "Target Support Files/Pods-Sollividu-SollividuTests/Pods-Sollividu-SollividuTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C63689B27154CF4871C0706 /* NotoSerifTamil_Condensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ExtraLightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Sollividu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sollividu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E994AF56F764F97A26AAEBB /* Catamaran-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-SemiBold.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-SemiBold.ttf"; sourceTree = "<group>"; };
-		600AEF57589F42AC904CA3B3 /* NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		605F449F9A9E4B1990847FAB /* NotoSerifTamil_Condensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-MediumItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-MediumItalic.ttf"; sourceTree = "<group>"; };
-		62D6178AD23C442EB94B9D02 /* MuktaMalar-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-Bold.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-Bold.ttf"; sourceTree = "<group>"; };
-		65A77E6328884DCB8AE8F415 /* NotoSerifTamil_ExtraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
-		6854959033A343D8AF19E6B0 /* NotoSerifTamil_Condensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-BoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-BoldItalic.ttf"; sourceTree = "<group>"; };
 		68C9BF5C66884240837EAC5C /* NotoSansTamil_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-Bold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		69A0C4B9F234447AB7218ED5 /* BalooThambi2-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-VariableFont_wght.ttf"; path = "../assets/fonts/Baloo_Thambi_2/BalooThambi2-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		69ADEE7AFB3B4929B78129C0 /* NotoSansTamil_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
-		71315F571F98492CA372D25D /* NotoSerifTamil-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-SemiBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		72C3E67D37094E6699F979F9 /* NotoSerifTamil-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-ExtraLight.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraLight.ttf"; sourceTree = "<group>"; };
-		737A6D2CDEFA40DCB5DEF58F /* NotoSerifTamil_Condensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Light.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Light.ttf"; sourceTree = "<group>"; };
-		73DEE1500D3B4A2DB84A4C6A /* NotoSerifTamil_Condensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraLight.ttf"; sourceTree = "<group>"; };
 		74445C8E4CEE47CB82AE10D6 /* NotoSansTamil_ExtraCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Medium.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Medium.ttf"; sourceTree = "<group>"; };
 		7532C6DC9F6547CEA93268CD /* NotoSansTamil-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-ExtraLight.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-ExtraLight.ttf"; sourceTree = "<group>"; };
-		77709466EF294D17932ADC4E /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-VariableFont_wght.ttf"; path = "../assets/fonts/Catamaran/Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		7853393DB38243639614E75E /* NotoSansTamil_ExtraCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Regular.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		7987D0E97FD04EA0BD43929A /* NotoSerifTamil-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Italic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Italic.ttf"; sourceTree = "<group>"; };
-		79D5BB6C14DE4575BB63202C /* NotoSerifTamil_ExtraCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Black.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Black.ttf"; sourceTree = "<group>"; };
-		7ACFA6FBA68E451FB8456B40 /* Catamaran-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Bold.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Bold.ttf"; sourceTree = "<group>"; };
-		7ADD95C30AF844E3BEC28F1E /* NotoSerifTamil_ExtraCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Light.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Light.ttf"; sourceTree = "<group>"; };
 		7C147466BE384911B5891E6D /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = ../assets/fonts/Feather.ttf; sourceTree = "<group>"; };
-		7FC8BF71A9E2480BA9A45553 /* NotoSerifTamil_Condensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ThinItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ThinItalic.ttf"; sourceTree = "<group>"; };
 		7FF6D07D7D274441825BB7A3 /* Arima-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-Light.ttf"; path = "../assets/fonts/Arima/static/Arima-Light.ttf"; sourceTree = "<group>"; };
-		80987BA0F63F4457B2226526 /* NotoSerifTamil_ExtraCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-ThinItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Sollividu/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Sollividu-SollividuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sollividu-SollividuTests.release.xcconfig"; path = "Target Support Files/Pods-Sollividu-SollividuTests/Pods-Sollividu-SollividuTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C2689A4825F42AFA31B7BB1 /* NotoSansTamil_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8D4E892398444362AEA9D0CF /* NotoSansTamil-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-Thin.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-Thin.ttf"; sourceTree = "<group>"; };
@@ -283,77 +142,32 @@
 		8F9FFAB794E7450794258841 /* NotoSansTamil_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-Medium.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
 		90E62C982C56489AAF224F9D /* NotoSansTamil_ExtraCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Thin.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Thin.ttf"; sourceTree = "<group>"; };
 		91C65F4A015A4A1EAF564E40 /* Arima-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-Regular.ttf"; path = "../assets/fonts/Arima/static/Arima-Regular.ttf"; sourceTree = "<group>"; };
-		91D0905548B94836BF2E00E0 /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		927418D0667847408611245A /* NotoSansTamil-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-Regular.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-Regular.ttf"; sourceTree = "<group>"; };
-		93FFD0479DA2400A97EF39D5 /* BalooThambi2-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-Bold.ttf"; path = "../assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Bold.ttf"; sourceTree = "<group>"; };
-		94B816A2F0734576B5466ABB /* NotoSerifTamil-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-VariableFont_wdth,wght.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/NotoSerifTamil-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		93D928963C4D4DD286FBD381 /* AppIcon_512x512.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AppIcon_512x512.png; path = ../assets/images/AppIcon_512x512.png; sourceTree = "<group>"; };
 		95598F1CFBE14CA6BAA4695D /* tamillexicon_unique_words_of_length_6.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = tamillexicon_unique_words_of_length_6.txt; path = ../assets/wordLists/tamillexicon_unique_words_of_length_6.txt; sourceTree = "<group>"; };
-		9892DEB62ED042A1B62A8ABC /* Catamaran-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Regular.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Regular.ttf"; sourceTree = "<group>"; };
-		9A66B60C3CDE40159819E2E2 /* NotoSerifTamil_ExtraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-SemiBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
-		9B889807D131433BA9B96E63 /* NotoSerifTamil-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-LightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-LightItalic.ttf"; sourceTree = "<group>"; };
-		9C30EF22AAA14D18AD5FBDFC /* NotoSerifTamil-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-SemiBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-SemiBold.ttf"; sourceTree = "<group>"; };
-		9C6EC98FF90D472F8422B0A9 /* MuktaMalar-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-ExtraBold.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-ExtraBold.ttf"; sourceTree = "<group>"; };
-		9FE383FFAD484FD6B9701E9C /* NotoSerifTamil_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Italic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
-		A13874DC23924582A92607FA /* NotoSerifTamil_ExtraCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Thin.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		9A5F835F1EC64615961E2D26 /* AppIcon.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AppIcon.png; path = ../assets/images/AppIcon.png; sourceTree = "<group>"; };
 		A245DC15CD6E403488708906 /* NotoSansTamil-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-Medium.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-Medium.ttf"; sourceTree = "<group>"; };
-		A7484934FC1A4D4AA4352575 /* NotoSerifTamil-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-MediumItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-MediumItalic.ttf"; sourceTree = "<group>"; };
-		A78ECE76626F442FABFC405C /* NotoSerifTamil_Condensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Regular.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Regular.ttf"; sourceTree = "<group>"; };
 		A90899E18F6B4B86958603DE /* NotoSansTamil_SemiCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
 		A90E694B90024CAB966C5622 /* NotoSansTamil-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-Light.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-Light.ttf"; sourceTree = "<group>"; };
-		AAABA3236C7047EF9EB873BC /* NotoSerifTamil_ExtraCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-BlackItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
-		ABAD1F68100143888CF6A2AA /* NotoSerifTamil-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Regular.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Regular.ttf"; sourceTree = "<group>"; };
-		AF0E3FC245D14D1685046ECC /* MuktaMalar-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-Regular.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-Regular.ttf"; sourceTree = "<group>"; };
 		B0E78F3EE5A0466B80F7260D /* NotoSansTamil-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-VariableFont_wdth,wght.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/NotoSansTamil-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
-		B12205CCBE6A4BEDBA16F805 /* TiroTamil-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TiroTamil-Regular.ttf"; path = "../assets/fonts/Tiro_Tamil/TiroTamil-Regular.ttf"; sourceTree = "<group>"; };
-		B2E2DEBCBB7F4F51B581DDE8 /* NotoSerifTamil_ExtraCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Regular.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		B9791F7A93844C37A3ADEB6F /* NotoSerifTamil_ExtraCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-Medium.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-Medium.ttf"; sourceTree = "<group>"; };
-		BA6A2251182941B58B2A7DE3 /* NotoSerifTamil_SemiCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ThinItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
 		BB90E3C9D15D4CC592D2489C /* NotoSansTamil_Condensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Black.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Black.ttf"; sourceTree = "<group>"; };
 		BD18922948224BC1A6E6A897 /* NotoSansTamil_SemiCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-Black.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-Black.ttf"; sourceTree = "<group>"; };
-		BE0C4FFB0749423D868473FE /* Pavanam-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pavanam-Regular.ttf"; path = "../assets/fonts/Pavanam/Pavanam-Regular.ttf"; sourceTree = "<group>"; };
 		C047BFB3EFC14D42BA29E9AD /* NotoSansTamil_ExtraCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Black.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Black.ttf"; sourceTree = "<group>"; };
-		C0D01DBE1F6243B098CDF2D1 /* NotoSerifTamil_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-Regular.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		C416B678408C4F4B986A3D23 /* NotoSansTamil-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil-SemiBold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil/NotoSansTamil-SemiBold.ttf"; sourceTree = "<group>"; };
-		C594D4C8F592451EB3562A2D /* MuktaMalar-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-Medium.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-Medium.ttf"; sourceTree = "<group>"; };
-		C74F4FE6761C4FAAA3EB0BFE /* BalooThambi2-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-Medium.ttf"; path = "../assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Medium.ttf"; sourceTree = "<group>"; };
-		C760F4D02C014855A13DF6EE /* NotoSerifTamil_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
-		C9908DC581554C5C885E0748 /* NotoSerifTamil_ExtraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-ExtraBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
-		CB4C7F23F6E547458B25E8D7 /* NotoSerifTamil-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Medium.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Medium.ttf"; sourceTree = "<group>"; };
-		CDA54C500C3E44D093F730A9 /* NotoSerifTamil-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Bold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Bold.ttf"; sourceTree = "<group>"; };
-		CE5E0A2C4C99482184BFCE5A /* Kavivanar-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Kavivanar-Regular.ttf"; path = "../assets/fonts/Kavivanar/Kavivanar-Regular.ttf"; sourceTree = "<group>"; };
-		CE620EEDA0594BB08064FB4C /* MuktaMalar-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-ExtraLight.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CEB34BE889814531A3ED7037 /* tamillexicon_unique_words_of_length_3.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = tamillexicon_unique_words_of_length_3.txt; path = ../assets/wordLists/tamillexicon_unique_words_of_length_3.txt; sourceTree = "<group>"; };
-		D41886EDD4FC45DFADE1EB34 /* Catamaran-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-ExtraLight.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-ExtraLight.ttf"; sourceTree = "<group>"; };
-		D8B41184C0134923872D2D36 /* NotoSerifTamil_SemiCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-BoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D00BE93829255CEA00017A6D /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+		D00BE940292585FB00017A6D /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = Sollividu/BootSplash.storyboard; sourceTree = "<group>"; };
 		DB711C2AF0F44EBF91A812E9 /* Arima-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-Bold.ttf"; path = "../assets/fonts/Arima/static/Arima-Bold.ttf"; sourceTree = "<group>"; };
 		DDAE9088B58B411AA6DE0054 /* Arima-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-Medium.ttf"; path = "../assets/fonts/Arima/static/Arima-Medium.ttf"; sourceTree = "<group>"; };
-		DDF6A43A6A8D470ABB761078 /* NotoSerifTamil-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-ExtraBold.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraBold.ttf"; sourceTree = "<group>"; };
-		E00AC8438F21429291FF2C54 /* Catamaran-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Black.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Black.ttf"; sourceTree = "<group>"; };
-		E04F6BAA6C0946C3B4985D34 /* NotoSerifTamil_Condensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-BlackItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-BlackItalic.ttf"; sourceTree = "<group>"; };
-		E165D36457C547B499BEECEA /* BalooThambi2-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooThambi2-Regular.ttf"; path = "../assets/fonts/Baloo_Thambi_2/static/BalooThambi2-Regular.ttf"; sourceTree = "<group>"; };
-		E54401D0106149998E7B63A7 /* MuktaMalar-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MuktaMalar-Light.ttf"; path = "../assets/fonts/Mukta_Malar/MuktaMalar-Light.ttf"; sourceTree = "<group>"; };
-		E633BB7A99914C23B7A60A70 /* Catamaran-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Thin.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Thin.ttf"; sourceTree = "<group>"; };
-		E89D18CECCB44194A8A542E6 /* NotoSerifTamil-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Black.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Black.ttf"; sourceTree = "<group>"; };
 		EB34E453F403458AB3D5DCDC /* NotoSansTamil_ExtraCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_ExtraCondensed-Light.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_ExtraCondensed/NotoSansTamil_ExtraCondensed-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED3E8AF6E85F4F8AA6B06326 /* NotoSansTamil_Condensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Bold.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Bold.ttf"; sourceTree = "<group>"; };
-		ED92DAE72BC74BCEA456F004 /* TiroTamil-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "TiroTamil-Italic.ttf"; path = "../assets/fonts/Tiro_Tamil/TiroTamil-Italic.ttf"; sourceTree = "<group>"; };
-		EE4A0FF58BCC4401BAE4B85A /* NotoSerifTamil_Condensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-Black.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-Black.ttf"; sourceTree = "<group>"; };
-		F0552B830800445EB2F0579F /* Catamaran-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-ExtraBold.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-ExtraBold.ttf"; sourceTree = "<group>"; };
-		F08A5DD82EDD4E71A00F7B89 /* NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_ExtraCondensed/NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		F10D302F67B94C7E8DA17896 /* NotoSerifTamil-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-Light.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-Light.ttf"; sourceTree = "<group>"; };
 		F1730F8D37C64A00BC3D98FE /* NotoSansTamil_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_SemiCondensed-Regular.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_SemiCondensed/NotoSansTamil_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		F1898AC56AA04F9FBA9E596E /* NotoSerifTamil_Condensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-SemiBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		F36E9E852B3F4AD6B58E1E32 /* NotoSerifTamil_Condensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_Condensed-ExtraBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_Condensed/NotoSerifTamil_Condensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		F40CAA5EA5CA4F17AC4A45A3 /* Arima-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arima-VariableFont_wght.ttf"; path = "../assets/fonts/Arima/Arima-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		F57688B5927249E18B182D4E /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = ../assets/fonts/MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
 		F5D075E4AEB8415BB0CD3BD3 /* NotoSansTamil_Condensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-Medium.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-Medium.ttf"; sourceTree = "<group>"; };
-		F6DADBDC7E2642C99D44B75D /* NotoSerifTamil-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-ExtraBoldItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		F74D19D803494407A0145C2B /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = ../assets/fonts/MaterialIcons.ttf; sourceTree = "<group>"; };
 		F77F02ADA34A4995974CC4C0 /* NotoSansTamil_Condensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansTamil_Condensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Sans_Tamil/static/NotoSansTamil_Condensed/NotoSansTamil_Condensed-ExtraLight.ttf"; sourceTree = "<group>"; };
-		FA0DD13342DD4519849175A5 /* NotoSerifTamil_SemiCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil_SemiCondensed-ExtraLight.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil_SemiCondensed/NotoSerifTamil_SemiCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
-		FB1E6AF717D6477AA2EE2214 /* NotoSerifTamil-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSerifTamil-ExtraLightItalic.ttf"; path = "../assets/fonts/Noto_Serif_Tamil/static/NotoSerifTamil/NotoSerifTamil-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		FF8E4E1CC5CD40AC9988F67A /* Catamaran-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Catamaran-Medium.ttf"; path = "../assets/fonts/Catamaran/static/Catamaran-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,7 +214,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				D00BE940292585FB00017A6D /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = Sollividu;
@@ -417,31 +231,6 @@
 				91C65F4A015A4A1EAF564E40 /* Arima-Regular.ttf */,
 				35DA1BB3F2B545E7AAA14DCA /* Arima-SemiBold.ttf */,
 				4823D3EFC8A34AB58FEC6116 /* Arima-Thin.ttf */,
-				69A0C4B9F234447AB7218ED5 /* BalooThambi2-VariableFont_wght.ttf */,
-				93FFD0479DA2400A97EF39D5 /* BalooThambi2-Bold.ttf */,
-				2AAD4BF100F24EF58E565087 /* BalooThambi2-ExtraBold.ttf */,
-				C74F4FE6761C4FAAA3EB0BFE /* BalooThambi2-Medium.ttf */,
-				E165D36457C547B499BEECEA /* BalooThambi2-Regular.ttf */,
-				317DAEBBC4464BE58A113A20 /* BalooThambi2-SemiBold.ttf */,
-				77709466EF294D17932ADC4E /* Catamaran-VariableFont_wght.ttf */,
-				E00AC8438F21429291FF2C54 /* Catamaran-Black.ttf */,
-				7ACFA6FBA68E451FB8456B40 /* Catamaran-Bold.ttf */,
-				F0552B830800445EB2F0579F /* Catamaran-ExtraBold.ttf */,
-				D41886EDD4FC45DFADE1EB34 /* Catamaran-ExtraLight.ttf */,
-				1351ABAD5576454CACBB9DC4 /* Catamaran-Light.ttf */,
-				FF8E4E1CC5CD40AC9988F67A /* Catamaran-Medium.ttf */,
-				9892DEB62ED042A1B62A8ABC /* Catamaran-Regular.ttf */,
-				5E994AF56F764F97A26AAEBB /* Catamaran-SemiBold.ttf */,
-				E633BB7A99914C23B7A60A70 /* Catamaran-Thin.ttf */,
-				CE5E0A2C4C99482184BFCE5A /* Kavivanar-Regular.ttf */,
-				0E4C92DE4AAF4B3D823A88FA /* MeeraInimai-Regular.ttf */,
-				62D6178AD23C442EB94B9D02 /* MuktaMalar-Bold.ttf */,
-				9C6EC98FF90D472F8422B0A9 /* MuktaMalar-ExtraBold.ttf */,
-				CE620EEDA0594BB08064FB4C /* MuktaMalar-ExtraLight.ttf */,
-				E54401D0106149998E7B63A7 /* MuktaMalar-Light.ttf */,
-				C594D4C8F592451EB3562A2D /* MuktaMalar-Medium.ttf */,
-				AF0E3FC245D14D1685046ECC /* MuktaMalar-Regular.ttf */,
-				557B97127E884B74B746453F /* MuktaMalar-SemiBold.ttf */,
 				B0E78F3EE5A0466B80F7260D /* NotoSansTamil-VariableFont_wdth,wght.ttf */,
 				3CF4FDEBF0F74CE78AC8195D /* NotoSansTamil-Black.ttf */,
 				8DA62784BCE048678ADD20C9 /* NotoSansTamil-Bold.ttf */,
@@ -479,83 +268,6 @@
 				F1730F8D37C64A00BC3D98FE /* NotoSansTamil_SemiCondensed-Regular.ttf */,
 				2FCA3358D3594B1E9FCCCAFB /* NotoSansTamil_SemiCondensed-SemiBold.ttf */,
 				8E60E165926E4768928FF64A /* NotoSansTamil_SemiCondensed-Thin.ttf */,
-				28D1278DEFD34FF09F5FD1A1 /* NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf */,
-				94B816A2F0734576B5466ABB /* NotoSerifTamil-VariableFont_wdth,wght.ttf */,
-				E89D18CECCB44194A8A542E6 /* NotoSerifTamil-Black.ttf */,
-				13548E91523C441B9C0ED1F7 /* NotoSerifTamil-BlackItalic.ttf */,
-				CDA54C500C3E44D093F730A9 /* NotoSerifTamil-Bold.ttf */,
-				5075D4BCFA1A4D61A30A16FB /* NotoSerifTamil-BoldItalic.ttf */,
-				DDF6A43A6A8D470ABB761078 /* NotoSerifTamil-ExtraBold.ttf */,
-				F6DADBDC7E2642C99D44B75D /* NotoSerifTamil-ExtraBoldItalic.ttf */,
-				72C3E67D37094E6699F979F9 /* NotoSerifTamil-ExtraLight.ttf */,
-				FB1E6AF717D6477AA2EE2214 /* NotoSerifTamil-ExtraLightItalic.ttf */,
-				7987D0E97FD04EA0BD43929A /* NotoSerifTamil-Italic.ttf */,
-				F10D302F67B94C7E8DA17896 /* NotoSerifTamil-Light.ttf */,
-				9B889807D131433BA9B96E63 /* NotoSerifTamil-LightItalic.ttf */,
-				CB4C7F23F6E547458B25E8D7 /* NotoSerifTamil-Medium.ttf */,
-				A7484934FC1A4D4AA4352575 /* NotoSerifTamil-MediumItalic.ttf */,
-				ABAD1F68100143888CF6A2AA /* NotoSerifTamil-Regular.ttf */,
-				9C30EF22AAA14D18AD5FBDFC /* NotoSerifTamil-SemiBold.ttf */,
-				71315F571F98492CA372D25D /* NotoSerifTamil-SemiBoldItalic.ttf */,
-				3B50635CD6A244CBB8D653C1 /* NotoSerifTamil-Thin.ttf */,
-				005D0720E3104F27BED987BD /* NotoSerifTamil-ThinItalic.ttf */,
-				EE4A0FF58BCC4401BAE4B85A /* NotoSerifTamil_Condensed-Black.ttf */,
-				E04F6BAA6C0946C3B4985D34 /* NotoSerifTamil_Condensed-BlackItalic.ttf */,
-				15610E4F9EE5451BAF1E8D04 /* NotoSerifTamil_Condensed-Bold.ttf */,
-				6854959033A343D8AF19E6B0 /* NotoSerifTamil_Condensed-BoldItalic.ttf */,
-				25B889E2B8C64DE588D02408 /* NotoSerifTamil_Condensed-ExtraBold.ttf */,
-				F36E9E852B3F4AD6B58E1E32 /* NotoSerifTamil_Condensed-ExtraBoldItalic.ttf */,
-				73DEE1500D3B4A2DB84A4C6A /* NotoSerifTamil_Condensed-ExtraLight.ttf */,
-				5C63689B27154CF4871C0706 /* NotoSerifTamil_Condensed-ExtraLightItalic.ttf */,
-				1FC2784E643F412FB462E161 /* NotoSerifTamil_Condensed-Italic.ttf */,
-				737A6D2CDEFA40DCB5DEF58F /* NotoSerifTamil_Condensed-Light.ttf */,
-				1CD3328410D54CA6BBD9C225 /* NotoSerifTamil_Condensed-LightItalic.ttf */,
-				1830601DC121470A89F6E540 /* NotoSerifTamil_Condensed-Medium.ttf */,
-				605F449F9A9E4B1990847FAB /* NotoSerifTamil_Condensed-MediumItalic.ttf */,
-				A78ECE76626F442FABFC405C /* NotoSerifTamil_Condensed-Regular.ttf */,
-				4EF4660A76AA4158901C9530 /* NotoSerifTamil_Condensed-SemiBold.ttf */,
-				F1898AC56AA04F9FBA9E596E /* NotoSerifTamil_Condensed-SemiBoldItalic.ttf */,
-				1870824209174670B0AD19B7 /* NotoSerifTamil_Condensed-Thin.ttf */,
-				7FC8BF71A9E2480BA9A45553 /* NotoSerifTamil_Condensed-ThinItalic.ttf */,
-				79D5BB6C14DE4575BB63202C /* NotoSerifTamil_ExtraCondensed-Black.ttf */,
-				AAABA3236C7047EF9EB873BC /* NotoSerifTamil_ExtraCondensed-BlackItalic.ttf */,
-				06B8FDC50B004CF9BCF95373 /* NotoSerifTamil_ExtraCondensed-Bold.ttf */,
-				0A8306FDEE0F4748863642EF /* NotoSerifTamil_ExtraCondensed-BoldItalic.ttf */,
-				C9908DC581554C5C885E0748 /* NotoSerifTamil_ExtraCondensed-ExtraBold.ttf */,
-				43A1C1109ACF473CA49643D7 /* NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf */,
-				65A77E6328884DCB8AE8F415 /* NotoSerifTamil_ExtraCondensed-ExtraLight.ttf */,
-				3FF8085E27194637B1BECF12 /* NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf */,
-				3DEADECB7FE24A02ADEA8850 /* NotoSerifTamil_ExtraCondensed-Italic.ttf */,
-				7ADD95C30AF844E3BEC28F1E /* NotoSerifTamil_ExtraCondensed-Light.ttf */,
-				3A3693E1D2DE416DA3CB4703 /* NotoSerifTamil_ExtraCondensed-LightItalic.ttf */,
-				B9791F7A93844C37A3ADEB6F /* NotoSerifTamil_ExtraCondensed-Medium.ttf */,
-				27BC965B9E5A4E9FB812CD9A /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf */,
-				B2E2DEBCBB7F4F51B581DDE8 /* NotoSerifTamil_ExtraCondensed-Regular.ttf */,
-				9A66B60C3CDE40159819E2E2 /* NotoSerifTamil_ExtraCondensed-SemiBold.ttf */,
-				F08A5DD82EDD4E71A00F7B89 /* NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf */,
-				A13874DC23924582A92607FA /* NotoSerifTamil_ExtraCondensed-Thin.ttf */,
-				80987BA0F63F4457B2226526 /* NotoSerifTamil_ExtraCondensed-ThinItalic.ttf */,
-				5152DCD866EB461691A76DE5 /* NotoSerifTamil_SemiCondensed-Black.ttf */,
-				41A6441D40C24F5CB3897F52 /* NotoSerifTamil_SemiCondensed-BlackItalic.ttf */,
-				1CAA33FDC4534D3DBA0AA94F /* NotoSerifTamil_SemiCondensed-Bold.ttf */,
-				D8B41184C0134923872D2D36 /* NotoSerifTamil_SemiCondensed-BoldItalic.ttf */,
-				C760F4D02C014855A13DF6EE /* NotoSerifTamil_SemiCondensed-ExtraBold.ttf */,
-				91D0905548B94836BF2E00E0 /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf */,
-				FA0DD13342DD4519849175A5 /* NotoSerifTamil_SemiCondensed-ExtraLight.ttf */,
-				214C05C379BC493A8924020D /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf */,
-				9FE383FFAD484FD6B9701E9C /* NotoSerifTamil_SemiCondensed-Italic.ttf */,
-				3C8A7915FE704A8597220FD3 /* NotoSerifTamil_SemiCondensed-Light.ttf */,
-				43DC3889245B40679101B2DD /* NotoSerifTamil_SemiCondensed-LightItalic.ttf */,
-				433F4028E30D44D4B2FC3A6B /* NotoSerifTamil_SemiCondensed-Medium.ttf */,
-				453AAD8D980B4A969B19AD01 /* NotoSerifTamil_SemiCondensed-MediumItalic.ttf */,
-				C0D01DBE1F6243B098CDF2D1 /* NotoSerifTamil_SemiCondensed-Regular.ttf */,
-				20F3CC60EB78442D84284616 /* NotoSerifTamil_SemiCondensed-SemiBold.ttf */,
-				600AEF57589F42AC904CA3B3 /* NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf */,
-				2244B95ADD4B41F88194428F /* NotoSerifTamil_SemiCondensed-Thin.ttf */,
-				BA6A2251182941B58B2A7DE3 /* NotoSerifTamil_SemiCondensed-ThinItalic.ttf */,
-				BE0C4FFB0749423D868473FE /* Pavanam-Regular.ttf */,
-				ED92DAE72BC74BCEA456F004 /* TiroTamil-Italic.ttf */,
-				B12205CCBE6A4BEDBA16F805 /* TiroTamil-Regular.ttf */,
 				7C147466BE384911B5891E6D /* Feather.ttf */,
 				CEB34BE889814531A3ED7037 /* tamillexicon_unique_words_of_length_3.txt */,
 				1CE93F67B0DC464F9B4CDC96 /* tamillexicon_unique_words_of_length_4.txt */,
@@ -564,6 +276,11 @@
 				F74D19D803494407A0145C2B /* MaterialIcons.ttf */,
 				F57688B5927249E18B182D4E /* MaterialCommunityIcons.ttf */,
 				22D9A2EC31B94625A02BEAD1 /* Ionicons.ttf */,
+				9A5F835F1EC64615961E2D26 /* AppIcon.png */,
+				1DA0D4135C1C4A2F92E08AD0 /* AppIconBackground.png */,
+				11CFF1D8721F4D9D9751B49F /* AppIconForeground.png */,
+				93D928963C4D4DD286FBD381 /* AppIcon_512x512.png */,
+				0CD3CAA832CA4AB5B2B8BD8E /* AppSplash.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -581,6 +298,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D00BE93829255CEA00017A6D /* SplashScreen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -619,6 +337,14 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-Sollividu-SollividuTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D00BE93929255CEA00017A6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D00BE93D29255CEA00017A6D /* libSplashScreen.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +421,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D00BE93929255CEA00017A6D /* Products */;
+					ProjectRef = D00BE93829255CEA00017A6D /* SplashScreen.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Sollividu */,
@@ -702,6 +434,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D00BE93D29255CEA00017A6D /* libSplashScreen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSplashScreen.a;
+			remoteRef = D00BE93C29255CEA00017A6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -715,7 +457,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6D7E22C910CE44CD92364DBA /* Arima-VariableFont_wght.ttf in Resources */,
 				CF7983EA734C4ECA928D2C69 /* Arima-Bold.ttf in Resources */,
@@ -725,31 +466,6 @@
 				F62EB1BE97A042C39DC8F75B /* Arima-Regular.ttf in Resources */,
 				4452679839354292ADCE61D5 /* Arima-SemiBold.ttf in Resources */,
 				B3D6AFE94A2343ABB126D668 /* Arima-Thin.ttf in Resources */,
-				F4F858F697954310997DE28D /* BalooThambi2-VariableFont_wght.ttf in Resources */,
-				C1F340EA8A1A44AE88E72ED0 /* BalooThambi2-Bold.ttf in Resources */,
-				9C5596A0D93E4A85AAB3CE81 /* BalooThambi2-ExtraBold.ttf in Resources */,
-				D846AC6E51014CF89FEC57A8 /* BalooThambi2-Medium.ttf in Resources */,
-				89151DB1884841099DF4A778 /* BalooThambi2-Regular.ttf in Resources */,
-				ED0EFE8301584E158AA71B34 /* BalooThambi2-SemiBold.ttf in Resources */,
-				DAF6A6D87DDF46EA9479DA81 /* Catamaran-VariableFont_wght.ttf in Resources */,
-				D762D36DA82040E799B7E8E9 /* Catamaran-Black.ttf in Resources */,
-				52455C2065C445C1A892BE86 /* Catamaran-Bold.ttf in Resources */,
-				669CEE27A50446909202888D /* Catamaran-ExtraBold.ttf in Resources */,
-				42F4ED6BE885402CAF2F4748 /* Catamaran-ExtraLight.ttf in Resources */,
-				FBE4DF685DFC4802A4D640CF /* Catamaran-Light.ttf in Resources */,
-				4EE6526D8588498887A38DF8 /* Catamaran-Medium.ttf in Resources */,
-				64C4CA8BA2E444EEB9CD5F6E /* Catamaran-Regular.ttf in Resources */,
-				4BF572FA49194628B71B69A4 /* Catamaran-SemiBold.ttf in Resources */,
-				7E08854F5355454A886461D8 /* Catamaran-Thin.ttf in Resources */,
-				0E7A8308D92A42FFB89E515A /* Kavivanar-Regular.ttf in Resources */,
-				1D9F627F3E2E4DF7B82D6D6A /* MeeraInimai-Regular.ttf in Resources */,
-				C17A079B21E14585A791A026 /* MuktaMalar-Bold.ttf in Resources */,
-				5AFD3E939AD14A7285603433 /* MuktaMalar-ExtraBold.ttf in Resources */,
-				2BD6BCFCF272400BA7BB374F /* MuktaMalar-ExtraLight.ttf in Resources */,
-				3A68A714BB61492E90757F82 /* MuktaMalar-Light.ttf in Resources */,
-				6763A52D972E497E9352B47E /* MuktaMalar-Medium.ttf in Resources */,
-				E3846E2E6EE34A569E2CD482 /* MuktaMalar-Regular.ttf in Resources */,
-				DD13402A234740DA87991723 /* MuktaMalar-SemiBold.ttf in Resources */,
 				EE119EC3C32F4EF0B321D199 /* NotoSansTamil-VariableFont_wdth,wght.ttf in Resources */,
 				714FEF9131DD4C6CBF93B99D /* NotoSansTamil-Black.ttf in Resources */,
 				3C49C201DD9748D891DAF6D4 /* NotoSansTamil-Bold.ttf in Resources */,
@@ -760,6 +476,7 @@
 				FA02F55FD12241C9B043DBED /* NotoSansTamil-Regular.ttf in Resources */,
 				D5038D7B14A943FB81B20098 /* NotoSansTamil-SemiBold.ttf in Resources */,
 				C48E739EDB374BEDAF71125E /* NotoSansTamil-Thin.ttf in Resources */,
+				D00BE942292585FB00017A6D /* BootSplash.storyboard in Resources */,
 				B993252EE69549BAB32DE7C4 /* NotoSansTamil_Condensed-Black.ttf in Resources */,
 				01B140ED3CF4464B973DC1AF /* NotoSansTamil_Condensed-Bold.ttf in Resources */,
 				8AD679A425144279A0777CDC /* NotoSansTamil_Condensed-ExtraBold.ttf in Resources */,
@@ -787,83 +504,6 @@
 				97EAC438C34E46F892FACA26 /* NotoSansTamil_SemiCondensed-Regular.ttf in Resources */,
 				B2B949F8B1774AFAB6C06B79 /* NotoSansTamil_SemiCondensed-SemiBold.ttf in Resources */,
 				B32BC354B0E54577AE05EF52 /* NotoSansTamil_SemiCondensed-Thin.ttf in Resources */,
-				4EE2D62015D34462B57FF70F /* NotoSerifTamil-Italic-VariableFont_wdth,wght.ttf in Resources */,
-				DEC85A2F543E48069DD3C5BD /* NotoSerifTamil-VariableFont_wdth,wght.ttf in Resources */,
-				99E741C7E8334220848E8C63 /* NotoSerifTamil-Black.ttf in Resources */,
-				E19836218D4248DC858AFC57 /* NotoSerifTamil-BlackItalic.ttf in Resources */,
-				D60B2CB4BD624A9886A61DB4 /* NotoSerifTamil-Bold.ttf in Resources */,
-				E225146B93094310BFA8399A /* NotoSerifTamil-BoldItalic.ttf in Resources */,
-				72CCEF608BF045888D99B960 /* NotoSerifTamil-ExtraBold.ttf in Resources */,
-				4842ECFF35E84AE48E0A0C00 /* NotoSerifTamil-ExtraBoldItalic.ttf in Resources */,
-				2CE5D1847B3A43CCADFC4F73 /* NotoSerifTamil-ExtraLight.ttf in Resources */,
-				5094D4EE1DB34327B3B02ECD /* NotoSerifTamil-ExtraLightItalic.ttf in Resources */,
-				0012535DC9B848F8AA9440B3 /* NotoSerifTamil-Italic.ttf in Resources */,
-				616BC544E547450A98F46016 /* NotoSerifTamil-Light.ttf in Resources */,
-				978E225AB0BA434B82BDB794 /* NotoSerifTamil-LightItalic.ttf in Resources */,
-				EDF600441AD8483FA99A6A87 /* NotoSerifTamil-Medium.ttf in Resources */,
-				F38556B9E2F34BF7A94FA81F /* NotoSerifTamil-MediumItalic.ttf in Resources */,
-				8F100E5B76194F09AB5B133D /* NotoSerifTamil-Regular.ttf in Resources */,
-				BB9DE27ED4D446AABF907288 /* NotoSerifTamil-SemiBold.ttf in Resources */,
-				866901F775D749B18F247B8E /* NotoSerifTamil-SemiBoldItalic.ttf in Resources */,
-				2F58B2ACF6B4438FB10C9BDA /* NotoSerifTamil-Thin.ttf in Resources */,
-				46A91793EF64421899C15F5E /* NotoSerifTamil-ThinItalic.ttf in Resources */,
-				9AEC774790F54556B189D06D /* NotoSerifTamil_Condensed-Black.ttf in Resources */,
-				23B775AA95E5401796B4A75A /* NotoSerifTamil_Condensed-BlackItalic.ttf in Resources */,
-				85D0D431F19848B1A05FE3CC /* NotoSerifTamil_Condensed-Bold.ttf in Resources */,
-				35A2B3A2B44E49C2AFE46F97 /* NotoSerifTamil_Condensed-BoldItalic.ttf in Resources */,
-				49D087D844ED4602BE03319B /* NotoSerifTamil_Condensed-ExtraBold.ttf in Resources */,
-				3CB430AD89E34F6F930D5759 /* NotoSerifTamil_Condensed-ExtraBoldItalic.ttf in Resources */,
-				B64F8448D9B74AF289D062CE /* NotoSerifTamil_Condensed-ExtraLight.ttf in Resources */,
-				C65BD9A248D148C59C961A59 /* NotoSerifTamil_Condensed-ExtraLightItalic.ttf in Resources */,
-				7E9F340D4D3B493ABAED5240 /* NotoSerifTamil_Condensed-Italic.ttf in Resources */,
-				AD716BD97C394A86B76B04D1 /* NotoSerifTamil_Condensed-Light.ttf in Resources */,
-				7AD2D96303014BD88DB30453 /* NotoSerifTamil_Condensed-LightItalic.ttf in Resources */,
-				E4E43A6C01FD42CC86144DFD /* NotoSerifTamil_Condensed-Medium.ttf in Resources */,
-				2DA850766CD440CC9CB4EA22 /* NotoSerifTamil_Condensed-MediumItalic.ttf in Resources */,
-				4F166AAAD8904893AD766932 /* NotoSerifTamil_Condensed-Regular.ttf in Resources */,
-				2062A0362CE4430BA25BEC36 /* NotoSerifTamil_Condensed-SemiBold.ttf in Resources */,
-				3B2728DB39044FF8A55C23D2 /* NotoSerifTamil_Condensed-SemiBoldItalic.ttf in Resources */,
-				95DEDD543FE84C07B2837D7F /* NotoSerifTamil_Condensed-Thin.ttf in Resources */,
-				B059140A869C45B3B4DF4D9D /* NotoSerifTamil_Condensed-ThinItalic.ttf in Resources */,
-				A32532BC79FA40A595C049F3 /* NotoSerifTamil_ExtraCondensed-Black.ttf in Resources */,
-				EBEE4CE5559044A0B0F33674 /* NotoSerifTamil_ExtraCondensed-BlackItalic.ttf in Resources */,
-				0CE630BA839F48EC940F6E7D /* NotoSerifTamil_ExtraCondensed-Bold.ttf in Resources */,
-				30C883BE089A4A3E90844F4B /* NotoSerifTamil_ExtraCondensed-BoldItalic.ttf in Resources */,
-				68CA8F0BF9FB46AC89B012C7 /* NotoSerifTamil_ExtraCondensed-ExtraBold.ttf in Resources */,
-				A00EDDEF5DC34333A77A5F3F /* NotoSerifTamil_ExtraCondensed-ExtraBoldItalic.ttf in Resources */,
-				C096269005D248BCA9576C6A /* NotoSerifTamil_ExtraCondensed-ExtraLight.ttf in Resources */,
-				299314EF4FF8433C93964666 /* NotoSerifTamil_ExtraCondensed-ExtraLightItalic.ttf in Resources */,
-				656252356AC746DDA8A0DD52 /* NotoSerifTamil_ExtraCondensed-Italic.ttf in Resources */,
-				B456ECC384FC4ABB987AE57E /* NotoSerifTamil_ExtraCondensed-Light.ttf in Resources */,
-				D250B73E30C84376A787A5E9 /* NotoSerifTamil_ExtraCondensed-LightItalic.ttf in Resources */,
-				C91D036D18474B4B8177D63B /* NotoSerifTamil_ExtraCondensed-Medium.ttf in Resources */,
-				EAC18A3615D44789BA94C263 /* NotoSerifTamil_ExtraCondensed-MediumItalic.ttf in Resources */,
-				CAB6C452A2FB4AAB84511B42 /* NotoSerifTamil_ExtraCondensed-Regular.ttf in Resources */,
-				3AC079596E5743BC899C789C /* NotoSerifTamil_ExtraCondensed-SemiBold.ttf in Resources */,
-				3EB068655968475CB4C2F7F8 /* NotoSerifTamil_ExtraCondensed-SemiBoldItalic.ttf in Resources */,
-				B95AB137DB464ECFA8D0E5C8 /* NotoSerifTamil_ExtraCondensed-Thin.ttf in Resources */,
-				21EFAA7457654C1CAF7BD68C /* NotoSerifTamil_ExtraCondensed-ThinItalic.ttf in Resources */,
-				C46CB6FFCEC84274852692A9 /* NotoSerifTamil_SemiCondensed-Black.ttf in Resources */,
-				7C2516B98FF740D597170F8E /* NotoSerifTamil_SemiCondensed-BlackItalic.ttf in Resources */,
-				0A73487BFF484B04BC592B54 /* NotoSerifTamil_SemiCondensed-Bold.ttf in Resources */,
-				01DE94A2BB9F487C8A4655DC /* NotoSerifTamil_SemiCondensed-BoldItalic.ttf in Resources */,
-				46FBAA6815244588BF57B579 /* NotoSerifTamil_SemiCondensed-ExtraBold.ttf in Resources */,
-				5DA5D4DEBF084D448E2C746B /* NotoSerifTamil_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
-				2ABA77F4DD3F4DC5B2C7F560 /* NotoSerifTamil_SemiCondensed-ExtraLight.ttf in Resources */,
-				9A58785D9C13491A9C1CE6E8 /* NotoSerifTamil_SemiCondensed-ExtraLightItalic.ttf in Resources */,
-				E6D27EDA06564CDABFED48EC /* NotoSerifTamil_SemiCondensed-Italic.ttf in Resources */,
-				654D797BB1534C05952EC77F /* NotoSerifTamil_SemiCondensed-Light.ttf in Resources */,
-				F63898BE565346FAAC299BAC /* NotoSerifTamil_SemiCondensed-LightItalic.ttf in Resources */,
-				78BD4519C71942D4A40B7603 /* NotoSerifTamil_SemiCondensed-Medium.ttf in Resources */,
-				A6E9FACCD54B496789A780AD /* NotoSerifTamil_SemiCondensed-MediumItalic.ttf in Resources */,
-				02075B2643CE4776828ABBC8 /* NotoSerifTamil_SemiCondensed-Regular.ttf in Resources */,
-				F3E510D4806B436FB4560E3A /* NotoSerifTamil_SemiCondensed-SemiBold.ttf in Resources */,
-				281D5B83B6A7403EBE820591 /* NotoSerifTamil_SemiCondensed-SemiBoldItalic.ttf in Resources */,
-				C28949079E2948D1B555B6CB /* NotoSerifTamil_SemiCondensed-Thin.ttf in Resources */,
-				02863D7FB24140B7A34FE206 /* NotoSerifTamil_SemiCondensed-ThinItalic.ttf in Resources */,
-				71A3163EA3A44D148CD5750C /* Pavanam-Regular.ttf in Resources */,
-				AE44379D4144414A8EED14CD /* TiroTamil-Italic.ttf in Resources */,
-				1A1F4EE9851B434A81A9C4F3 /* TiroTamil-Regular.ttf in Resources */,
 				2BA726D598734338840AB198 /* Feather.ttf in Resources */,
 				3E585F38681D475FAAC574AC /* tamillexicon_unique_words_of_length_3.txt in Resources */,
 				369D842AF6E6430781B04780 /* tamillexicon_unique_words_of_length_4.txt in Resources */,
@@ -872,6 +512,11 @@
 				CE93933EBC5545E0AE90DFCE /* MaterialIcons.ttf in Resources */,
 				9C111EC30C0E429BA51D1BBE /* MaterialCommunityIcons.ttf in Resources */,
 				59CCC5454B774807928394DB /* Ionicons.ttf in Resources */,
+				66727CC4190F4B82A7B0121D /* AppIcon.png in Resources */,
+				1D8FD02472D341FC89FFBEE2 /* AppIconBackground.png in Resources */,
+				38B668FAD9EC49C9A9661F9A /* AppIconForeground.png in Resources */,
+				10FA5493B7534E19B70A437A /* AppIcon_512x512.png in Resources */,
+				CDF526E870554AD4A6E9EBCD /* AppSplash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1118,6 +763,57 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R5585AXKH;
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-Fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-PeerTalk\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-RSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FlipperKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKV\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKVCore\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNDeviceInfo\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFS\"",
+					"\"${PODS_ROOT}/Headers/Public/RNLocalize\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-bridging\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/YogaKit\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libevent\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-mmkv\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-splash-screen\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_TARGET_SRCROOT)/include/\"",
+				);
 				INFOPLIST_FILE = Sollividu/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "சொல்லிவிடு";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
@@ -1150,6 +846,57 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R5585AXKH;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-Fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-PeerTalk\"",
+					"\"${PODS_ROOT}/Headers/Public/Flipper-RSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FlipperKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKV\"",
+					"\"${PODS_ROOT}/Headers/Public/MMKVCore\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNDeviceInfo\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFS\"",
+					"\"${PODS_ROOT}/Headers/Public/RNLocalize\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-bridging\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/YogaKit\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libevent\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-mmkv\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-splash-screen\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_TARGET_SRCROOT)/include/\"",
+				);
 				INFOPLIST_FILE = Sollividu/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "சொல்லிவிடு";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";

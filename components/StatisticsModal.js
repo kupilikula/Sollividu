@@ -4,6 +4,7 @@ import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIc
 import {colorPalette} from '../styles/colorPalette';
 import {styleSheet} from '../styles/styleSheet';
 import {StackedBarChart} from 'react-native-chart-kit';
+import {constants} from '../utils/constants';
 
 export const StatisticsModal = props => {
   // console.log('props.stats', props.stats);
@@ -59,7 +60,9 @@ export const StatisticsModal = props => {
     <Modal
       isVisible={props.visible}
       backdropColor={'black'}
-      backdropOpacity={0.5}>
+      backdropOpacity={0.5}
+      statusBarTranslucent={true}
+      deviceHeight={constants.screenHeight}>
       <View
         style={{
           flex: 1,

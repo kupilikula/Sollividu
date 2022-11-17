@@ -14,7 +14,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import {addGuess, giveUpGame, initializeNewGameState} from '../store/actions';
 import {TamilLetterUtils} from '../utils/TamilLetterUtils';
 import {TamilStringUtils} from '../utils/TamilStringUtils';
-import DropDownPicker from 'react-native-dropdown-picker';
 import {Button} from './Button';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {constants} from '../utils/constants';

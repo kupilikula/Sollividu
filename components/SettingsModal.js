@@ -7,6 +7,7 @@ import {RadioButton} from 'react-native-paper';
 import {useEffect, useState} from 'react';
 import {RadioGroup} from 'react-native-radio-buttons-group';
 import {Button} from './Button';
+import {constants} from '../utils/constants';
 
 export const SettingsModal = props => {
   const radioButtonsData = [
@@ -91,7 +92,9 @@ export const SettingsModal = props => {
       isVisible={props.visible}
       backdropColor={'black'}
       backdropOpacity={0.5}
-      onModalWillShow={() => onModalWillShow()}>
+      onModalWillShow={() => onModalWillShow()}
+      statusBarTranslucent={true}
+      deviceHeight={constants.screenHeight}>
       <View
         style={{
           flex: 1,
