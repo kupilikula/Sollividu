@@ -6,4 +6,5 @@ export const colorPalette = {
   green: '#3aaa34',
   gray: '#989c9e',
   yellow: '#c9b458',
+  transparent: '#ffffffff',
 };

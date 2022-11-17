@@ -59,7 +59,12 @@ const App = () => {
         style={{
           flexDirection: 'column',
           flex: 1,
-          backgroundColor: colorPalette.red,
+          backgroundColor: colorPalette.transparent,
+          width: '100%',
+          height: 'auto',
+          alignSelf: 'center',
+          alignContent: 'center',
+          // alignItems: 'center',
         }}>
         <Header />
         <GameContainer />
