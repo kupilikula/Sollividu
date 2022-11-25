@@ -179,6 +179,16 @@ export const HelpModal = props => {
               என்ற நூலை இலக்கமாக்கிய University of Chicago-வின் Digital
               Dictionaries of South Asia உபாயத்திற்க்கு நன்றி.
             </Text>
+            <Text style={styleSheet.helpModalSmallText}>
+              எங்கள்{' '}
+              <Text
+                style={{color: colorPalette.blue}}
+                onPress={() =>
+                  Linking.openURL('https://sollividu.com/privacy_policy.html')
+                }>
+                தனியுரிமைக் கொள்கை.{' '}
+              </Text>
+            </Text>
           </ScrollView>
         </View>
       </View>
