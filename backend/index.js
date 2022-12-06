@@ -20,11 +20,10 @@ app.post('/postGameData', (req, res) => {
   console.log('req.body:', req.body);
   console.log('JSON.parse(req.body):', JSON.parse(req.body));
   console.log('headers:', req.headers);
-  const newData = JSON.parse(req.body);
-  const uniqueId = newData.deviceUniqueId;
-  if (newData.app_id === 'BCB9C644-3F19-4BA1-B2C8-39B2463EBDE3') {
+  const gameData = JSON.parse(req.body);
+  if (gameData.app_id === 'BCB9C644-3F19-4BA1-B2C8-39B2463EBDE3') {
     docClient.put(
-      {TableName: gamesDataTableName, Item: newData},
+      {TableName: gamesDataTableName, Item: gameData},
       (err, data) => {
         if (err) {
           console.log('Error writing to DynamoDB:', err);

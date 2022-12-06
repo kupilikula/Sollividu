@@ -18,7 +18,3 @@ phases:
     commands:
       - aws lambda update-function-code \--function-name  sollividu_backend \--zip-file fileb://backend.zip
       - echo Build completed on `date`
-artifacts:
-  type: zip
-  files:
-    - backend.zip

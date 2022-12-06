@@ -125,14 +125,18 @@ export const GameContainer = props => {
     });
   };
 
-  const onTileFocus = focusedInputNode => {
+  const onTileFocus = (focusedInputNode, guessIndex) => {
     // console.log('inside onTileFocus:', focusedInputNode);
-    scrollToInput(focusedInputNode);
+    if (guessIndex !== lastFocusGuessIndex) {
+      setLastFocusGuessIndex(guessIndex);
+      scrollToInput(focusedInputNode);
+    }
   };
 
   const [helpModalVisible, setHelpModalVisible] = useState(false);
   const [statisticsModalVisible, setStatisticsModalVisible] = useState(false);
   const [settingsModalVisible, setSettingsModalVisible] = useState(false);
+  const [lastFocusGuessIndex, setLastFocusGuessIndex] = useState(null);
 
   useEffect(() => {
     const callOnNewGame = async () => {

@@ -67,7 +67,7 @@ export const LetterTile = forwardRef((props, inputRefArray) => {
     if (!isFocussed) {
       // console.log('inside !isFocussed condition. event:', event);
       setIsFocussed(true);
-      props.onTileFocus(event.target);
+      props.onTileFocus(event.target, props.guessIndex);
     }
   };
 
