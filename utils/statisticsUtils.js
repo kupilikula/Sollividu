@@ -8,24 +8,21 @@ const updateGameHistory = (
   wordLength
 ) => {
   initializeGameHistoryIfEmpty();
-  mmkvStore.set(
-    'playedWordList',
-    mmkvStore.getString('playedWordList') + ',' + secretWord
-  );
-  mmkvStore.set(
-    'gameResultList',
-    mmkvStore.getString('gameResultList') + ',' + wordGuessed.toString()
-  );
-  mmkvStore.set(
-    'wordLengthList',
-    mmkvStore.getString('wordLengthList') + ',' + wordLength.toString()
-  );
-  mmkvStore.set(
-    'numberOfGuessesList',
-    mmkvStore.getString('numberOfGuessesList') +
-      ',' +
-      numberOfGuesses.toString()
-  );
+  let newGame = {
+    word: secretWord,
+    gameResult: wordGuessed,
+    numberOfGuesses: numberOfGuesses,
+    wordLength: wordLength,
+  };
+  let currGamesData = JSON.parse(mmkvStore.getString('gamesList'));
+  let n_curr_games = currGamesData.games.length;
+  if (
+    n_curr_games === 0 ||
+    currGamesData.games[n_curr_games - 1].word !== newGame.word
+  ) {
+    currGamesData.games.push(newGame);
+    mmkvStore.set('gamesList', JSON.stringify(currGamesData));
+  }
 
   // console.log(
   //   'inside update game history, after:',
@@ -35,7 +32,9 @@ const updateGameHistory = (
 
 const hasWordBeenPlayedAlready = word => {
   initializeGameHistoryIfEmpty();
-  return mmkvStore.getString('playedWordList').split(',').includes(word);
+  return JSON.parse(mmkvStore.getString('gamesList'))
+    .games.map(g => g.word)
+    .includes(word);
 };
 
 const getStatistics = () => {
@@ -67,46 +66,26 @@ const getStatistics = () => {
 };
 
 const initializeGameHistoryIfEmpty = () => {
-  if (!mmkvStore.contains('playedWordList')) {
-    mmkvStore.set('playedWordList', '');
-  }
-
-  if (!mmkvStore.contains('gameResultList')) {
-    mmkvStore.set('gameResultList', '');
-  }
-
-  if (!mmkvStore.contains('wordLengthList')) {
-    mmkvStore.set('wordLengthList', '');
-  }
-
-  if (!mmkvStore.contains('numberOfGuessesList')) {
-    mmkvStore.set('numberOfGuessesList', '');
+  if (!mmkvStore.contains('gamesList')) {
+    mmkvStore.set('gamesList', JSON.stringify({games: []}));
   }
 };
 
 const getGameDataArrays = () => {
-  let playedWordList = mmkvStore
-    .getString('playedWordList')
-    .split(',')
-    .filter(s => s);
+  let gamesListString = mmkvStore.getString('gamesList');
+  console.log('gamesListString:', gamesListString);
+  let gamesList = JSON.parse(gamesListString).games;
 
-  let gameResultList = mmkvStore
-    .getString('gameResultList')
-    .split(',')
-    .filter(s => s)
-    .map(s => s === 'true');
-  let numberOfGuessesList = mmkvStore
-    .getString('numberOfGuessesList')
-    .split(',')
-    .filter(s => s)
-    .map(s => parseInt(s, 10));
-  let wordLengthList = mmkvStore
-    .getString('wordLengthList')
-    .split(',')
-    .filter(s => s)
-    .map(s => parseInt(s, 10));
+  let playedWordList = gamesList.map(g => g.word);
+  let gameResultList = gamesList.map(g => g.gameResult);
+  let numberOfGuessesList = gamesList.map(g => g.numberOfGuesses);
+  let wordLengthList = gamesList.map(g => g.wordLength);
 
   return {playedWordList, gameResultList, numberOfGuessesList, wordLengthList};
+};
+
+const getGameDataJSON = () => {
+  return JSON.parse(mmkvStore.getString('gamesList'));
 };
 
 module.exports = {
@@ -115,4 +94,5 @@ module.exports = {
   getStatistics,
   initializeGameHistoryIfEmpty,
   getGameDataArrays,
+  getGameDataJSON,
 };

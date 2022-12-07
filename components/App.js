@@ -16,7 +16,7 @@ import {colorPalette} from '../styles/colorPalette';
 let gameStore;
 
 const initialSecretWordLetters =
-  TamilStringUtils().splitIntoTamilLetters('மரவள்ளி');
+  TamilStringUtils().splitIntoTamilLetters('படம்');
 const currentGameState = newGameState(
   initialSecretWordLetters,
   constants.numberOfGuesses

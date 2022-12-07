@@ -20,7 +20,7 @@ const sendUsageData = () => {
     timeZone: RNLocalize.getTimeZone(),
   };
 
-  const games = statisticsUtils.getGameDataArrays();
+  const games = statisticsUtils.getGameDataJSON().games;
 
   // axios
   //   .get('https://38.124.64.205:3000/test')

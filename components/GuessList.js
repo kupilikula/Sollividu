@@ -45,8 +45,8 @@ export const GuessList = props => {
             isAnnotated={item.isAnnotated}
             isFuture={item.isFuture}
             onSubmitGuess={props.onSubmitGuess}
-            onTileFocus={props.onTileFocus}
             guessAnnotation={item.guessAnnotation}
+            onTileFocus={props.onTileFocus}
           />
         );
       })}

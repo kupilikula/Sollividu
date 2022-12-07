@@ -4,6 +4,7 @@ import {
   Alert,
   findNodeHandle,
   Linking,
+  Platform,
   Pressable,
   Text,
   UIManager,
@@ -87,11 +88,6 @@ export const GameContainer = props => {
         break;
       }
     }
-
-    // console.log(
-    //   'letters:',
-    //   TamilStringUtils().splitIntoTamilLetters(newSecretWord)
-    // );
     dispatch(
       initializeNewGameState({
         secretWordLetters:
@@ -127,9 +123,11 @@ export const GameContainer = props => {
 
   const onTileFocus = (focusedInputNode, guessIndex) => {
     // console.log('inside onTileFocus:', focusedInputNode);
+    if (Platform.OS === 'android') {
+      scrollToInput(focusedInputNode);
+    }
     if (guessIndex !== lastFocusGuessIndex) {
       setLastFocusGuessIndex(guessIndex);
-      scrollToInput(focusedInputNode);
     }
   };
 
@@ -140,7 +138,7 @@ export const GameContainer = props => {
 
   useEffect(() => {
     const callOnNewGame = async () => {
-      await onNewGame(storeWordLength ? storeWordLength : 5);
+      await onNewGame(storeWordLength ? storeWordLength : 3);
     };
     callOnNewGame().catch(console.error);
     const data = statisticsUtils.getStatistics();
@@ -201,7 +199,7 @@ export const GameContainer = props => {
       style={{backgroundColor: colorPalette.blue, height: 2000, flex: 1}}
       contentContainerStyle={{flexGrow: 1}}
       nestedScrollEnabled={true}
-      enableOnAndroid={true}
+      enableOnAndroid={false}
       enableResetScrollToCoords={false}
       contentInsetAdjustmentBehavior="always"
       overScrollMode="always"
